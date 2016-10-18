@@ -1,4 +1,9 @@
-tignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+*.xcworkspace
+Podfile.lock
 
 ## Build generated
 build/
