@@ -23,7 +23,7 @@ class TxactionListViewController: UIViewController {
     
     // MARK: - Properties
     
-    private var didScrollingToSelectedDateOnLoadCalendar = false
+    fileprivate var didScrollingToSelectedDateOnLoadCalendar = false
     
     // MARK: - Outlets
     
@@ -70,7 +70,7 @@ class TxactionListViewController: UIViewController {
     
     // MARK: - Setup UI
     
-    private func setupCalendarView() {
+    fileprivate func setupCalendarView() {
         calendarView.isHidden = true
         calendarView.dataSource = self
         calendarView.delegate = self
@@ -84,7 +84,7 @@ class TxactionListViewController: UIViewController {
     
     // MARK: - Constants
     
-    private struct CalendarView {
+    fileprivate struct CalendarView {
         static let defaultSelectedDate = Date()
         static let itemSize = 52
         static let numberOfRows = 6
