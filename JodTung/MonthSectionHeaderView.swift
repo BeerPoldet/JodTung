@@ -11,7 +11,11 @@ import JTAppleCalendar
 class MonthSectionHeaderView: JTAppleHeaderView {
     
     @IBOutlet weak var monthLabel: UILabel!
-    @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var yearLabel: UILabel! {
+        didSet {
+            yearLabel.isHidden = true
+        }
+    }
     
     static let xibName: String = String(describing: MonthSectionHeaderView.self)
     
@@ -32,7 +36,7 @@ class MonthSectionHeaderView: JTAppleHeaderView {
     }
     
     func monthText(for date: Date) -> String {
-        return text(of: date, dateFormat: "MMMM")
+        return text(of: date, dateFormat: "MMM").uppercased()
     }
     
     func yearText(for date: Date) -> String {

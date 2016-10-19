@@ -10,10 +10,49 @@ import JTAppleCalendar
 
 class DayCellView: JTAppleDayCellView {
     
-    @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var dayLabel: RoundedLabel!
     
-    let normalDayColor = UIColor.black
-    let weekendDayColor = UIColor.gray
+    private struct DayOpions {
+        var dayType: DayType
+        var isSelected: Bool
+    }
+    
+    private enum DayType {
+        case today, weekend, normal
+    }
+    
+    private struct DayLabelStyle {
+        var textColor: UIColor
+        var backgroundColor: UIColor?
+    }
+    
+    private func dayOptions(of cellState: CellState) -> DayOpions {
+        if Calendar.current.isDateInToday(cellState.date) {
+            return DayOpions(dayType: .today, isSelected: cellState.isSelected)
+        }
+        
+        switch cellState.day {
+        case .sunday, .saturday:
+            return DayOpions(dayType: .weekend, isSelected: cellState.isSelected)
+        default:
+            return DayOpions(dayType: .normal, isSelected: cellState.isSelected)
+        }
+    }
+    
+    private func dayLabelStyle(for dayOptions: DayOpions) -> DayLabelStyle {
+        switch (dayOptions.dayType, dayOptions.isSelected) {
+        case (.today, true):
+            return DayLabelStyle(textColor: UIColor.white, backgroundColor: UIColor.red)
+        case (.today, false):
+            return DayLabelStyle(textColor: UIColor.red, backgroundColor: nil)
+        case (.weekend, false):
+            return DayLabelStyle(textColor: UIColor.gray, backgroundColor: nil)
+        case (.normal, false):
+            return DayLabelStyle(textColor: UIColor.black, backgroundColor: nil)
+        case (_, true):
+            return DayLabelStyle(textColor: UIColor.white, backgroundColor: UIColor.black)
+        }
+    }
     
     static let xibName: String = String(describing: DayCellView.self)
     
@@ -26,11 +65,15 @@ class DayCellView: JTAppleDayCellView {
         self.isHidden = false
         dayLabel?.text = cellState.text
         
-        switch cellState.day {
-        case .sunday, .saturday:
-            dayLabel.textColor = weekendDayColor
-        default:
-            dayLabel.textColor = normalDayColor
+        let dayLabelStyle = self.dayLabelStyle(for: dayOptions(of: cellState))
+        
+        if let backgroundColor = dayLabelStyle.backgroundColor {
+            dayLabel.layerBackgroundColor = backgroundColor
+            dayLabel.backgroundHidden = false
+        } else {
+            dayLabel.backgroundHidden = true
         }
+        
+        dayLabel.textColor = dayLabelStyle.textColor
     }
 }

@@ -19,6 +19,7 @@
 		053E0C801DB6070700E0B9FC /* DayCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053E0C7F1DB6070700E0B9FC /* DayCellView.swift */; };
 		053E0C831DB61D5700E0B9FC /* MonthSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053E0C821DB61D5700E0B9FC /* MonthSectionHeaderView.swift */; };
 		053E0C851DB6203000E0B9FC /* MonthSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053E0C841DB6203000E0B9FC /* MonthSectionHeaderView.xib */; };
+		05EB3BEC1DB7198500E84B45 /* RoundedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB3BEB1DB7198500E84B45 /* RoundedLabel.swift */; };
 		3504535878364C61A7DBBD19 /* Pods_JodTungUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC784598F3A0F28DF1889C3C /* Pods_JodTungUITests.framework */; };
 		A0F7A450DE09F34F0ABCA0DE /* Pods_JodTung.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3454CB1778743E68FE708C0 /* Pods_JodTung.framework */; };
 		AE7917D198EB799B7C5F54D0 /* Pods_JodTungTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CE8A49E32E494B0C62D506 /* Pods_JodTungTests.framework */; };
@@ -61,6 +62,7 @@
 		053E0C7F1DB6070700E0B9FC /* DayCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCellView.swift; sourceTree = "<group>"; };
 		053E0C821DB61D5700E0B9FC /* MonthSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthSectionHeaderView.swift; sourceTree = "<group>"; };
 		053E0C841DB6203000E0B9FC /* MonthSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthSectionHeaderView.xib; sourceTree = "<group>"; };
+		05EB3BEB1DB7198500E84B45 /* RoundedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedLabel.swift; sourceTree = "<group>"; };
 		17FFAE9CC9E2EE658417E8F1 /* Pods-JodTung.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JodTung.release.xcconfig"; path = "Pods/Target Support Files/Pods-JodTung/Pods-JodTung.release.xcconfig"; sourceTree = "<group>"; };
 		686E2B6AB80DA2CF41321908 /* Pods-JodTungTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JodTungTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JodTungTests/Pods-JodTungTests.debug.xcconfig"; sourceTree = "<group>"; };
 		70F6336C014B95B64C5E2A8F /* Pods-JodTungUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JodTungUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JodTungUITests/Pods-JodTungUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				053593B41DB37ACB00A7B508 /* Main.storyboard */,
 				050397611DB5C84C00D82B3D /* Scenes */,
+				05EB3BE81DB7194D00E84B45 /* Frameworks */,
 				053593DE1DB37AE500A7B508 /* Suppporting Files */,
 			);
 			path = JodTung;
@@ -187,6 +190,14 @@
 				053E0C841DB6203000E0B9FC /* MonthSectionHeaderView.xib */,
 			);
 			name = "Calendar View";
+			sourceTree = "<group>";
+		};
+		05EB3BE81DB7194D00E84B45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05EB3BEB1DB7198500E84B45 /* RoundedLabel.swift */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3C43DD488267C2DB7735847E /* Frameworks */ = {
@@ -487,6 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				050397641DB5C8FA00D82B3D /* TxactionListViewController.swift in Sources */,
+				05EB3BEC1DB7198500E84B45 /* RoundedLabel.swift in Sources */,
 				053593B11DB37ACB00A7B508 /* AppDelegate.swift in Sources */,
 				053E0C831DB61D5700E0B9FC /* MonthSectionHeaderView.swift in Sources */,
 				053E0C801DB6070700E0B9FC /* DayCellView.swift in Sources */,

@@ -13,17 +13,12 @@ class TxactionListViewController: UIViewController {
     
     // MARK: - Injected Dependencies
     
-    var selectedDate: Date? = CalendarView.defaultSelectedDate {
-        didSet {
-            if let selectedDate = selectedDate {
-                select(date: selectedDate)
-            }
-        }
-    }
+    
     
     // MARK: - Properties
     
     fileprivate var didScrollingToSelectedDateOnLoadCalendar = false
+    fileprivate var selectedDate: Date? = CalendarView.defaultSelectedDate
     
     // MARK: - Outlets
     
@@ -32,6 +27,9 @@ class TxactionListViewController: UIViewController {
             setupCalendarView()
         }
     }
+    @IBOutlet var calendarTitleView: UIView!
+    @IBOutlet weak var monthTitleLabel: UILabel!
+    @IBOutlet weak var yearTitleLabel: UILabel!
     
     // MARK: - View Controller Lifecycle
     
@@ -43,6 +41,8 @@ class TxactionListViewController: UIViewController {
         }
         
         scrollToSelectedDate(withAnimation: false)
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: calendarTitleView)
     }
     
     
@@ -64,8 +64,8 @@ class TxactionListViewController: UIViewController {
         }
     }
     
-    func select(date: Date) {
-        calendarView?.selectDates([date], triggerSelectionDelegate: true, keepSelectionIfMultiSelectionAllowed: false)
+    func select(date: Date, updatingCalendar: Bool = false) {
+        calendarView?.selectDates([date], triggerSelectionDelegate: updatingCalendar, keepSelectionIfMultiSelectionAllowed: false)
     }
     
     // MARK: - Setup UI
@@ -74,11 +74,10 @@ class TxactionListViewController: UIViewController {
         calendarView.isHidden = true
         calendarView.dataSource = self
         calendarView.delegate = self
-        calendarView.scrollingMode = .nonStopToCell(withResistance: CalendarView.Scrolling.resistance)
+        calendarView.scrollingMode = CalendarView.Scrolling.mode
         calendarView.direction = CalendarView.Scrolling.direction
         calendarView.registerCellViewXib(file: DayCellView.xibName)
         calendarView.registerHeaderView(xibFileNames: [MonthSectionHeaderView.xibName])
-        
         calendarView.itemSize = CGFloat(CalendarView.itemSize)
     }
     
@@ -86,11 +85,13 @@ class TxactionListViewController: UIViewController {
     
     fileprivate struct CalendarView {
         static let defaultSelectedDate = Date()
-        static let itemSize = 52
+        static let itemSize = 60
         static let numberOfRows = 6
         
         struct Scrolling {
-            static let resistance = CGFloat(0.75)
+            static let mode = JTAppleCalendarView.ScrollingMode.nonStopToCell(withResistance: CalendarView.Scrolling.resistance)
+//            static let mode = .none
+            static let resistance = CGFloat(0)
             static let direction = UICollectionViewScrollDirection.vertical
         }
         
@@ -107,6 +108,80 @@ class TxactionListViewController: UIViewController {
                 let formatter = DateFormatter()
                 formatter.dateFormat = "yyyy MM dd"
                 return formatter
+            }
+        }
+    }
+    
+    // MARK: - Calendar Navigation Header
+    
+    lazy var monthFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM"
+        return formatter
+    }()
+    
+    lazy var yearFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy"
+        return formatter
+    }()
+    
+    struct MonthItem {
+        var month: Int
+        var year: Int
+        
+        init(month: Int, year: Int) {
+            self.month = month
+            self.year = year
+        }
+        
+        var count = 0
+    }
+    
+    struct MonthItemList {
+        var items = [MonthItem]()
+        
+        mutating func add(_ item: MonthItem) {
+            if let existItemIndex = items.index(where: { item.month == $0.month && item.year == $0.year }) {
+                items[existItemIndex].count = items[existItemIndex].count + 1
+            } else {
+                items.append(item)
+            }
+        }
+        
+        var max: MonthItem? {
+            if items.isEmpty {
+                return nil
+            }
+            
+            return items.max { $0.count < $1.count }
+        }
+        
+        init(monthDates: [Date]) {
+            monthDates.forEach({ (date) in
+                let month = Calendar.current.component(.month, from: date)
+                let year = Calendar.current.component(.year, from: date)
+                self.add(MonthItem(month: month, year: year))
+            })
+        }
+        
+        var mostPresenceDate: Date? {
+            guard let mostPresenceMonthItem = self.max else { return nil }
+            var dateComponent = DateComponents()
+            dateComponent.month = mostPresenceMonthItem.month
+            dateComponent.year = mostPresenceMonthItem.year
+            
+            return Calendar.current.date(from: dateComponent)
+        }
+    }
+    
+    fileprivate func updateNavigationTitle() {
+        
+        calendarView.visibleDates { (dateSegmentInfo: DateSegmentInfo) in
+            let monthItemList = MonthItemList(monthDates: dateSegmentInfo.monthDates)
+            if let mostPresenceDate = monthItemList.mostPresenceDate {
+                self.monthTitleLabel.text = self.monthFormatter.string(from: mostPresenceDate)
+                self.yearTitleLabel.text = self.yearFormatter.string(from: mostPresenceDate)
             }
         }
     }
@@ -134,11 +209,13 @@ extension TxactionListViewController: JTAppleCalendarViewDataSource {
 }
 
 extension TxactionListViewController: JTAppleCalendarViewDelegate {
-    
+
     func calendar(_ calendar: JTAppleCalendarView, willDisplayCell cell: JTAppleDayCellView, date: Date, cellState: CellState) {
-        if let cell = cell as? DayCellView, isViewLoaded {
+        if let cell = cell as? DayCellView {
             cell.setup(date: date, with: cellState)
         }
+        
+        updateNavigationTitle()
     }
     
     func calendar(_ calendar: JTAppleCalendarView, sectionHeaderSizeFor range: (start: Date, end: Date), belongingTo month: Int) -> CGSize {
@@ -149,5 +226,15 @@ extension TxactionListViewController: JTAppleCalendarViewDelegate {
         if let headerView = header as? MonthSectionHeaderView {
             headerView.setup(range: range)
         }
+    }
+    
+    func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleDayCellView?, cellState: CellState) {
+        var reloadDates = [date]
+        if let selectedDate = selectedDate {
+            reloadDates.append(selectedDate)
+        }
+        calendar.reloadDates(reloadDates)
+
+        selectedDate = calendar.selectedDates.first
     }
 }

@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-425" y="218"/>
         </scene>
-        <!--Transactions-->
+        <!--Txaction List View Controller-->
         <scene sceneID="7Qh-fK-O3X">
             <objects>
-                <viewController id="Trn-Qo-wFo" customClass="TxactionListViewController" customModule="JodTung" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Trn-Qo-wFo" customClass="TxactionListViewController" customModule="JodTung" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fxZ-ub-dI1"/>
                         <viewControllerLayoutGuide type="bottom" id="tXF-zG-asc"/>
@@ -37,26 +37,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dU5-KS-D5H" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dU5-KS-D5H" userLabel="Calendar View" customClass="JTAppleCalendarView" customModule="JTAppleCalendar" colorLabel="IBBuiltInLabel-Blue">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dU5-KS-D5H" firstAttribute="top" secondItem="fxZ-ub-dI1" secondAttribute="bottom" id="MKF-vN-NGC"/>
                             <constraint firstItem="tXF-zG-asc" firstAttribute="top" secondItem="dU5-KS-D5H" secondAttribute="bottom" id="Nyi-Tn-brF"/>
+                            <constraint firstItem="dU5-KS-D5H" firstAttribute="top" secondItem="fxZ-ub-dI1" secondAttribute="bottom" id="Qay-Tf-HW0"/>
                             <constraint firstItem="dU5-KS-D5H" firstAttribute="leading" secondItem="12j-Z7-Nya" secondAttribute="leading" id="Yv2-ER-27y"/>
                             <constraint firstAttribute="trailing" secondItem="dU5-KS-D5H" secondAttribute="trailing" id="hrB-ll-cvg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Transactions" id="QJX-9s-OJS"/>
+                    <navigationItem key="navigationItem" id="0Ke-0P-hgU"/>
                     <connections>
+                        <outlet property="calendarTitleView" destination="euK-Sl-pVN" id="mAM-Kn-vh1"/>
                         <outlet property="calendarView" destination="dU5-KS-D5H" id="Ufg-hM-cAf"/>
+                        <outlet property="monthTitleLabel" destination="GCJ-i5-7Sf" id="JDu-gu-Bfn"/>
+                        <outlet property="yearTitleLabel" destination="G6i-zq-3xb" id="nYe-4O-MTg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nel-Jk-vTO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="euK-Sl-pVN" userLabel="Calendar TItle">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Qce-yg-RKK">
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="November" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCJ-i5-7Sf">
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6i-zq-3xb">
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Qce-yg-RKK" firstAttribute="centerY" secondItem="euK-Sl-pVN" secondAttribute="centerY" id="Uhe-31-2Ix"/>
+                        <constraint firstItem="Qce-yg-RKK" firstAttribute="leading" secondItem="euK-Sl-pVN" secondAttribute="leading" id="xCe-M4-cu1"/>
+                    </constraints>
+                </view>
             </objects>
-            <point key="canvasLocation" x="-426.39999999999998" y="-437.63118440779613"/>
+            <point key="canvasLocation" x="512.79999999999995" y="-437.63118440779613"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="UAX-hl-7U6">
@@ -68,13 +101,32 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Trn-Qo-wFo" kind="relationship" relationship="viewControllers" id="FmH-kL-z8G"/>
+                        <segue destination="PIF-Fr-5Lj" kind="relationship" relationship="viewControllers" id="FmH-kL-z8G"/>
                         <segue destination="juZ-tb-Tum" kind="relationship" relationship="viewControllers" id="05M-Ok-quE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgF-fi-rhr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1377" y="-109"/>
+        </scene>
+        <!--Transactions-->
+        <scene sceneID="pMH-M5-SMG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PIF-Fr-5Lj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Transactions" id="QJX-9s-OJS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eMU-AI-o5y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Trn-Qo-wFo" kind="relationship" relationship="rootViewController" id="GZ6-h6-73D"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rRg-mW-a06" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-426.39999999999998" y="-437.63118440779613"/>
         </scene>
     </scenes>
 </document>
