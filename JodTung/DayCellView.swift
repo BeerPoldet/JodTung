@@ -12,6 +12,8 @@ class DayCellView: JTAppleDayCellView {
     
     @IBOutlet weak var dayLabel: RoundedLabel!
     
+    // MARK: - Day Style
+    
     private struct DayOpions {
         var dayType: DayType
         var isSelected: Bool
@@ -53,16 +55,10 @@ class DayCellView: JTAppleDayCellView {
             return DayLabelStyle(textColor: UIColor.white, backgroundColor: UIColor.black)
         }
     }
-    
+     
     static let xibName: String = String(describing: DayCellView.self)
     
     func setup(date: Date, with cellState: CellState) {
-        if cellState.dateBelongsTo != .thisMonth {
-            self.isHidden = true
-            return
-        }
-        
-        self.isHidden = false
         dayLabel?.text = cellState.text
         
         let dayLabelStyle = self.dayLabelStyle(for: dayOptions(of: cellState))
@@ -75,5 +71,19 @@ class DayCellView: JTAppleDayCellView {
         }
         
         dayLabel.textColor = dayLabelStyle.textColor
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        setupSeparateLine()
+    }
+    
+    private func setupSeparateLine() {
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: bounds.minX, y: bounds.minY))
+        path.addLine(to: CGPoint(x: bounds.maxX, y: bounds.minY))
+        UIColor.gray.set()
+        path.lineWidth = 0.5
+        path.stroke()
     }
 }

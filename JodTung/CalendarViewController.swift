@@ -1,15 +1,17 @@
 //
-//  TxactionListViewController.swift
+//  CalendarViewController.swift
 //  JodTung
 //
-//  Created by Poldet Assanangkornchai on 10/18/2559 BE.
+//  Created by Poldet Assanangkornchai on 10/20/2559 BE.
 //  Copyright © 2559 Poldet Assanangkornchai. All rights reserved.
 //
 
 import UIKit
+
+import UIKit
 import JTAppleCalendar
 
-class TxactionListViewController: UIViewController {
+class CalendarViewController: UIViewController {
     
     // MARK: - Injected Dependencies
     
@@ -90,14 +92,14 @@ class TxactionListViewController: UIViewController {
     fileprivate struct CalendarView {
         static let defaultSelectedDate = Date()
         static let itemSize = 54
-        static let numberOfRows = 1
+        static let numberOfRows = 6
         static let cellInset = CGPoint(x: 0, y: 0)
         
         struct Scrolling {
-//            static let mode = JTAppleCalendarView.ScrollingMode.nonStopToCell(withResistance: CalendarView.Scrolling.resistance)
-            static let mode = JTAppleCalendarView.ScrollingMode.stopAtEachSection
+            //            static let mode = JTAppleCalendarView.ScrollingMode.nonStopToCell(withResistance: CalendarView.Scrolling.resistance)
+            static let mode = JTAppleCalendarView.ScrollingMode.none
             static let resistance = CGFloat(0)
-            static let direction = UICollectionViewScrollDirection.horizontal
+            static let direction = UICollectionViewScrollDirection.vertical
         }
         
         struct Boundary {
@@ -184,9 +186,9 @@ class TxactionListViewController: UIViewController {
     
     fileprivate func updateNavigationTitle() {
         
-            DispatchQueue.global(qos: .userInitiated).async {
-                self.calendarView.visibleDates { (dateSegmentInfo: DateSegmentInfo) in
-
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.calendarView.visibleDates { (dateSegmentInfo: DateSegmentInfo) in
+                
                 let monthItemList = MonthItemList(monthDates: dateSegmentInfo.monthDates)
                 if let mostPresenceDate = monthItemList.mostPresenceDate, self.currentMostPresenceDate != mostPresenceDate {
                     DispatchQueue.main.async {
@@ -201,7 +203,7 @@ class TxactionListViewController: UIViewController {
     }
 }
 
-extension TxactionListViewController: JTAppleCalendarViewDataSource {
+extension CalendarViewController: JTAppleCalendarViewDataSource {
     
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         
@@ -215,18 +217,23 @@ extension TxactionListViewController: JTAppleCalendarViewDataSource {
             endDate: endDate,
             numberOfRows: numberOfRows,
             calendar: calendar,
-            generateInDates: InDateCellGeneration.off,
-            generateOutDates: OutDateCellGeneration.tillEndOfGrid,
+            generateInDates: InDateCellGeneration.forAllMonths,
+            generateOutDates: OutDateCellGeneration.tillEndOfRow,
             firstDayOfWeek: DaysOfWeek.sunday
         )
     }
 }
 
-extension TxactionListViewController: JTAppleCalendarViewDelegate {
-
+extension CalendarViewController: JTAppleCalendarViewDelegate {
+    
     func calendar(_ calendar: JTAppleCalendarView, willDisplayCell cell: JTAppleDayCellView, date: Date, cellState: CellState) {
         if let cell = cell as? DayCellView {
-            cell.setup(date: date, with: cellState)
+            if cellState.dateBelongsTo != .thisMonth {
+                cell.isHidden = true
+            } else {
+                cell.isHidden = false
+                cell.setup(date: date, with: cellState)
+            }            
         }
     }
     
@@ -248,7 +255,7 @@ extension TxactionListViewController: JTAppleCalendarViewDelegate {
             reloadDates.append(selectedDate)
         }
         calendar.reloadDates(reloadDates)
-
+        
         selectedDate = calendar.selectedDates.first
     }
 }

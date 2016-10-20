@@ -20,6 +20,8 @@
 		053E0C831DB61D5700E0B9FC /* MonthSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053E0C821DB61D5700E0B9FC /* MonthSectionHeaderView.swift */; };
 		053E0C851DB6203000E0B9FC /* MonthSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053E0C841DB6203000E0B9FC /* MonthSectionHeaderView.xib */; };
 		05EB3BEC1DB7198500E84B45 /* RoundedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB3BEB1DB7198500E84B45 /* RoundedLabel.swift */; };
+		05F917321DB8AC8A0032F54C /* WeekNavbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F917311DB8AC8A0032F54C /* WeekNavbarView.swift */; };
+		05F917341DB8C9B70032F54C /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F917331DB8C9B70032F54C /* CalendarViewController.swift */; };
 		3504535878364C61A7DBBD19 /* Pods_JodTungUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC784598F3A0F28DF1889C3C /* Pods_JodTungUITests.framework */; };
 		A0F7A450DE09F34F0ABCA0DE /* Pods_JodTung.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3454CB1778743E68FE708C0 /* Pods_JodTung.framework */; };
 		AE7917D198EB799B7C5F54D0 /* Pods_JodTungTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CE8A49E32E494B0C62D506 /* Pods_JodTungTests.framework */; };
@@ -63,6 +65,8 @@
 		053E0C821DB61D5700E0B9FC /* MonthSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthSectionHeaderView.swift; sourceTree = "<group>"; };
 		053E0C841DB6203000E0B9FC /* MonthSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthSectionHeaderView.xib; sourceTree = "<group>"; };
 		05EB3BEB1DB7198500E84B45 /* RoundedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedLabel.swift; sourceTree = "<group>"; };
+		05F917311DB8AC8A0032F54C /* WeekNavbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekNavbarView.swift; sourceTree = "<group>"; };
+		05F917331DB8C9B70032F54C /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		17FFAE9CC9E2EE658417E8F1 /* Pods-JodTung.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JodTung.release.xcconfig"; path = "Pods/Target Support Files/Pods-JodTung/Pods-JodTung.release.xcconfig"; sourceTree = "<group>"; };
 		686E2B6AB80DA2CF41321908 /* Pods-JodTungTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JodTungTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JodTungTests/Pods-JodTungTests.debug.xcconfig"; sourceTree = "<group>"; };
 		70F6336C014B95B64C5E2A8F /* Pods-JodTungUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JodTungUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JodTungUITests/Pods-JodTungUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				050397631DB5C8FA00D82B3D /* TxactionListViewController.swift */,
+				05F917331DB8C9B70032F54C /* CalendarViewController.swift */,
 				053E0C811DB61A1300E0B9FC /* Calendar View */,
 			);
 			name = "Txaction List";
@@ -188,6 +193,7 @@
 				053E0C7D1DB606C000E0B9FC /* DayCellView.xib */,
 				053E0C821DB61D5700E0B9FC /* MonthSectionHeaderView.swift */,
 				053E0C841DB6203000E0B9FC /* MonthSectionHeaderView.xib */,
+				05F917311DB8AC8A0032F54C /* WeekNavbarView.swift */,
 			);
 			name = "Calendar View";
 			sourceTree = "<group>";
@@ -501,6 +507,8 @@
 				05EB3BEC1DB7198500E84B45 /* RoundedLabel.swift in Sources */,
 				053593B11DB37ACB00A7B508 /* AppDelegate.swift in Sources */,
 				053E0C831DB61D5700E0B9FC /* MonthSectionHeaderView.swift in Sources */,
+				05F917321DB8AC8A0032F54C /* WeekNavbarView.swift in Sources */,
+				05F917341DB8C9B70032F54C /* CalendarViewController.swift in Sources */,
 				053E0C801DB6070700E0B9FC /* DayCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

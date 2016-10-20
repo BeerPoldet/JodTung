@@ -17,7 +17,7 @@
                         <constraint firstAttribute="width" constant="34" id="4M3-qj-KpK"/>
                         <constraint firstAttribute="height" constant="34" id="nXs-Gq-sGm"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                     <userDefinedRuntimeAttributes>
@@ -32,8 +32,9 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="qiN-ZA-o3c" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FZt-vV-txq"/>
-                <constraint firstItem="qiN-ZA-o3c" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ZMS-om-Efd"/>
+                <constraint firstItem="qiN-ZA-o3c" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="wyI-uA-QAX"/>
             </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="dayLabel" destination="qiN-ZA-o3c" id="uaK-Pi-vMG"/>
