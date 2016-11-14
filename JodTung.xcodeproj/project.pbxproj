@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		050397641DB5C8FA00D82B3D /* TxactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050397631DB5C8FA00D82B3D /* TxactionListViewController.swift */; };
+		050411111DC1B2F9005D1EBB /* WeekHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050411101DC1B2F9005D1EBB /* WeekHeaderView.xib */; };
+		050411131DC1B405005D1EBB /* WeekHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050411121DC1B405005D1EBB /* WeekHeaderView.swift */; };
+		0510E4E61DC9A903002EE2F2 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0510E4E51DC9A903002EE2F2 /* UIStoryboard.swift */; };
+		051BAA591DCDE263008474BA /* CalendarViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051BAA581DCDE263008474BA /* CalendarViewControllerAnimatedTransitioning.swift */; };
+		05228ED01DBDC9D9008403B2 /* NavigationBar+Transparent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05228ECF1DBDC9D9008403B2 /* NavigationBar+Transparent.swift */; };
 		053593B11DB37ACB00A7B508 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053593B01DB37ACB00A7B508 /* AppDelegate.swift */; };
 		053593B61DB37ACB00A7B508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 053593B41DB37ACB00A7B508 /* Main.storyboard */; };
 		053593B81DB37ACB00A7B508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 053593B71DB37ACB00A7B508 /* Assets.xcassets */; };
@@ -19,9 +24,26 @@
 		053E0C801DB6070700E0B9FC /* DayCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053E0C7F1DB6070700E0B9FC /* DayCellView.swift */; };
 		053E0C831DB61D5700E0B9FC /* MonthSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053E0C821DB61D5700E0B9FC /* MonthSectionHeaderView.swift */; };
 		053E0C851DB6203000E0B9FC /* MonthSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053E0C841DB6203000E0B9FC /* MonthSectionHeaderView.xib */; };
+		05709CEE1DC89F9E00EADFD9 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05709CED1DC89F9E00EADFD9 /* CalendarViewController.swift */; };
+		058472501DD3230700843C55 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0584724A1DD3230700843C55 /* Category+CoreDataClass.swift */; };
+		058472511DD3230700843C55 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0584724B1DD3230700843C55 /* Category+CoreDataProperties.swift */; };
+		058472521DD3230700843C55 /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0584724C1DD3230700843C55 /* Transaction+CoreDataClass.swift */; };
+		058472531DD3230700843C55 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0584724D1DD3230700843C55 /* Transaction+CoreDataProperties.swift */; };
+		058472541DD3230700843C55 /* CategoryGroup+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0584724E1DD3230700843C55 /* CategoryGroup+CoreDataClass.swift */; };
+		058472551DD3230700843C55 /* CategoryGroup+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0584724F1DD3230700843C55 /* CategoryGroup+CoreDataProperties.swift */; };
+		058472571DD3235A00843C55 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058472561DD3235A00843C55 /* Interactor.swift */; };
+		058723DA1DC0A2A800FEF676 /* ShadowedBlurVisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058723D91DC0A2A800FEF676 /* ShadowedBlurVisualEffectView.swift */; };
+		058723DC1DC0A2E900FEF676 /* ShadowedBlurVisualEffectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058723DB1DC0A2E900FEF676 /* ShadowedBlurVisualEffectView.xib */; };
+		05A97E8C1DD6D38400606052 /* CategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A97E8B1DD6D38400606052 /* CategoryInfo.swift */; };
+		05B9BA801DD34DFE00B604A9 /* InMemoryPersistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9BA7F1DD34DFE00B604A9 /* InMemoryPersistent.swift */; };
+		05CFA4BC1DD60825003FEA0A /* TransactionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CFA4BB1DD60825003FEA0A /* TransactionInfo.swift */; };
+		05CFA4BE1DD6093F003FEA0A /* SQLiteMemoryPersistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CFA4BD1DD6093F003FEA0A /* SQLiteMemoryPersistent.swift */; };
+		05CFFD811DC74C0000BC1DB8 /* CalendarNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CFFD801DC74C0000BC1DB8 /* CalendarNavigationController.swift */; };
+		05EA02B21DD31E5A00E9A498 /* Models.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05EA02B01DD31E5A00E9A498 /* Models.xcdatamodeld */; };
 		05EB3BEC1DB7198500E84B45 /* RoundedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB3BEB1DB7198500E84B45 /* RoundedLabel.swift */; };
-		05F917321DB8AC8A0032F54C /* WeekNavbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F917311DB8AC8A0032F54C /* WeekNavbarView.swift */; };
-		05F917341DB8C9B70032F54C /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F917331DB8C9B70032F54C /* CalendarViewController.swift */; };
+		05F545591DC0677A00045E7E /* View+HairlineShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F545581DC0677A00045E7E /* View+HairlineShadow.swift */; };
+		05F5455B1DC07B3F00045E7E /* UIVisualEffectView+HairlineShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F5455A1DC07B3F00045E7E /* UIVisualEffectView+HairlineShadow.swift */; };
+		05F917341DB8C9B70032F54C /* CalendarMonthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F917331DB8C9B70032F54C /* CalendarMonthViewController.swift */; };
 		3504535878364C61A7DBBD19 /* Pods_JodTungUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC784598F3A0F28DF1889C3C /* Pods_JodTungUITests.framework */; };
 		A0F7A450DE09F34F0ABCA0DE /* Pods_JodTung.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3454CB1778743E68FE708C0 /* Pods_JodTung.framework */; };
 		AE7917D198EB799B7C5F54D0 /* Pods_JodTungTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CE8A49E32E494B0C62D506 /* Pods_JodTungTests.framework */; };
@@ -44,9 +66,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0511C8371DD32F9F00457387 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		017BB3DE55D7643175D6F816 /* Pods-JodTungUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JodTungUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JodTungUITests/Pods-JodTungUITests.release.xcconfig"; sourceTree = "<group>"; };
 		050397631DB5C8FA00D82B3D /* TxactionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TxactionListViewController.swift; sourceTree = "<group>"; };
+		050411101DC1B2F9005D1EBB /* WeekHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekHeaderView.xib; sourceTree = "<group>"; };
+		050411121DC1B405005D1EBB /* WeekHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekHeaderView.swift; sourceTree = "<group>"; };
+		0510E4E51DC9A903002EE2F2 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		051BAA581DCDE263008474BA /* CalendarViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		05228ECF1DBDC9D9008403B2 /* NavigationBar+Transparent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NavigationBar+Transparent.swift"; sourceTree = "<group>"; };
 		053593AD1DB37ACB00A7B508 /* JodTung.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JodTung.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		053593B01DB37ACB00A7B508 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		053593B51DB37ACB00A7B508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,9 +104,26 @@
 		053E0C7F1DB6070700E0B9FC /* DayCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCellView.swift; sourceTree = "<group>"; };
 		053E0C821DB61D5700E0B9FC /* MonthSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthSectionHeaderView.swift; sourceTree = "<group>"; };
 		053E0C841DB6203000E0B9FC /* MonthSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthSectionHeaderView.xib; sourceTree = "<group>"; };
+		05709CED1DC89F9E00EADFD9 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		0584724A1DD3230700843C55 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0584724B1DD3230700843C55 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0584724C1DD3230700843C55 /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0584724D1DD3230700843C55 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0584724E1DD3230700843C55 /* CategoryGroup+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CategoryGroup+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0584724F1DD3230700843C55 /* CategoryGroup+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CategoryGroup+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		058472561DD3235A00843C55 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		058723D91DC0A2A800FEF676 /* ShadowedBlurVisualEffectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowedBlurVisualEffectView.swift; sourceTree = "<group>"; };
+		058723DB1DC0A2E900FEF676 /* ShadowedBlurVisualEffectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShadowedBlurVisualEffectView.xib; sourceTree = "<group>"; };
+		05A97E8B1DD6D38400606052 /* CategoryInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryInfo.swift; sourceTree = "<group>"; };
+		05B9BA7F1DD34DFE00B604A9 /* InMemoryPersistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InMemoryPersistent.swift; sourceTree = "<group>"; };
+		05CFA4BB1DD60825003FEA0A /* TransactionInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionInfo.swift; sourceTree = "<group>"; };
+		05CFA4BD1DD6093F003FEA0A /* SQLiteMemoryPersistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteMemoryPersistent.swift; sourceTree = "<group>"; };
+		05CFFD801DC74C0000BC1DB8 /* CalendarNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarNavigationController.swift; sourceTree = "<group>"; };
+		05EA02B11DD31E5A00E9A498 /* Models.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Models.xcdatamodel; sourceTree = "<group>"; };
 		05EB3BEB1DB7198500E84B45 /* RoundedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedLabel.swift; sourceTree = "<group>"; };
-		05F917311DB8AC8A0032F54C /* WeekNavbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekNavbarView.swift; sourceTree = "<group>"; };
-		05F917331DB8C9B70032F54C /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		05F545581DC0677A00045E7E /* View+HairlineShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+HairlineShadow.swift"; sourceTree = "<group>"; };
+		05F5455A1DC07B3F00045E7E /* UIVisualEffectView+HairlineShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVisualEffectView+HairlineShadow.swift"; sourceTree = "<group>"; };
+		05F917331DB8C9B70032F54C /* CalendarMonthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarMonthViewController.swift; sourceTree = "<group>"; };
 		17FFAE9CC9E2EE658417E8F1 /* Pods-JodTung.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JodTung.release.xcconfig"; path = "Pods/Target Support Files/Pods-JodTung/Pods-JodTung.release.xcconfig"; sourceTree = "<group>"; };
 		686E2B6AB80DA2CF41321908 /* Pods-JodTungTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JodTungTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JodTungTests/Pods-JodTungTests.debug.xcconfig"; sourceTree = "<group>"; };
 		70F6336C014B95B64C5E2A8F /* Pods-JodTungUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JodTungUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JodTungUITests/Pods-JodTungUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +166,7 @@
 		050397611DB5C84C00D82B3D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				053593B01DB37ACB00A7B508 /* AppDelegate.swift */,
 				050397621DB5C85C00D82B3D /* Txaction List */,
 			);
 			name = Scenes;
@@ -117,11 +175,20 @@
 		050397621DB5C85C00D82B3D /* Txaction List */ = {
 			isa = PBXGroup;
 			children = (
-				050397631DB5C8FA00D82B3D /* TxactionListViewController.swift */,
-				05F917331DB8C9B70032F54C /* CalendarViewController.swift */,
-				053E0C811DB61A1300E0B9FC /* Calendar View */,
+				05709CF01DC8A5A800EADFD9 /* Controllers */,
+				05709CEF1DC8A58500EADFD9 /* View Controllers */,
+				053E0C811DB61A1300E0B9FC /* Views */,
 			);
 			name = "Txaction List";
+			sourceTree = "<group>";
+		};
+		0504110D1DC1B1D2005D1EBB /* BlurVisualEffect + HairlineShadow */ = {
+			isa = PBXGroup;
+			children = (
+				058723D91DC0A2A800FEF676 /* ShadowedBlurVisualEffectView.swift */,
+				058723DB1DC0A2E900FEF676 /* ShadowedBlurVisualEffectView.xib */,
+			);
+			name = "BlurVisualEffect + HairlineShadow";
 			sourceTree = "<group>";
 		};
 		053593A41DB37ACB00A7B508 = {
@@ -150,7 +217,12 @@
 			isa = PBXGroup;
 			children = (
 				053593B41DB37ACB00A7B508 /* Main.storyboard */,
+				05EA02AF1DD31E0300E9A498 /* Models */,
+				058472581DD3235E00843C55 /* Interactors */,
+				05A97E871DD6C80E00606052 /* Boundary */,
+				05CFA4BA1DD60811003FEA0A /* View Models */,
 				050397611DB5C84C00D82B3D /* Scenes */,
+				05B9BA7E1DD34DCA00B604A9 /* Persistents */,
 				05EB3BE81DB7194D00E84B45 /* Frameworks */,
 				053593DE1DB37AE500A7B508 /* Suppporting Files */,
 			);
@@ -178,7 +250,6 @@
 		053593DE1DB37AE500A7B508 /* Suppporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				053593B01DB37ACB00A7B508 /* AppDelegate.swift */,
 				053593B71DB37ACB00A7B508 /* Assets.xcassets */,
 				053593B91DB37ACB00A7B508 /* LaunchScreen.storyboard */,
 				053593BC1DB37ACB00A7B508 /* Info.plist */,
@@ -186,24 +257,104 @@
 			name = "Suppporting Files";
 			sourceTree = "<group>";
 		};
-		053E0C811DB61A1300E0B9FC /* Calendar View */ = {
+		053E0C811DB61A1300E0B9FC /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				053E0C7F1DB6070700E0B9FC /* DayCellView.swift */,
 				053E0C7D1DB606C000E0B9FC /* DayCellView.xib */,
 				053E0C821DB61D5700E0B9FC /* MonthSectionHeaderView.swift */,
 				053E0C841DB6203000E0B9FC /* MonthSectionHeaderView.xib */,
-				05F917311DB8AC8A0032F54C /* WeekNavbarView.swift */,
+				050411121DC1B405005D1EBB /* WeekHeaderView.swift */,
+				050411101DC1B2F9005D1EBB /* WeekHeaderView.xib */,
 			);
-			name = "Calendar View";
+			name = Views;
+			sourceTree = "<group>";
+		};
+		05709CEF1DC8A58500EADFD9 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				05709CED1DC89F9E00EADFD9 /* CalendarViewController.swift */,
+				05CFFD801DC74C0000BC1DB8 /* CalendarNavigationController.swift */,
+				05F917331DB8C9B70032F54C /* CalendarMonthViewController.swift */,
+				050397631DB5C8FA00D82B3D /* TxactionListViewController.swift */,
+				051BAA581DCDE263008474BA /* CalendarViewControllerAnimatedTransitioning.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		05709CF01DC8A5A800EADFD9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		058472581DD3235E00843C55 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				058472561DD3235A00843C55 /* Interactor.swift */,
+			);
+			name = Interactors;
+			sourceTree = "<group>";
+		};
+		05A97E871DD6C80E00606052 /* Boundary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Boundary;
+			sourceTree = "<group>";
+		};
+		05B9BA7E1DD34DCA00B604A9 /* Persistents */ = {
+			isa = PBXGroup;
+			children = (
+				05B9BA7F1DD34DFE00B604A9 /* InMemoryPersistent.swift */,
+				05CFA4BD1DD6093F003FEA0A /* SQLiteMemoryPersistent.swift */,
+			);
+			name = Persistents;
+			sourceTree = "<group>";
+		};
+		05CFA4BA1DD60811003FEA0A /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				05CFA4BB1DD60825003FEA0A /* TransactionInfo.swift */,
+				05A97E8B1DD6D38400606052 /* CategoryInfo.swift */,
+			);
+			name = "View Models";
+			sourceTree = "<group>";
+		};
+		05EA02AF1DD31E0300E9A498 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0584724A1DD3230700843C55 /* Category+CoreDataClass.swift */,
+				0584724B1DD3230700843C55 /* Category+CoreDataProperties.swift */,
+				0584724C1DD3230700843C55 /* Transaction+CoreDataClass.swift */,
+				0584724D1DD3230700843C55 /* Transaction+CoreDataProperties.swift */,
+				0584724E1DD3230700843C55 /* CategoryGroup+CoreDataClass.swift */,
+				0584724F1DD3230700843C55 /* CategoryGroup+CoreDataProperties.swift */,
+				05EA02B01DD31E5A00E9A498 /* Models.xcdatamodeld */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		05EB3BE81DB7194D00E84B45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				05EB3BEB1DB7198500E84B45 /* RoundedLabel.swift */,
+				05F545551DC0657D00045E7E /* Views */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		05F545551DC0657D00045E7E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0504110D1DC1B1D2005D1EBB /* BlurVisualEffect + HairlineShadow */,
+				05228ECF1DBDC9D9008403B2 /* NavigationBar+Transparent.swift */,
+				05F545581DC0677A00045E7E /* View+HairlineShadow.swift */,
+				05F5455A1DC07B3F00045E7E /* UIVisualEffectView+HairlineShadow.swift */,
+				05EB3BEB1DB7198500E84B45 /* RoundedLabel.swift */,
+				0510E4E51DC9A903002EE2F2 /* UIStoryboard.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		3C43DD488267C2DB7735847E /* Frameworks */ = {
@@ -243,6 +394,7 @@
 				053593AB1DB37ACB00A7B508 /* Resources */,
 				28417B87A6FE6020E217BF15 /* [CP] Embed Pods Frameworks */,
 				305E9623C9818F5D6377BB92 /* [CP] Copy Pods Resources */,
+				0511C8371DD32F9F00457387 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,6 +435,7 @@
 				053593C91DB37ACB00A7B508 /* Frameworks */,
 				053593CA1DB37ACB00A7B508 /* Resources */,
 				2CF3848DE617C823C469C2EA /* [CP] Copy Pods Resources */,
+				88F6DEE5BC26774653FABE98 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -301,7 +454,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Poldet Assanangkornchai";
 				TargetAttributes = {
 					053593AC1DB37ACB00A7B508 = {
@@ -351,7 +504,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				058723DC1DC0A2E900FEF676 /* ShadowedBlurVisualEffectView.xib in Resources */,
 				053593BB1DB37ACB00A7B508 /* LaunchScreen.storyboard in Resources */,
+				050411111DC1B2F9005D1EBB /* WeekHeaderView.xib in Resources */,
 				053593B81DB37ACB00A7B508 /* Assets.xcassets in Resources */,
 				053593B61DB37ACB00A7B508 /* Main.storyboard in Resources */,
 				053E0C7E1DB606C000E0B9FC /* DayCellView.xib in Resources */,
@@ -433,7 +588,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		48A4945FEE86C2CDB549ED9E /* [CP] Embed Pods Frameworks */ = {
@@ -466,6 +621,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JodTungTests/Pods-JodTungTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		88F6DEE5BC26774653FABE98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JodTungUITests/Pods-JodTungUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8B1B1A71DB72A171FBF9D355 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -478,7 +648,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		96166C4780459FF80EE59AE0 /* [CP] Check Pods Manifest.lock */ = {
@@ -493,7 +663,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -503,13 +673,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				058472531DD3230700843C55 /* Transaction+CoreDataProperties.swift in Sources */,
 				050397641DB5C8FA00D82B3D /* TxactionListViewController.swift in Sources */,
+				058472511DD3230700843C55 /* Category+CoreDataProperties.swift in Sources */,
+				05CFA4BC1DD60825003FEA0A /* TransactionInfo.swift in Sources */,
+				050411131DC1B405005D1EBB /* WeekHeaderView.swift in Sources */,
+				05CFA4BE1DD6093F003FEA0A /* SQLiteMemoryPersistent.swift in Sources */,
+				058472501DD3230700843C55 /* Category+CoreDataClass.swift in Sources */,
+				05F545591DC0677A00045E7E /* View+HairlineShadow.swift in Sources */,
+				058723DA1DC0A2A800FEF676 /* ShadowedBlurVisualEffectView.swift in Sources */,
 				05EB3BEC1DB7198500E84B45 /* RoundedLabel.swift in Sources */,
 				053593B11DB37ACB00A7B508 /* AppDelegate.swift in Sources */,
+				0510E4E61DC9A903002EE2F2 /* UIStoryboard.swift in Sources */,
+				058472521DD3230700843C55 /* Transaction+CoreDataClass.swift in Sources */,
+				05CFFD811DC74C0000BC1DB8 /* CalendarNavigationController.swift in Sources */,
 				053E0C831DB61D5700E0B9FC /* MonthSectionHeaderView.swift in Sources */,
-				05F917321DB8AC8A0032F54C /* WeekNavbarView.swift in Sources */,
-				05F917341DB8C9B70032F54C /* CalendarViewController.swift in Sources */,
+				058472551DD3230700843C55 /* CategoryGroup+CoreDataProperties.swift in Sources */,
+				05709CEE1DC89F9E00EADFD9 /* CalendarViewController.swift in Sources */,
+				05F917341DB8C9B70032F54C /* CalendarMonthViewController.swift in Sources */,
+				05A97E8C1DD6D38400606052 /* CategoryInfo.swift in Sources */,
+				05B9BA801DD34DFE00B604A9 /* InMemoryPersistent.swift in Sources */,
 				053E0C801DB6070700E0B9FC /* DayCellView.swift in Sources */,
+				05228ED01DBDC9D9008403B2 /* NavigationBar+Transparent.swift in Sources */,
+				058472571DD3235A00843C55 /* Interactor.swift in Sources */,
+				051BAA591DCDE263008474BA /* CalendarViewControllerAnimatedTransitioning.swift in Sources */,
+				05F5455B1DC07B3F00045E7E /* UIVisualEffectView+HairlineShadow.swift in Sources */,
+				05EA02B21DD31E5A00E9A498 /* Models.xcdatamodeld in Sources */,
+				058472541DD3230700843C55 /* CategoryGroup+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,7 +885,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 686E2B6AB80DA2CF41321908 /* Pods-JodTungTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = F6395XL53N;
 				INFOPLIST_FILE = JodTungTests/Info.plist;
@@ -711,7 +901,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9FF141CAB061E2853D1DBE22 /* Pods-JodTungTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = F6395XL53N;
 				INFOPLIST_FILE = JodTungTests/Info.plist;
@@ -727,7 +917,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 70F6336C014B95B64C5E2A8F /* Pods-JodTungUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				DEVELOPMENT_TEAM = F6395XL53N;
 				INFOPLIST_FILE = JodTungUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -742,7 +932,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 017BB3DE55D7643175D6F816 /* Pods-JodTungUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				DEVELOPMENT_TEAM = F6395XL53N;
 				INFOPLIST_FILE = JodTungUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -793,6 +983,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		05EA02B01DD31E5A00E9A498 /* Models.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				05EA02B11DD31E5A00E9A498 /* Models.xcdatamodel */,
+			);
+			currentVersion = 05EA02B11DD31E5A00E9A498 /* Models.xcdatamodel */;
+			path = Models.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 053593A51DB37ACB00A7B508 /* Project object */;
 }
