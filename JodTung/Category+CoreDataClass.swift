@@ -13,13 +13,11 @@ import CoreData
 public class Category: NSManagedObject {
     static let className = String(describing: Category.self)
     
-    override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {
-        super.init(entity: entity, insertInto: context)
+    public override func awakeFromInsert() {
+        super.awakeFromInsert()
         
         if uniqueIdentifier == nil {
             uniqueIdentifier = UUID().uuidString
         }
-        print("FUCK")
     }
-    
 }

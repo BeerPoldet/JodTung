@@ -20,7 +20,7 @@ class CalendarNavigationController: UINavigationController {
     return self.viewControllers.first as! CalendarMonthViewController
   }
   
-  let calendarViewControllerAnimatedTransitioning = CalendarViewControllerAnimatedTransitioning(isExpanding: true)
+  let collapsingViewControllerAnimatedTransitioning = CollapsingViewControllerAnimatedTransitioning(isExpanding: true)
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -29,7 +29,7 @@ class CalendarNavigationController: UINavigationController {
     
     txactionListViewController.delegate = calendarMonthViewController
     
-    calendarViewControllerAnimatedTransitioning.dataSource = txactionListViewController
+    collapsingViewControllerAnimatedTransitioning.dataSource = txactionListViewController
     
     pushViewController(txactionListViewController, animated: false)
   }
@@ -46,9 +46,9 @@ extension CalendarNavigationController: UINavigationControllerDelegate {
     
     switch operation {
     case .push:
-      return calendarViewControllerAnimatedTransitioning
+      return collapsingViewControllerAnimatedTransitioning
     case .pop:
-      return calendarViewControllerAnimatedTransitioning
+      return collapsingViewControllerAnimatedTransitioning
     case .none:
       return nil
     }

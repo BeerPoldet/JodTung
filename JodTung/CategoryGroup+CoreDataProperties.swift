@@ -2,7 +2,7 @@
 //  CategoryGroup+CoreDataProperties.swift
 //  JodTung
 //
-//  Created by Poldet Assanangkornchai on 11/11/2559 BE.
+//  Created by Poldet Assanangkornchai on 11/19/2559 BE.
 //  Copyright © 2559 Poldet Assanangkornchai. All rights reserved.
 //
 
@@ -17,6 +17,7 @@ extension CategoryGroup {
     }
 
     @NSManaged public var title: String?
+    @NSManaged public var persistentType: Int16
     @NSManaged public var uniqueIdentifier: String?
     @NSManaged public var categories: NSSet?
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CalendarViewControllerAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioning {
+class CollapsingViewControllerAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioning {
     
     weak var dataSource: CalendarViewControllerAnimatedTransitioningDataSource!
     fileprivate var isExpanding: Bool

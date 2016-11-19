@@ -13,7 +13,7 @@ class TxactionListViewController: UIViewController {
     
     // MARK: - Injected Dependencies
     
-    var selectedDate: Date? {
+    var selectedDate: Date! {
         get {
             return calendarViewController.selectedDate
         }
@@ -23,11 +23,14 @@ class TxactionListViewController: UIViewController {
         }
     }
     
-    var boundary: Boundary?
-    
     weak var delegate: TxactionListViewControllerDelegate?
     
+    var accountant: Accountant!
+    
     // MARK: - Properties
+    
+    // Transaction for selected date
+    var transactions = [Transaction]()
     
     lazy var calendarViewController: CalendarViewController = {
         let config = CalendarViewController.CalendarViewConfig(
@@ -56,6 +59,10 @@ class TxactionListViewController: UIViewController {
     }()
     fileprivate var expandedHeightOfCalendarWeekView: CGFloat?
     
+    fileprivate lazy var viewControllerAnimatedTransitioning: StackViewControllerAnimatedTransitioning = {
+        return StackViewControllerAnimatedTransitioning()
+    }()
+    
     // MARK: - Outlets
     
     @IBOutlet weak var calendarView: JTAppleCalendarView! {
@@ -74,7 +81,21 @@ class TxactionListViewController: UIViewController {
             expandedHeightOfCalendarWeekView = calendarWeekViewHeightConstraint.constant
         }
     }
-    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.delegate = self
+            tableView.dataSource = self
+        }
+    }
+    
+    // MARK: - Table View
+    
+    fileprivate func reloadTableData() {
+        if let accountant = accountant {
+            transactions = accountant.transactions(ofDate: selectedDate)!
+            tableView.reloadData()
+        }
+    }
     
     // MARK: - Events
     
@@ -82,6 +103,7 @@ class TxactionListViewController: UIViewController {
         updateSelectedDay()
         updateSelectedDateLabel()
         if let selectedDate = selectedDate {
+            reloadTableData()
             delegate?.txactionListViewController(self, didSelect: selectedDate)
         }
     }
@@ -92,15 +114,11 @@ class TxactionListViewController: UIViewController {
         super.viewDidLoad()
         
         setupNavigationBar()
+               
+//        let categories = accountant.transactionCategories!
+//        accountant.add(transactionInfo: TransactionInfo(creationDate: Date(), note: "some note", value: 40, category: categories.first!))
         
-        var cateInfo = CategoryInfo()
-        cateInfo.title = "test"
-        cateInfo.iconName = "hi"
-        
-        
-            let todayTxn = boundary?.transactions(forDate: Date())
-            print(todayTxn)
-        
+        reloadTableData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -150,15 +168,31 @@ class TxactionListViewController: UIViewController {
     
     struct SegueIdentifier {
         static let showCalendar = "Show Calendar"
+        static let showTransactionInfo = "Show Transaction Info"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let identifier = segue.identifier
-        if identifier == SegueIdentifier.showCalendar {
+        guard let identifier = segue.identifier else { return }
+        
+        switch identifier {
+        case SegueIdentifier.showCalendar:
             let calendarMonthViewController = segue.destination as! CalendarMonthViewController
             if let selectedDate = calendarViewController.selectedDate {
                 calendarMonthViewController.selectedDate = selectedDate
             }
+        case SegueIdentifier.showTransactionInfo:
+            let transactionInfoViewController = segue.destination as! TransactionInfoViewController
+            transactionInfoViewController.transitioningDelegate = self
+        default:
+            break
+        }
+    }
+    
+    // MARK: - Constants
+    
+    struct StoryboardIdentifier {
+        struct TableViewCell {
+            static let transaction = "TxactionViewCell"
         }
     }
 }
@@ -191,7 +225,7 @@ extension TxactionListViewController: JTAppleCalendarViewDelegate {
     }
 }
 
-// MARK: - 
+// MARK: - CalendarViewControllerAnimatedTransitioningDataSource
 
 extension TxactionListViewController: CalendarViewControllerAnimatedTransitioningDataSource {
     func expandableLayoutConstraint() -> NSLayoutConstraint {
@@ -203,12 +237,41 @@ extension TxactionListViewController: CalendarViewControllerAnimatedTransitionin
     }
     
     func contentViewToFadeIn() -> UIView {
-        return self.contentView
+        return self.tableView
     }
+}
+
+// MARK: - UITableViewDataSource
+
+extension TxactionListViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return transactions.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: StoryboardIdentifier.TableViewCell.transaction, for: indexPath) as! TxactionViewCell
+        let transaction = transactions[indexPath.row]
+        cell.transaction = transaction
+        return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+
+extension TxactionListViewController: UITableViewDelegate {
+    
 }
 
 // MARK: - TxactionListViewControllerDelegate
 
 protocol TxactionListViewControllerDelegate: class {
     func txactionListViewController(_ controller: TxactionListViewController, didSelect date: Date)
+}
+
+// MARK: - TransitioningDelgate
+
+extension TxactionListViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return viewControllerAnimatedTransitioning
+    }
 }

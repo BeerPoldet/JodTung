@@ -14,10 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Properties
     
     var window: UIWindow?
-    var sqliteMemoryPersistent: SQLiteMemoryPersistent?
-    var interactor: Interactor?
+    var dataStorage: DataStorage!
     
-    weak var txactionListViewController: TxactionListViewController?
+    weak var txactionListViewController: TxactionListViewController!
     
     // MARK: - Application lifecycle
 
@@ -25,19 +24,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Setup Database
         
-        sqliteMemoryPersistent = SQLiteMemoryPersistent()
-        
-        // Setup Interactor
-        
-        interactor = Interactor()
-        interactor?.gateway = sqliteMemoryPersistent
+        dataStorage = DataStorage(storageType: .sqlite)
         
         // Setup View Controller
         
         let tabBarController = window?.rootViewController as! UITabBarController
         let calendarNavigationController = tabBarController.viewControllers?.first as! CalendarNavigationController
         txactionListViewController = calendarNavigationController.txactionListViewController
-        txactionListViewController?.boundary = interactor
+        let defaultAccountBootstrapFactory = AccountBootstrapFactory(dataStorage: dataStorage)
+        txactionListViewController.accountant = Accountant(
+            entityGateway: dataStorage,
+            accountBootstrapFactory: defaultAccountBootstrapFactory
+        )
         
         return true
     }
@@ -50,14 +48,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         let taskIdentifier = UIApplication.shared.beginBackgroundTask(expirationHandler: nil)
         
-        sqliteMemoryPersistent?.save()
-        sqliteMemoryPersistent?.synchonize {
+        dataStorage?.save()
+        dataStorage?.synchonize {
             UIApplication.shared.endBackgroundTask(taskIdentifier)
         }
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        sqliteMemoryPersistent?.synchonize()
+        dataStorage?.synchonize()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {

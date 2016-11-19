@@ -13,12 +13,21 @@ import CoreData
 public class Transaction: NSManagedObject {
     static let className = String(describing: Transaction.self)
     
-    override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {
-        super.init(entity: entity, insertInto: context)
+    public override func awakeFromInsert() {
+        super.awakeFromInsert()
         
         if uniqueIdentifier == nil {
             uniqueIdentifier = UUID().uuidString
         }
-        print("FUCK")
+    }
+    
+    var creationDate: Date? {
+        get {
+            return creationNSDate as? Date
+        }
+        set(newValue) {
+            creationNSDate = newValue as NSDate?
+            
+        }
     }
 }

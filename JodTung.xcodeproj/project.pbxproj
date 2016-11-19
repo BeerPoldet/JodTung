@@ -10,20 +10,22 @@
 		050397641DB5C8FA00D82B3D /* TxactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050397631DB5C8FA00D82B3D /* TxactionListViewController.swift */; };
 		050411111DC1B2F9005D1EBB /* WeekHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050411101DC1B2F9005D1EBB /* WeekHeaderView.xib */; };
 		050411131DC1B405005D1EBB /* WeekHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050411121DC1B405005D1EBB /* WeekHeaderView.swift */; };
+		0510CD841DDDA7700008029A /* AccountantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0510CD831DDDA7700008029A /* AccountantTests.swift */; };
+		0510CD871DDDA8720008029A /* Accountant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0510CD861DDDA8720008029A /* Accountant.swift */; };
 		0510E4E61DC9A903002EE2F2 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0510E4E51DC9A903002EE2F2 /* UIStoryboard.swift */; };
-		051BAA591DCDE263008474BA /* CalendarViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051BAA581DCDE263008474BA /* CalendarViewControllerAnimatedTransitioning.swift */; };
+		051BAA591DCDE263008474BA /* CollapsingViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051BAA581DCDE263008474BA /* CollapsingViewControllerAnimatedTransitioning.swift */; };
 		05228ED01DBDC9D9008403B2 /* NavigationBar+Transparent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05228ECF1DBDC9D9008403B2 /* NavigationBar+Transparent.swift */; };
 		053593B11DB37ACB00A7B508 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053593B01DB37ACB00A7B508 /* AppDelegate.swift */; };
 		053593B61DB37ACB00A7B508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 053593B41DB37ACB00A7B508 /* Main.storyboard */; };
 		053593B81DB37ACB00A7B508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 053593B71DB37ACB00A7B508 /* Assets.xcassets */; };
 		053593BB1DB37ACB00A7B508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 053593B91DB37ACB00A7B508 /* LaunchScreen.storyboard */; };
-		053593C61DB37ACB00A7B508 /* JodTungTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053593C51DB37ACB00A7B508 /* JodTungTests.swift */; };
 		053593D11DB37ACB00A7B508 /* JodTungUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053593D01DB37ACB00A7B508 /* JodTungUITests.swift */; };
 		053E0C7C1DB5D95000E0B9FC /* Pods_JodTung.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053E0C7B1DB5D95000E0B9FC /* Pods_JodTung.framework */; };
 		053E0C7E1DB606C000E0B9FC /* DayCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053E0C7D1DB606C000E0B9FC /* DayCellView.xib */; };
 		053E0C801DB6070700E0B9FC /* DayCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053E0C7F1DB6070700E0B9FC /* DayCellView.swift */; };
 		053E0C831DB61D5700E0B9FC /* MonthSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053E0C821DB61D5700E0B9FC /* MonthSectionHeaderView.swift */; };
 		053E0C851DB6203000E0B9FC /* MonthSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053E0C841DB6203000E0B9FC /* MonthSectionHeaderView.xib */; };
+		056246601DD9CBD000FB6C92 /* TransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0562465F1DD9CBD000FB6C92 /* TransactionType.swift */; };
 		05709CEE1DC89F9E00EADFD9 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05709CED1DC89F9E00EADFD9 /* CalendarViewController.swift */; };
 		058472501DD3230700843C55 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0584724A1DD3230700843C55 /* Category+CoreDataClass.swift */; };
 		058472511DD3230700843C55 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0584724B1DD3230700843C55 /* Category+CoreDataProperties.swift */; };
@@ -31,19 +33,23 @@
 		058472531DD3230700843C55 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0584724D1DD3230700843C55 /* Transaction+CoreDataProperties.swift */; };
 		058472541DD3230700843C55 /* CategoryGroup+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0584724E1DD3230700843C55 /* CategoryGroup+CoreDataClass.swift */; };
 		058472551DD3230700843C55 /* CategoryGroup+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0584724F1DD3230700843C55 /* CategoryGroup+CoreDataProperties.swift */; };
-		058472571DD3235A00843C55 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058472561DD3235A00843C55 /* Interactor.swift */; };
 		058723DA1DC0A2A800FEF676 /* ShadowedBlurVisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058723D91DC0A2A800FEF676 /* ShadowedBlurVisualEffectView.swift */; };
 		058723DC1DC0A2E900FEF676 /* ShadowedBlurVisualEffectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058723DB1DC0A2E900FEF676 /* ShadowedBlurVisualEffectView.xib */; };
-		05A97E8C1DD6D38400606052 /* CategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A97E8B1DD6D38400606052 /* CategoryInfo.swift */; };
-		05B9BA801DD34DFE00B604A9 /* InMemoryPersistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9BA7F1DD34DFE00B604A9 /* InMemoryPersistent.swift */; };
-		05CFA4BC1DD60825003FEA0A /* TransactionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CFA4BB1DD60825003FEA0A /* TransactionInfo.swift */; };
-		05CFA4BE1DD6093F003FEA0A /* SQLiteMemoryPersistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CFA4BD1DD6093F003FEA0A /* SQLiteMemoryPersistent.swift */; };
+		05CFA4BE1DD6093F003FEA0A /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CFA4BD1DD6093F003FEA0A /* DataStorage.swift */; };
 		05CFFD811DC74C0000BC1DB8 /* CalendarNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CFFD801DC74C0000BC1DB8 /* CalendarNavigationController.swift */; };
 		05EA02B21DD31E5A00E9A498 /* Models.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05EA02B01DD31E5A00E9A498 /* Models.xcdatamodeld */; };
 		05EB3BEC1DB7198500E84B45 /* RoundedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EB3BEB1DB7198500E84B45 /* RoundedLabel.swift */; };
 		05F545591DC0677A00045E7E /* View+HairlineShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F545581DC0677A00045E7E /* View+HairlineShadow.swift */; };
-		05F5455B1DC07B3F00045E7E /* UIVisualEffectView+HairlineShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F5455A1DC07B3F00045E7E /* UIVisualEffectView+HairlineShadow.swift */; };
+		05F7E0BD1DDE9DFD00379902 /* DataStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7E0BC1DDE9DFD00379902 /* DataStorageTests.swift */; };
+		05F7E0BF1DDE9FC700379902 /* AccountBootstrapFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7E0BE1DDE9FC700379902 /* AccountBootstrapFactory.swift */; };
+		05F7E0C31DDEA1BA00379902 /* AccountBootstrapFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7E0C21DDEA1BA00379902 /* AccountBootstrapFactoryTests.swift */; };
+		05F7E0C51DDEB7E100379902 /* Int+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7E0C41DDEB7E100379902 /* Int+Random.swift */; };
+		05F7E0C71DDEBB2A00379902 /* Array+RandomChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7E0C61DDEBB2A00379902 /* Array+RandomChild.swift */; };
 		05F917341DB8C9B70032F54C /* CalendarMonthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F917331DB8C9B70032F54C /* CalendarMonthViewController.swift */; };
+		05FEA77A1DE0140000BD4252 /* TxactionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FEA7791DE0140000BD4252 /* TxactionViewCell.swift */; };
+		05FEA77C1DE022DF00BD4252 /* ExtendedTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FEA77B1DE022DF00BD4252 /* ExtendedTable.swift */; };
+		05FEA77F1DE0516400BD4252 /* StackViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FEA77E1DE0516400BD4252 /* StackViewControllerAnimatedTransitioning.swift */; };
+		05FEA7811DE0591400BD4252 /* TransactionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FEA7801DE0591400BD4252 /* TransactionInfoViewController.swift */; };
 		3504535878364C61A7DBBD19 /* Pods_JodTungUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC784598F3A0F28DF1889C3C /* Pods_JodTungUITests.framework */; };
 		A0F7A450DE09F34F0ABCA0DE /* Pods_JodTung.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3454CB1778743E68FE708C0 /* Pods_JodTung.framework */; };
 		AE7917D198EB799B7C5F54D0 /* Pods_JodTungTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CE8A49E32E494B0C62D506 /* Pods_JodTungTests.framework */; };
@@ -84,8 +90,10 @@
 		050397631DB5C8FA00D82B3D /* TxactionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TxactionListViewController.swift; sourceTree = "<group>"; };
 		050411101DC1B2F9005D1EBB /* WeekHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekHeaderView.xib; sourceTree = "<group>"; };
 		050411121DC1B405005D1EBB /* WeekHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekHeaderView.swift; sourceTree = "<group>"; };
+		0510CD831DDDA7700008029A /* AccountantTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountantTests.swift; sourceTree = "<group>"; };
+		0510CD861DDDA8720008029A /* Accountant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accountant.swift; sourceTree = "<group>"; };
 		0510E4E51DC9A903002EE2F2 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
-		051BAA581DCDE263008474BA /* CalendarViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		051BAA581DCDE263008474BA /* CollapsingViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollapsingViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
 		05228ECF1DBDC9D9008403B2 /* NavigationBar+Transparent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NavigationBar+Transparent.swift"; sourceTree = "<group>"; };
 		053593AD1DB37ACB00A7B508 /* JodTung.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JodTung.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		053593B01DB37ACB00A7B508 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,7 +102,6 @@
 		053593BA1DB37ACB00A7B508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		053593BC1DB37ACB00A7B508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		053593C11DB37ACB00A7B508 /* JodTungTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JodTungTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		053593C51DB37ACB00A7B508 /* JodTungTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JodTungTests.swift; sourceTree = "<group>"; };
 		053593C71DB37ACB00A7B508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		053593CC1DB37ACB00A7B508 /* JodTungUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JodTungUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		053593D01DB37ACB00A7B508 /* JodTungUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JodTungUITests.swift; sourceTree = "<group>"; };
@@ -104,6 +111,7 @@
 		053E0C7F1DB6070700E0B9FC /* DayCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCellView.swift; sourceTree = "<group>"; };
 		053E0C821DB61D5700E0B9FC /* MonthSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthSectionHeaderView.swift; sourceTree = "<group>"; };
 		053E0C841DB6203000E0B9FC /* MonthSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthSectionHeaderView.xib; sourceTree = "<group>"; };
+		0562465F1DD9CBD000FB6C92 /* TransactionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionType.swift; sourceTree = "<group>"; };
 		05709CED1DC89F9E00EADFD9 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		0584724A1DD3230700843C55 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0584724B1DD3230700843C55 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -111,19 +119,23 @@
 		0584724D1DD3230700843C55 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0584724E1DD3230700843C55 /* CategoryGroup+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CategoryGroup+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0584724F1DD3230700843C55 /* CategoryGroup+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CategoryGroup+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		058472561DD3235A00843C55 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		058723D91DC0A2A800FEF676 /* ShadowedBlurVisualEffectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowedBlurVisualEffectView.swift; sourceTree = "<group>"; };
 		058723DB1DC0A2E900FEF676 /* ShadowedBlurVisualEffectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShadowedBlurVisualEffectView.xib; sourceTree = "<group>"; };
-		05A97E8B1DD6D38400606052 /* CategoryInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryInfo.swift; sourceTree = "<group>"; };
-		05B9BA7F1DD34DFE00B604A9 /* InMemoryPersistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InMemoryPersistent.swift; sourceTree = "<group>"; };
-		05CFA4BB1DD60825003FEA0A /* TransactionInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionInfo.swift; sourceTree = "<group>"; };
-		05CFA4BD1DD6093F003FEA0A /* SQLiteMemoryPersistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteMemoryPersistent.swift; sourceTree = "<group>"; };
+		05CFA4BD1DD6093F003FEA0A /* DataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		05CFFD801DC74C0000BC1DB8 /* CalendarNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarNavigationController.swift; sourceTree = "<group>"; };
 		05EA02B11DD31E5A00E9A498 /* Models.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Models.xcdatamodel; sourceTree = "<group>"; };
 		05EB3BEB1DB7198500E84B45 /* RoundedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedLabel.swift; sourceTree = "<group>"; };
 		05F545581DC0677A00045E7E /* View+HairlineShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+HairlineShadow.swift"; sourceTree = "<group>"; };
-		05F5455A1DC07B3F00045E7E /* UIVisualEffectView+HairlineShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVisualEffectView+HairlineShadow.swift"; sourceTree = "<group>"; };
+		05F7E0BC1DDE9DFD00379902 /* DataStorageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorageTests.swift; sourceTree = "<group>"; };
+		05F7E0BE1DDE9FC700379902 /* AccountBootstrapFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountBootstrapFactory.swift; sourceTree = "<group>"; };
+		05F7E0C21DDEA1BA00379902 /* AccountBootstrapFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountBootstrapFactoryTests.swift; sourceTree = "<group>"; };
+		05F7E0C41DDEB7E100379902 /* Int+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Random.swift"; sourceTree = "<group>"; };
+		05F7E0C61DDEBB2A00379902 /* Array+RandomChild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+RandomChild.swift"; sourceTree = "<group>"; };
 		05F917331DB8C9B70032F54C /* CalendarMonthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarMonthViewController.swift; sourceTree = "<group>"; };
+		05FEA7791DE0140000BD4252 /* TxactionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TxactionViewCell.swift; sourceTree = "<group>"; };
+		05FEA77B1DE022DF00BD4252 /* ExtendedTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedTable.swift; sourceTree = "<group>"; };
+		05FEA77E1DE0516400BD4252 /* StackViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		05FEA7801DE0591400BD4252 /* TransactionInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionInfoViewController.swift; sourceTree = "<group>"; };
 		17FFAE9CC9E2EE658417E8F1 /* Pods-JodTung.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JodTung.release.xcconfig"; path = "Pods/Target Support Files/Pods-JodTung/Pods-JodTung.release.xcconfig"; sourceTree = "<group>"; };
 		686E2B6AB80DA2CF41321908 /* Pods-JodTungTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JodTungTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JodTungTests/Pods-JodTungTests.debug.xcconfig"; sourceTree = "<group>"; };
 		70F6336C014B95B64C5E2A8F /* Pods-JodTungUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JodTungUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JodTungUITests/Pods-JodTungUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +190,7 @@
 				05709CF01DC8A5A800EADFD9 /* Controllers */,
 				05709CEF1DC8A58500EADFD9 /* View Controllers */,
 				053E0C811DB61A1300E0B9FC /* Views */,
+				05FEA77D1DE0507600BD4252 /* Animations */,
 			);
 			name = "Txaction List";
 			sourceTree = "<group>";
@@ -189,6 +202,15 @@
 				058723DB1DC0A2E900FEF676 /* ShadowedBlurVisualEffectView.xib */,
 			);
 			name = "BlurVisualEffect + HairlineShadow";
+			sourceTree = "<group>";
+		};
+		0510CD851DDDA83D0008029A /* Application Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0510CD861DDDA8720008029A /* Accountant.swift */,
+				05F7E0BE1DDE9FC700379902 /* AccountBootstrapFactory.swift */,
+			);
+			name = "Application Frameworks";
 			sourceTree = "<group>";
 		};
 		053593A41DB37ACB00A7B508 = {
@@ -216,14 +238,12 @@
 		053593AF1DB37ACB00A7B508 /* JodTung */ = {
 			isa = PBXGroup;
 			children = (
+				0510CD851DDDA83D0008029A /* Application Frameworks */,
 				053593B41DB37ACB00A7B508 /* Main.storyboard */,
 				05EA02AF1DD31E0300E9A498 /* Models */,
-				058472581DD3235E00843C55 /* Interactors */,
-				05A97E871DD6C80E00606052 /* Boundary */,
-				05CFA4BA1DD60811003FEA0A /* View Models */,
 				050397611DB5C84C00D82B3D /* Scenes */,
-				05B9BA7E1DD34DCA00B604A9 /* Persistents */,
-				05EB3BE81DB7194D00E84B45 /* Frameworks */,
+				05B9BA7E1DD34DCA00B604A9 /* Data Storage */,
+				05EB3BE81DB7194D00E84B45 /* Libraries */,
 				053593DE1DB37AE500A7B508 /* Suppporting Files */,
 			);
 			path = JodTung;
@@ -232,7 +252,9 @@
 		053593C41DB37ACB00A7B508 /* JodTungTests */ = {
 			isa = PBXGroup;
 			children = (
-				053593C51DB37ACB00A7B508 /* JodTungTests.swift */,
+				0510CD831DDDA7700008029A /* AccountantTests.swift */,
+				05F7E0C21DDEA1BA00379902 /* AccountBootstrapFactoryTests.swift */,
+				05F7E0BC1DDE9DFD00379902 /* DataStorageTests.swift */,
 				053593C71DB37ACB00A7B508 /* Info.plist */,
 			);
 			path = JodTungTests;
@@ -266,6 +288,7 @@
 				053E0C841DB6203000E0B9FC /* MonthSectionHeaderView.xib */,
 				050411121DC1B405005D1EBB /* WeekHeaderView.swift */,
 				050411101DC1B2F9005D1EBB /* WeekHeaderView.xib */,
+				05FEA7791DE0140000BD4252 /* TxactionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -277,7 +300,7 @@
 				05CFFD801DC74C0000BC1DB8 /* CalendarNavigationController.swift */,
 				05F917331DB8C9B70032F54C /* CalendarMonthViewController.swift */,
 				050397631DB5C8FA00D82B3D /* TxactionListViewController.swift */,
-				051BAA581DCDE263008474BA /* CalendarViewControllerAnimatedTransitioning.swift */,
+				05FEA7801DE0591400BD4252 /* TransactionInfoViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -289,46 +312,22 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		058472581DD3235E00843C55 /* Interactors */ = {
+		05B9BA7E1DD34DCA00B604A9 /* Data Storage */ = {
 			isa = PBXGroup;
 			children = (
-				058472561DD3235A00843C55 /* Interactor.swift */,
+				05CFA4BD1DD6093F003FEA0A /* DataStorage.swift */,
 			);
-			name = Interactors;
-			sourceTree = "<group>";
-		};
-		05A97E871DD6C80E00606052 /* Boundary */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Boundary;
-			sourceTree = "<group>";
-		};
-		05B9BA7E1DD34DCA00B604A9 /* Persistents */ = {
-			isa = PBXGroup;
-			children = (
-				05B9BA7F1DD34DFE00B604A9 /* InMemoryPersistent.swift */,
-				05CFA4BD1DD6093F003FEA0A /* SQLiteMemoryPersistent.swift */,
-			);
-			name = Persistents;
-			sourceTree = "<group>";
-		};
-		05CFA4BA1DD60811003FEA0A /* View Models */ = {
-			isa = PBXGroup;
-			children = (
-				05CFA4BB1DD60825003FEA0A /* TransactionInfo.swift */,
-				05A97E8B1DD6D38400606052 /* CategoryInfo.swift */,
-			);
-			name = "View Models";
+			name = "Data Storage";
 			sourceTree = "<group>";
 		};
 		05EA02AF1DD31E0300E9A498 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0584724A1DD3230700843C55 /* Category+CoreDataClass.swift */,
-				0584724B1DD3230700843C55 /* Category+CoreDataProperties.swift */,
+				0562465F1DD9CBD000FB6C92 /* TransactionType.swift */,
 				0584724C1DD3230700843C55 /* Transaction+CoreDataClass.swift */,
 				0584724D1DD3230700843C55 /* Transaction+CoreDataProperties.swift */,
+				0584724A1DD3230700843C55 /* Category+CoreDataClass.swift */,
+				0584724B1DD3230700843C55 /* Category+CoreDataProperties.swift */,
 				0584724E1DD3230700843C55 /* CategoryGroup+CoreDataClass.swift */,
 				0584724F1DD3230700843C55 /* CategoryGroup+CoreDataProperties.swift */,
 				05EA02B01DD31E5A00E9A498 /* Models.xcdatamodeld */,
@@ -336,12 +335,14 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		05EB3BE81DB7194D00E84B45 /* Frameworks */ = {
+		05EB3BE81DB7194D00E84B45 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
 				05F545551DC0657D00045E7E /* Views */,
+				05F7E0C41DDEB7E100379902 /* Int+Random.swift */,
+				05F7E0C61DDEBB2A00379902 /* Array+RandomChild.swift */,
 			);
-			name = Frameworks;
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 		05F545551DC0657D00045E7E /* Views */ = {
@@ -350,11 +351,20 @@
 				0504110D1DC1B1D2005D1EBB /* BlurVisualEffect + HairlineShadow */,
 				05228ECF1DBDC9D9008403B2 /* NavigationBar+Transparent.swift */,
 				05F545581DC0677A00045E7E /* View+HairlineShadow.swift */,
-				05F5455A1DC07B3F00045E7E /* UIVisualEffectView+HairlineShadow.swift */,
 				05EB3BEB1DB7198500E84B45 /* RoundedLabel.swift */,
 				0510E4E51DC9A903002EE2F2 /* UIStoryboard.swift */,
+				05FEA77B1DE022DF00BD4252 /* ExtendedTable.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		05FEA77D1DE0507600BD4252 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				051BAA581DCDE263008474BA /* CollapsingViewControllerAnimatedTransitioning.swift */,
+				05FEA77E1DE0516400BD4252 /* StackViewControllerAnimatedTransitioning.swift */,
+			);
+			name = Animations;
 			sourceTree = "<group>";
 		};
 		3C43DD488267C2DB7735847E /* Frameworks */ = {
@@ -466,7 +476,7 @@
 					053593C01DB37ACB00A7B508 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = F6395XL53N;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 053593AC1DB37ACB00A7B508;
 					};
@@ -674,11 +684,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				058472531DD3230700843C55 /* Transaction+CoreDataProperties.swift in Sources */,
+				05FEA7811DE0591400BD4252 /* TransactionInfoViewController.swift in Sources */,
 				050397641DB5C8FA00D82B3D /* TxactionListViewController.swift in Sources */,
+				05F7E0BF1DDE9FC700379902 /* AccountBootstrapFactory.swift in Sources */,
 				058472511DD3230700843C55 /* Category+CoreDataProperties.swift in Sources */,
-				05CFA4BC1DD60825003FEA0A /* TransactionInfo.swift in Sources */,
 				050411131DC1B405005D1EBB /* WeekHeaderView.swift in Sources */,
-				05CFA4BE1DD6093F003FEA0A /* SQLiteMemoryPersistent.swift in Sources */,
+				05CFA4BE1DD6093F003FEA0A /* DataStorage.swift in Sources */,
 				058472501DD3230700843C55 /* Category+CoreDataClass.swift in Sources */,
 				05F545591DC0677A00045E7E /* View+HairlineShadow.swift in Sources */,
 				058723DA1DC0A2A800FEF676 /* ShadowedBlurVisualEffectView.swift in Sources */,
@@ -686,18 +697,21 @@
 				053593B11DB37ACB00A7B508 /* AppDelegate.swift in Sources */,
 				0510E4E61DC9A903002EE2F2 /* UIStoryboard.swift in Sources */,
 				058472521DD3230700843C55 /* Transaction+CoreDataClass.swift in Sources */,
+				056246601DD9CBD000FB6C92 /* TransactionType.swift in Sources */,
 				05CFFD811DC74C0000BC1DB8 /* CalendarNavigationController.swift in Sources */,
 				053E0C831DB61D5700E0B9FC /* MonthSectionHeaderView.swift in Sources */,
 				058472551DD3230700843C55 /* CategoryGroup+CoreDataProperties.swift in Sources */,
+				05FEA77C1DE022DF00BD4252 /* ExtendedTable.swift in Sources */,
+				05FEA77F1DE0516400BD4252 /* StackViewControllerAnimatedTransitioning.swift in Sources */,
 				05709CEE1DC89F9E00EADFD9 /* CalendarViewController.swift in Sources */,
 				05F917341DB8C9B70032F54C /* CalendarMonthViewController.swift in Sources */,
-				05A97E8C1DD6D38400606052 /* CategoryInfo.swift in Sources */,
-				05B9BA801DD34DFE00B604A9 /* InMemoryPersistent.swift in Sources */,
+				05FEA77A1DE0140000BD4252 /* TxactionViewCell.swift in Sources */,
 				053E0C801DB6070700E0B9FC /* DayCellView.swift in Sources */,
 				05228ED01DBDC9D9008403B2 /* NavigationBar+Transparent.swift in Sources */,
-				058472571DD3235A00843C55 /* Interactor.swift in Sources */,
-				051BAA591DCDE263008474BA /* CalendarViewControllerAnimatedTransitioning.swift in Sources */,
-				05F5455B1DC07B3F00045E7E /* UIVisualEffectView+HairlineShadow.swift in Sources */,
+				05F7E0C51DDEB7E100379902 /* Int+Random.swift in Sources */,
+				05F7E0C71DDEBB2A00379902 /* Array+RandomChild.swift in Sources */,
+				051BAA591DCDE263008474BA /* CollapsingViewControllerAnimatedTransitioning.swift in Sources */,
+				0510CD871DDDA8720008029A /* Accountant.swift in Sources */,
 				05EA02B21DD31E5A00E9A498 /* Models.xcdatamodeld in Sources */,
 				058472541DD3230700843C55 /* CategoryGroup+CoreDataClass.swift in Sources */,
 			);
@@ -707,7 +721,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				053593C61DB37ACB00A7B508 /* JodTungTests.swift in Sources */,
+				0510CD841DDDA7700008029A /* AccountantTests.swift in Sources */,
+				05F7E0BD1DDE9DFD00379902 /* DataStorageTests.swift in Sources */,
+				05F7E0C31DDEA1BA00379902 /* AccountBootstrapFactoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -887,11 +903,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = F6395XL53N;
 				INFOPLIST_FILE = JodTungTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bib.JodTungTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JodTung.app/JodTung";
 			};
@@ -903,6 +921,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = F6395XL53N;
 				INFOPLIST_FILE = JodTungTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
