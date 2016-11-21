@@ -59,9 +59,7 @@ class TxactionListViewController: UIViewController {
     }()
     fileprivate var expandedHeightOfCalendarWeekView: CGFloat?
     
-    fileprivate lazy var viewControllerAnimatedTransitioning: StackViewControllerAnimatedTransitioning = {
-        return StackViewControllerAnimatedTransitioning()
-    }()
+    fileprivate lazy var viewControllerAnimatedTransitioning = StackViewControllerAnimatedTransitioning()
     
     // MARK: - Outlets
     
@@ -183,6 +181,7 @@ class TxactionListViewController: UIViewController {
         case SegueIdentifier.showTransactionInfo:
             let transactionInfoViewController = segue.destination as! TransactionInfoViewController
             transactionInfoViewController.transitioningDelegate = self
+            transactionInfoViewController.modalPresentationStyle = .custom
         default:
             break
         }
@@ -227,7 +226,7 @@ extension TxactionListViewController: JTAppleCalendarViewDelegate {
 
 // MARK: - CalendarViewControllerAnimatedTransitioningDataSource
 
-extension TxactionListViewController: CalendarViewControllerAnimatedTransitioningDataSource {
+extension TxactionListViewController: CollapsingViewControllerAnimatedTransitioningDataSource {
     func expandableLayoutConstraint() -> NSLayoutConstraint {
         return self.calendarWeekViewHeightConstraint
     }
@@ -236,7 +235,7 @@ extension TxactionListViewController: CalendarViewControllerAnimatedTransitionin
         return self.expandedHeightOfCalendarWeekView ?? 0
     }
     
-    func contentViewToFadeIn() -> UIView {
+    func contentView() -> UIView {
         return self.tableView
     }
 }
@@ -273,5 +272,13 @@ protocol TxactionListViewControllerDelegate: class {
 extension TxactionListViewController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return viewControllerAnimatedTransitioning
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return viewControllerAnimatedTransitioning
+    }
+    
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return StackPresentationController(presentedViewController: presented, presenting: presenting)
     }
 }

@@ -9,48 +9,48 @@
 import UIKit
 
 class CalendarNavigationController: UINavigationController {
-  
-  lazy var txactionListViewController: TxactionListViewController = {
-    let txactionListViewController = self.storyboard!.instantiateViewController(withType: TxactionListViewController.self)
-    txactionListViewController.selectedDate = Date()
-    return txactionListViewController
-  }()
-  
-  var calendarMonthViewController: CalendarMonthViewController {
-    return self.viewControllers.first as! CalendarMonthViewController
-  }
-  
-  let collapsingViewControllerAnimatedTransitioning = CollapsingViewControllerAnimatedTransitioning(isExpanding: true)
-  
-  override func awakeFromNib() {
-    super.awakeFromNib()
     
-    delegate = self
+    lazy var txactionListViewController: TxactionListViewController = {
+        let txactionListViewController = self.storyboard!.instantiateViewController(withType: TxactionListViewController.self)
+        txactionListViewController.selectedDate = Date()
+        return txactionListViewController
+    }()
     
-    txactionListViewController.delegate = calendarMonthViewController
+    var calendarMonthViewController: CalendarMonthViewController {
+        return self.viewControllers.first as! CalendarMonthViewController
+    }
     
-    collapsingViewControllerAnimatedTransitioning.dataSource = txactionListViewController
+    let collapsingViewControllerAnimatedTransitioning = CollapsingViewControllerAnimatedTransitioning(isExpanding: true)
     
-    pushViewController(txactionListViewController, animated: false)
-  }
-  
-  func performSegue(toTxactionListViewControllerWith selectedDate: Date) {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        delegate = self
+        
+        txactionListViewController.delegate = calendarMonthViewController
+        
+        collapsingViewControllerAnimatedTransitioning.dataSource = txactionListViewController
+        
+        pushViewController(txactionListViewController, animated: false)
+    }
     
-    txactionListViewController.selectedDate = selectedDate
-    pushViewController(txactionListViewController, animated: true)
-  }
+    func performSegue(toTxactionListViewControllerWith selectedDate: Date) {
+        
+        txactionListViewController.selectedDate = selectedDate
+        pushViewController(txactionListViewController, animated: true)
+    }
 }
 
 extension CalendarNavigationController: UINavigationControllerDelegate {
-  func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-    
-    switch operation {
-    case .push:
-      return collapsingViewControllerAnimatedTransitioning
-    case .pop:
-      return collapsingViewControllerAnimatedTransitioning
-    case .none:
-      return nil
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        switch operation {
+        case .push:
+            return collapsingViewControllerAnimatedTransitioning
+        case .pop:
+            return collapsingViewControllerAnimatedTransitioning
+        case .none:
+            return nil
+        }
     }
-  }
 }

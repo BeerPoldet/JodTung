@@ -8,9 +8,18 @@
 
 import UIKit
 
+/**
+ Present State: Expanding View and Fade In Content View which supplied by DataSource
+ Dismissal State: Collapse View and Fade Out Content View
+ In order to us this animation transition you have to supply DataSource that will give:
+ 
+ Parameters
+ expandableLayoutConstaint, expandedHeight, contentView
+ 
+ */
 class CollapsingViewControllerAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioning {
     
-    weak var dataSource: CalendarViewControllerAnimatedTransitioningDataSource!
+    weak var dataSource: CollapsingViewControllerAnimatedTransitioningDataSource!
     fileprivate var isExpanding: Bool
     
     init(isExpanding: Bool) {
@@ -31,7 +40,7 @@ class CollapsingViewControllerAnimatedTransitioning: NSObject, UIViewControllerA
         guard let toView = transitionContext.view(forKey: .to) else { return }
         
         let containerView = transitionContext.containerView
-        let contentView = dataSource.contentViewToFadeIn()
+        let contentView = dataSource.contentView()
         let expandedHeight = dataSource.expendedHeight()
         let expandableLayoutConstraint = dataSource.expandableLayoutConstraint()
         
@@ -57,7 +66,7 @@ class CollapsingViewControllerAnimatedTransitioning: NSObject, UIViewControllerA
             let toView = transitionContext.view(forKey: .to) else { return }
         
         let containerView = transitionContext.containerView
-        let contentView = dataSource.contentViewToFadeIn()
+        let contentView = dataSource.contentView()
         let expandableLayoutConstraint = dataSource.expandableLayoutConstraint()
         
         containerView.addSubview(toView)
@@ -81,10 +90,11 @@ class CollapsingViewControllerAnimatedTransitioning: NSObject, UIViewControllerA
     }
 }
 
-protocol CalendarViewControllerAnimatedTransitioningDataSource: class {
+protocol CollapsingViewControllerAnimatedTransitioningDataSource: class {
+    
     func expandableLayoutConstraint() -> NSLayoutConstraint
     
     func expendedHeight() -> CGFloat
     
-    func contentViewToFadeIn() -> UIView
+    func contentView() -> UIView
 }

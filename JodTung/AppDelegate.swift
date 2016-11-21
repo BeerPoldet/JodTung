@@ -37,6 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             accountBootstrapFactory: defaultAccountBootstrapFactory
         )
         
+        // Window Setup
+        
         return true
     }
 

@@ -205,7 +205,7 @@
                     <navigationItem key="navigationItem" id="0Ke-0P-hgU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dfF-8K-w3d">
                             <connections>
-                                <segue destination="yE3-eT-bzu" kind="presentation" identifier="Show Transaction Info" id="tym-3H-bZK"/>
+                                <segue destination="yE3-eT-bzu" kind="presentation" identifier="Show Transaction Info" id="Gel-vY-i5Q"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -261,7 +261,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="PIF-Fr-5Lj" kind="relationship" relationship="viewControllers" id="FmH-kL-z8G"/>
+                        <segue destination="PIF-Fr-5Lj" kind="relationship" relationship="viewControllers" id="HT7-e0-hq7"/>
                         <segue destination="juZ-tb-Tum" kind="relationship" relationship="viewControllers" id="05M-Ok-quE"/>
                     </connections>
                 </tabBarController>

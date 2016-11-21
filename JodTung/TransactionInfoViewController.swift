@@ -12,6 +12,21 @@ class TransactionInfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        modalPresentationCapturesStatusBarAppearance = true
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
 }
