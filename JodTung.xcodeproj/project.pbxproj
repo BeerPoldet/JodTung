@@ -36,6 +36,9 @@
 		058723DA1DC0A2A800FEF676 /* ShadowedBlurVisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058723D91DC0A2A800FEF676 /* ShadowedBlurVisualEffectView.swift */; };
 		058723DC1DC0A2E900FEF676 /* ShadowedBlurVisualEffectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058723DB1DC0A2E900FEF676 /* ShadowedBlurVisualEffectView.xib */; };
 		05A0DE0C1DE0908C00B4E04B /* StackPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A0DE0B1DE0908C00B4E04B /* StackPresentationController.swift */; };
+		05A3D5131DE3FC100086DA5C /* UIViewController+ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A3D5121DE3FC100086DA5C /* UIViewController+ContentViewController.swift */; };
+		05A3D5151DE400CE0086DA5C /* CategoryGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A3D5141DE400CE0086DA5C /* CategoryGroupCollectionViewCell.swift */; };
+		05A3D51A1DE40A7D0086DA5C /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A3D5191DE40A7D0086DA5C /* CategoryCollectionViewCell.swift */; };
 		05CFA4BE1DD6093F003FEA0A /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CFA4BD1DD6093F003FEA0A /* DataStorage.swift */; };
 		05CFFD811DC74C0000BC1DB8 /* CalendarNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CFFD801DC74C0000BC1DB8 /* CalendarNavigationController.swift */; };
 		05EA02B21DD31E5A00E9A498 /* Models.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05EA02B01DD31E5A00E9A498 /* Models.xcdatamodeld */; };
@@ -123,6 +126,9 @@
 		058723D91DC0A2A800FEF676 /* ShadowedBlurVisualEffectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowedBlurVisualEffectView.swift; sourceTree = "<group>"; };
 		058723DB1DC0A2E900FEF676 /* ShadowedBlurVisualEffectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShadowedBlurVisualEffectView.xib; sourceTree = "<group>"; };
 		05A0DE0B1DE0908C00B4E04B /* StackPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackPresentationController.swift; sourceTree = "<group>"; };
+		05A3D5121DE3FC100086DA5C /* UIViewController+ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ContentViewController.swift"; sourceTree = "<group>"; };
+		05A3D5141DE400CE0086DA5C /* CategoryGroupCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryGroupCollectionViewCell.swift; sourceTree = "<group>"; };
+		05A3D5191DE40A7D0086DA5C /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		05CFA4BD1DD6093F003FEA0A /* DataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 		05CFFD801DC74C0000BC1DB8 /* CalendarNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarNavigationController.swift; sourceTree = "<group>"; };
 		05EA02B11DD31E5A00E9A498 /* Models.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Models.xcdatamodel; sourceTree = "<group>"; };
@@ -241,9 +247,9 @@
 			isa = PBXGroup;
 			children = (
 				0510CD851DDDA83D0008029A /* Application Frameworks */,
+				05B9BA7E1DD34DCA00B604A9 /* Data Storage */,
 				05EA02AF1DD31E0300E9A498 /* Models */,
 				050397611DB5C84C00D82B3D /* Scenes */,
-				05B9BA7E1DD34DCA00B604A9 /* Data Storage */,
 				05EB3BE81DB7194D00E84B45 /* Libraries */,
 				053593DE1DB37AE500A7B508 /* Suppporting Files */,
 			);
@@ -290,6 +296,8 @@
 				050411121DC1B405005D1EBB /* WeekHeaderView.swift */,
 				050411101DC1B2F9005D1EBB /* WeekHeaderView.xib */,
 				05FEA7791DE0140000BD4252 /* TxactionViewCell.swift */,
+				05A3D5141DE400CE0086DA5C /* CategoryGroupCollectionViewCell.swift */,
+				05A3D5191DE40A7D0086DA5C /* CategoryCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -374,6 +382,7 @@
 				05EB3BEB1DB7198500E84B45 /* RoundedLabel.swift */,
 				0510E4E51DC9A903002EE2F2 /* UIStoryboard.swift */,
 				05FEA77B1DE022DF00BD4252 /* ExtendedTable.swift */,
+				05A3D5121DE3FC100086DA5C /* UIViewController+ContentViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -489,7 +498,7 @@
 					053593AC1DB37ACB00A7B508 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = F6395XL53N;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					053593C01DB37ACB00A7B508 = {
@@ -720,12 +729,15 @@
 				05CFFD811DC74C0000BC1DB8 /* CalendarNavigationController.swift in Sources */,
 				053E0C831DB61D5700E0B9FC /* MonthSectionHeaderView.swift in Sources */,
 				058472551DD3230700843C55 /* CategoryGroup+CoreDataProperties.swift in Sources */,
+				05A3D5151DE400CE0086DA5C /* CategoryGroupCollectionViewCell.swift in Sources */,
 				05FEA77C1DE022DF00BD4252 /* ExtendedTable.swift in Sources */,
 				05FEA77F1DE0516400BD4252 /* StackViewControllerAnimatedTransitioning.swift in Sources */,
 				05709CEE1DC89F9E00EADFD9 /* CalendarViewController.swift in Sources */,
 				05F917341DB8C9B70032F54C /* CalendarMonthViewController.swift in Sources */,
+				05A3D5131DE3FC100086DA5C /* UIViewController+ContentViewController.swift in Sources */,
 				05A0DE0C1DE0908C00B4E04B /* StackPresentationController.swift in Sources */,
 				05FEA77A1DE0140000BD4252 /* TxactionViewCell.swift in Sources */,
+				05A3D51A1DE40A7D0086DA5C /* CategoryCollectionViewCell.swift in Sources */,
 				053E0C801DB6070700E0B9FC /* DayCellView.swift in Sources */,
 				05228ED01DBDC9D9008403B2 /* NavigationBar+Transparent.swift in Sources */,
 				05F7E0C51DDEB7E100379902 /* Int+Random.swift in Sources */,
@@ -893,11 +905,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = F6395XL53N;
 				INFOPLIST_FILE = JodTung/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bib.JodTung;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -908,6 +922,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = F6395XL53N;
 				INFOPLIST_FILE = JodTung/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -22,6 +22,8 @@ protocol EntityGateway {
     
     func categories() -> [Category]?
     
+    func categories(ofGroup categoryGroup: CategoryGroup) -> [Category]?
+    
     func makeCategory() -> Category
     
     func categoryBy(uniqueIdentifier: String) -> Category?
@@ -225,6 +227,20 @@ class DataStorage: NSObject, EntityGateway {
             }
         }
         return category
+    }
+    
+    func categories(ofGroup categoryGroup: CategoryGroup) -> [Category]? {
+        var categories: [Category]?
+        managedObjectContext.performAndWait {
+            let request: NSFetchRequest<Category> = Category.fetchRequest()
+            request.predicate = NSPredicate(format: "group = %@", categoryGroup)
+            do {
+                categories = try request.execute()
+            } catch {
+                print(error)
+            }
+        }
+        return categories
     }
     
     // MARK: - Transaction

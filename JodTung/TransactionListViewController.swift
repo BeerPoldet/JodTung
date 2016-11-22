@@ -182,6 +182,7 @@ class TransactionListViewController: UIViewController {
             let transactionInfoViewController = segue.destination as! TransactionInfoViewController
             transactionInfoViewController.transitioningDelegate = self
             transactionInfoViewController.modalPresentationStyle = .custom
+            transactionInfoViewController.accountant = accountant
         default:
             break
         }

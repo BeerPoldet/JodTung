@@ -11,11 +11,12 @@ import XCTest
 
 class AccountantTests: XCTestCase {
     var accountant: Accountant!
+    var dataStorage: DataStorage!
     
     override func setUp() {
         super.setUp()
         
-        let dataStorage = DataStorage(storageType: .inMemory)
+        dataStorage = DataStorage(storageType: .inMemory)
         let accountBootstrapFactory = AccountBootstrapFactory(dataStorage: dataStorage)
         accountant = Accountant(entityGateway: dataStorage, accountBootstrapFactory: accountBootstrapFactory)
     }
@@ -80,5 +81,32 @@ class AccountantTests: XCTestCase {
         let categoryGroup = accountant.categoryGroups!.first!
         let category = categoryGroup.categoryList!.first!
         XCTAssertNotNil(category.title)
+    }
+    
+    func testCanListCategoriesByGroup_containCorrectData() {
+        let foodCategoryGroup = dataStorage.makeCategoryGroup()
+        foodCategoryGroup.title = "food"
+        
+        let incomeCategoryGroup = dataStorage.makeCategoryGroup()
+        incomeCategoryGroup.title = "income"
+        
+        let breakfastCategory = dataStorage.makeCategory()
+        breakfastCategory.title = "breakfast"
+        breakfastCategory.group = foodCategoryGroup
+        
+        let dinnerCategory = dataStorage.makeCategory()
+        dinnerCategory.title = "dinner"
+        dinnerCategory.group = foodCategoryGroup
+        
+        let salaryCategory = dataStorage.makeCategory()
+        salaryCategory.title = "salary"
+        salaryCategory.group = incomeCategoryGroup
+        
+        dataStorage.save()
+        
+//        let listedCategories = accountant.categories(ofGroup: foodCategoryGroup)
+        let listedCategories = foodCategoryGroup.categoryList
+        XCTAssertTrue(listedCategories?.count == 2)
+        XCTAssertTrue(listedCategories?.contains { $0.title == breakfastCategory.title } == true)
     }
 }

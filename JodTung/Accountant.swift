@@ -31,6 +31,10 @@ class Accountant {
         return entityGateway.categories()
     }
     
+    func categories(ofGroup categoryGroup: CategoryGroup) -> [Category]? {
+        return entityGateway.categories(ofGroup: categoryGroup)
+    }
+    
     func transactions(ofDate date: Date) -> [Transaction]? {
         return entityGateway.transactions(ofDate: date)
     }
