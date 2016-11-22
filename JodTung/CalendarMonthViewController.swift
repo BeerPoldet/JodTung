@@ -132,9 +132,9 @@ class CalendarMonthViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let identifier = segue.identifier
         if identifier == SegueIdentifier.showTxaction {
-            let txactionViewController = segue.destination as! TxactionListViewController
-            txactionViewController.selectedDate = selectedDate
-            txactionViewController.delegate = self
+            let transactionViewController = segue.destination as! TransactionListViewController
+            transactionViewController.selectedDate = selectedDate
+            transactionViewController.delegate = self
         }
     }
     
@@ -260,8 +260,8 @@ extension CalendarMonthViewController: JTAppleCalendarViewDelegate {
 
 // MARK: - TxactionListViewControllerDelegate
 
-extension CalendarMonthViewController: TxactionListViewControllerDelegate {
-    func txactionListViewController(_ controller: TxactionListViewController, didSelect date: Date) {
+extension CalendarMonthViewController: TransactionListViewControllerDelegate {
+    func transactionListViewController(_ controller: TransactionListViewController, didSelect date: Date) {
         updateNavigationBarTitle()
         
         if let selectedDate = selectedDate, Calendar.current.isDate(selectedDate, inSameDayAs: date) {

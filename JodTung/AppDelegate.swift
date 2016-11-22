@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var dataStorage: DataStorage!
     
-    weak var txactionListViewController: TxactionListViewController!
+    weak var transactionListViewController: TransactionListViewController!
     
     // MARK: - Application lifecycle
 
@@ -30,9 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let tabBarController = window?.rootViewController as! UITabBarController
         let calendarNavigationController = tabBarController.viewControllers?.first as! CalendarNavigationController
-        txactionListViewController = calendarNavigationController.txactionListViewController
+        transactionListViewController = calendarNavigationController.transactionListViewController
         let defaultAccountBootstrapFactory = AccountBootstrapFactory(dataStorage: dataStorage)
-        txactionListViewController.accountant = Accountant(
+        transactionListViewController.accountant = Accountant(
             entityGateway: dataStorage,
             accountBootstrapFactory: defaultAccountBootstrapFactory
         )

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		050397641DB5C8FA00D82B3D /* TxactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050397631DB5C8FA00D82B3D /* TxactionListViewController.swift */; };
+		050397641DB5C8FA00D82B3D /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050397631DB5C8FA00D82B3D /* TransactionListViewController.swift */; };
 		050411111DC1B2F9005D1EBB /* WeekHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050411101DC1B2F9005D1EBB /* WeekHeaderView.xib */; };
 		050411131DC1B405005D1EBB /* WeekHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050411121DC1B405005D1EBB /* WeekHeaderView.swift */; };
 		0510CD841DDDA7700008029A /* AccountantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0510CD831DDDA7700008029A /* AccountantTests.swift */; };
@@ -88,7 +88,7 @@
 
 /* Begin PBXFileReference section */
 		017BB3DE55D7643175D6F816 /* Pods-JodTungUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JodTungUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JodTungUITests/Pods-JodTungUITests.release.xcconfig"; sourceTree = "<group>"; };
-		050397631DB5C8FA00D82B3D /* TxactionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TxactionListViewController.swift; sourceTree = "<group>"; };
+		050397631DB5C8FA00D82B3D /* TransactionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
 		050411101DC1B2F9005D1EBB /* WeekHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekHeaderView.xib; sourceTree = "<group>"; };
 		050411121DC1B405005D1EBB /* WeekHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekHeaderView.swift; sourceTree = "<group>"; };
 		0510CD831DDDA7700008029A /* AccountantTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountantTests.swift; sourceTree = "<group>"; };
@@ -300,7 +300,7 @@
 				05709CED1DC89F9E00EADFD9 /* CalendarViewController.swift */,
 				05CFFD801DC74C0000BC1DB8 /* CalendarNavigationController.swift */,
 				05F917331DB8C9B70032F54C /* CalendarMonthViewController.swift */,
-				050397631DB5C8FA00D82B3D /* TxactionListViewController.swift */,
+				050397631DB5C8FA00D82B3D /* TransactionListViewController.swift */,
 				05FEA7801DE0591400BD4252 /* TransactionInfoViewController.swift */,
 			);
 			name = "View Controllers";
@@ -704,7 +704,7 @@
 			files = (
 				058472531DD3230700843C55 /* Transaction+CoreDataProperties.swift in Sources */,
 				05FEA7811DE0591400BD4252 /* TransactionInfoViewController.swift in Sources */,
-				050397641DB5C8FA00D82B3D /* TxactionListViewController.swift in Sources */,
+				050397641DB5C8FA00D82B3D /* TransactionListViewController.swift in Sources */,
 				05F7E0BF1DDE9FC700379902 /* AccountBootstrapFactory.swift in Sources */,
 				058472511DD3230700843C55 /* Category+CoreDataProperties.swift in Sources */,
 				050411131DC1B405005D1EBB /* WeekHeaderView.swift in Sources */,

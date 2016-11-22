@@ -9,7 +9,7 @@
 import UIKit
 import JTAppleCalendar
 
-class TxactionListViewController: UIViewController {
+class TransactionListViewController: UIViewController {
     
     // MARK: - Injected Dependencies
     
@@ -23,7 +23,7 @@ class TxactionListViewController: UIViewController {
         }
     }
     
-    weak var delegate: TxactionListViewControllerDelegate?
+    weak var delegate: TransactionListViewControllerDelegate?
     
     var accountant: Accountant!
     
@@ -102,7 +102,7 @@ class TxactionListViewController: UIViewController {
         updateSelectedDateLabel()
         if let selectedDate = selectedDate {
             reloadTableData()
-            delegate?.txactionListViewController(self, didSelect: selectedDate)
+            delegate?.transactionListViewController(self, didSelect: selectedDate)
         }
     }
     
@@ -198,7 +198,7 @@ class TxactionListViewController: UIViewController {
 
 // MARK: - JTAppleCalendarViewDelegate
 
-extension TxactionListViewController: JTAppleCalendarViewDelegate {
+extension TransactionListViewController: JTAppleCalendarViewDelegate {
     
     func calendar(_ calendar: JTAppleCalendarView, willDisplayCell cell: JTAppleDayCellView, date: Date, cellState: CellState) {
         if let cell = cell as? DayCellView {
@@ -226,7 +226,7 @@ extension TxactionListViewController: JTAppleCalendarViewDelegate {
 
 // MARK: - CalendarViewControllerAnimatedTransitioningDataSource
 
-extension TxactionListViewController: CollapsingViewControllerAnimatedTransitioningDataSource {
+extension TransactionListViewController: CollapsingViewControllerAnimatedTransitioningDataSource {
     func expandableLayoutConstraint() -> NSLayoutConstraint {
         return self.calendarWeekViewHeightConstraint
     }
@@ -242,7 +242,7 @@ extension TxactionListViewController: CollapsingViewControllerAnimatedTransition
 
 // MARK: - UITableViewDataSource
 
-extension TxactionListViewController: UITableViewDataSource {
+extension TransactionListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return transactions.count
     }
@@ -257,19 +257,19 @@ extension TxactionListViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 
-extension TxactionListViewController: UITableViewDelegate {
+extension TransactionListViewController: UITableViewDelegate {
     
 }
 
 // MARK: - TxactionListViewControllerDelegate
 
-protocol TxactionListViewControllerDelegate: class {
-    func txactionListViewController(_ controller: TxactionListViewController, didSelect date: Date)
+protocol TransactionListViewControllerDelegate: class {
+    func transactionListViewController(_ controller: TransactionListViewController, didSelect date: Date)
 }
 
 // MARK: - TransitioningDelgate
 
-extension TxactionListViewController: UIViewControllerTransitioningDelegate {
+extension TransactionListViewController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return viewControllerAnimatedTransitioning
     }

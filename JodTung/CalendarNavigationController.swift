@@ -10,10 +10,10 @@ import UIKit
 
 class CalendarNavigationController: UINavigationController {
     
-    lazy var txactionListViewController: TxactionListViewController = {
-        let txactionListViewController = self.storyboard!.instantiateViewController(withType: TxactionListViewController.self)
-        txactionListViewController.selectedDate = Date()
-        return txactionListViewController
+    lazy var transactionListViewController: TransactionListViewController = {
+        let transansactionListViewController = self.storyboard!.instantiateViewController(withType: TransactionListViewController.self)
+        transansactionListViewController.selectedDate = Date()
+        return transansactionListViewController
     }()
     
     var calendarMonthViewController: CalendarMonthViewController {
@@ -27,17 +27,17 @@ class CalendarNavigationController: UINavigationController {
         
         delegate = self
         
-        txactionListViewController.delegate = calendarMonthViewController
+        transactionListViewController.delegate = calendarMonthViewController
         
-        collapsingViewControllerAnimatedTransitioning.dataSource = txactionListViewController
+        collapsingViewControllerAnimatedTransitioning.dataSource = transactionListViewController
         
-        pushViewController(txactionListViewController, animated: false)
+        pushViewController(transactionListViewController, animated: false)
     }
     
     func performSegue(toTxactionListViewControllerWith selectedDate: Date) {
         
-        txactionListViewController.selectedDate = selectedDate
-        pushViewController(txactionListViewController, animated: true)
+        transactionListViewController.selectedDate = selectedDate
+        pushViewController(transactionListViewController, animated: true)
     }
 }
 
