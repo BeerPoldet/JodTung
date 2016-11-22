@@ -67,5 +67,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        postNotificationIfStatusBarTouched(by: touches)
+    }
+    
+    // MARK: - Status Bar
+    
+    private func postNotificationIfStatusBarTouched(by touches: Set<UITouch>) {
+        guard let location = touches.first?.location(in: window) else { return }
+        
+        let statusBarFrame = UIApplication.shared.statusBarFrame
+        if statusBarFrame.contains(location) {
+            NotificationCenter.default.post(name: Notification.Name.statusBarDidTap, object: self)
+        }
+        
+    }
+}
+
+extension Notification.Name {
+    static let statusBarDidTap = Notification.Name("statusBarDidTap")
 }
 

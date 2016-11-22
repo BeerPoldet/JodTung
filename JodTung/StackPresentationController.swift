@@ -29,8 +29,12 @@ class StackPresentationController: UIPresentationController {
     
     func dimmingViewDidTap(_ gesture: UIGestureRecognizer) {
         if gesture.state == .recognized {
-            presentingViewController.dismiss(animated: true, completion: nil)
+            dismissPresentedViewController()
         }
+    }
+    
+    func dismissPresentedViewController() {
+        presentingViewController.dismiss(animated: true, completion: nil)
     }
     
     override func presentationTransitionWillBegin() {
@@ -51,6 +55,13 @@ class StackPresentationController: UIPresentationController {
         transitionCoordinator.animate(alongsideTransition: { (context) in
             self.dimmingView.alpha = 1
         })
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(dismissPresentedViewController),
+            name: Notification.Name.statusBarDidTap,
+            object: nil
+        )
     }
     
     override func dismissalTransitionWillBegin() {
@@ -62,6 +73,8 @@ class StackPresentationController: UIPresentationController {
         transitionCoordinator.animate(alongsideTransition: { (context) in
             self.dimmingView.alpha = 0
         })
+        
+        NotificationCenter.default.removeObserver(self, name: Notification.Name.statusBarDidTap, object: nil)
     }
     
     override var adaptivePresentationStyle: UIModalPresentationStyle {
