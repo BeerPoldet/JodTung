@@ -1,0 +1,1391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0079375D93538C8928C422221B4A0372 /* CDEGlobalIdentifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 893A974CC4038AB0CCF171BA3C914834 /* CDEGlobalIdentifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00FC7CC72C3D96ED98B5371423C1CA83 /* CDEEventMigrator.m in Sources */ = {isa = PBXBuildFile; fileRef = E21941A131CC88D4201FABF991061D41 /* CDEEventMigrator.m */; };
+		02CCF2AE7CFCB2CCB27EA2A9EC3DDC1A /* CDEDataFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F9E35A644E9BB061CFC4A4B1FEDFB93 /* CDEDataFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0410186BBB687BA4EDFFD5E7E088C343 /* CDEObjectChange.h in Headers */ = {isa = PBXBuildFile; fileRef = 44AC569BF94E02939DB64E4D360743C7 /* CDEObjectChange.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04D11450DE4A00421B0E48DE74D6AFF2 /* NSManagedObjectModel+CDEAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CF41403424C1EB4501ABA8D3517554A /* NSManagedObjectModel+CDEAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		050B38E3544D77784C1C1F21704C2219 /* NSManagedObjectModel+CDEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8508C5DDE7E4019592C74765CB3A84 /* NSManagedObjectModel+CDEAdditions.m */; };
+		0BFA6C637DD65E6C3147C52907944B71 /* JTAppleCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 758AD1D00E5EFAD42BE11B6ED3983F9E /* JTAppleCalendar-dummy.m */; };
+		0D1B1BAC72E7013E6BE61893B970DE06 /* CDEEventRevision.h in Headers */ = {isa = PBXBuildFile; fileRef = 85AB9A9445CF59A79613BE3EAFC0224B /* CDEEventRevision.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DB0D970D3B70C9357B40E8BFB2343F3 /* CDECloudFile.m in Sources */ = {isa = PBXBuildFile; fileRef = BC79DEE87E497D2D4FBF47DD5A24FB5F /* CDECloudFile.m */; };
+		0F9794BBD6A9BB78B0184875B9AB5316 /* CDEPersistentStoreEnsemble.m in Sources */ = {isa = PBXBuildFile; fileRef = 50629759DEC74BA9A0D36B7F6548448A /* CDEPersistentStoreEnsemble.m */; };
+		1008FBC0C81745FD1450648D74E32479 /* CDEAsynchronousOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = B8980A5572DEAABD7AF29F9DD6DCC051 /* CDEAsynchronousOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10AC102CDF7C08DC2A362F348718698C /* CDEGlobalIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C3FE915D40C3DB2D3561034AA4135C /* CDEGlobalIdentifier.m */; };
+		15217BB0E5006F49A51D22ABBBD175E7 /* CDEBaselineConsolidator.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B13BAC8281159597D085CEEC443093 /* CDEBaselineConsolidator.m */; };
+		18638675F076AF7F1CD767877932849C /* CDEEventFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6DDA41837283EB12AD4A20A3076517 /* CDEEventFile.m */; };
+		18C5EBC01746E0491BE0F837E6C01365 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */; };
+		190BA87C8186D410C659C76483577709 /* CDESaveMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DD9572C1B2C1CF75EEA148B3CFE645 /* CDESaveMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1EAC1A072E5123D7A441C4139C336213 /* CDERevisionSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 926E21A32B74907789441A1A0ECE5F74 /* CDERevisionSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20C0F06F0222F2B79B5BFFD1F4FFE4CD /* CDERevisionSet.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB1745200A26A8C582CDF879049DBB7 /* CDERevisionSet.m */; };
+		21A839943182F72D48977B85864AB947 /* CDEEventStoreModel.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 9E2BB56154AE76C23D769B4035D52F12 /* CDEEventStoreModel.xcdatamodeld */; };
+		22BFB845F547E4B8762F30E33BFA0D19 /* Pods-JodTungTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A605BDF6B39C19497FF95833598EDDD7 /* Pods-JodTungTests-dummy.m */; };
+		23CE2DBD1A7F79C19DFD4AD9A2E002DD /* CDEEventBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = F99A2FD638AC7973A308ECC8544B39A3 /* CDEEventBuilder.m */; };
+		24EA2DAA09699CD9AEDFE51B473CA8B5 /* UICollectionViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF37F919E74F8ECD37C718A589A4429E /* UICollectionViewDelegates.swift */; };
+		278048732EA360380ED638184911F727 /* CDEDataFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2663693D019D33FCEC80A8BE285FBF /* CDEDataFile.m */; };
+		3337FEE25A3871539CBD19E3FAD25F7D /* CDELocalCloudFileSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = ABC3C3691DD0865E54BA9424B26667C7 /* CDELocalCloudFileSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3378C9D5CF49CC572051C98BD452C100 /* CDERevision.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F59190D62DC4AABCE0ED2E8F70D4391 /* CDERevision.m */; };
+		37C829006A6F4CC64B5E29D4800416C7 /* CDECloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14166604DD17A8E32E52AF3CC13990B2 /* CDECloudManager.m */; };
+		3ADA8FA14C7533CBCE18F07649E3B406 /* NSMapTable+CDEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A6061E751A006FE4BC93B78CFE5C877 /* NSMapTable+CDEAdditions.m */; };
+		3D489E54CB05CBBFAC805221E99FF71F /* CDEEventStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 433B8ED72B172CF30A7AA65AC765C842 /* CDEEventStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4029A31716254559675C38281CDAE8C5 /* CDERebaser.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DCA927D32CB3DA76228989656AD8969 /* CDERebaser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46028B842C50E29805B72682227071A1 /* CDEFoundationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F78F5C7C7A481D73D1EC9FF4164A56D3 /* CDEFoundationAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46D249B5DF8B1BA7509F6EDC5EE14E69 /* Pods-JodTung-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1FF09A4BF9CD6EA789C998EE3B1321 /* Pods-JodTung-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E742E4B2327D3E0A3180B8B0472B29A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */; };
+		4EE26287116F50D87A7A25854998D414 /* CDEFileDownloadOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = EB539A1480750F1D05BD709F1C4124B6 /* CDEFileDownloadOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52137715D4D89B297F569DB79E4CE384 /* Ensembles.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B632FA3A773D20D4BB373029C17D427 /* Ensembles.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53A61813C5891261763D30705D967D8B /* JTAppleCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3130156CBFB4F2D78E033033AB2702B6 /* JTAppleCalendarView.swift */; };
+		57000192CB8F377E71C8449ACA414473 /* NSFileCoordinator+CDEAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 24E8499E826C0795A36945C4575DE0F1 /* NSFileCoordinator+CDEAdditions.m */; };
+		5A3A6A8AAB434DEDC1601E97FB31BE1F /* CDEPropertyChangeValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A97042554912A65F8CEF53ED669CE3 /* CDEPropertyChangeValue.m */; };
+		5B43F1340D4369153D01EBEEAF42214E /* CalendarEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE148B98F08EF1D1BBF289DC37ABFDD /* CalendarEnums.swift */; };
+		5D561ACDEA2FC613AA5252B58CF9FCA7 /* CDEFileDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B21E1B1E427E0AE9C70D06DD907D3EE1 /* CDEFileDownloadOperation.m */; };
+		5DFD6F58C415532662A312BB9C39ECC0 /* Pods-JodTungTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CDB17E453DB681737C1C390D4F58E825 /* Pods-JodTungTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5ED915DC2381816A112715C119379E4E /* CDERevisionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C915FF7D3999AECA167B428F54DAAC0 /* CDERevisionManager.m */; };
+		601FB14D2AC97C4B8C6C6686EA24A3D6 /* CalendarStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93F7083A1EC69A6B565DDD43A55726 /* CalendarStructs.swift */; };
+		639540A73F4CEBCB5A9C8F7D0BE7DD3B /* Pods-JodTungUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FBF9E0182179AE291791601A2DF635A /* Pods-JodTungUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6476E949A684C1621874139B8ADB19C3 /* CDEICloudFileSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = F75C51D1B253F4FB41D36439312B2C62 /* CDEICloudFileSystem.m */; };
+		65A43D9E0261B9076435EFEACB81CC37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */; };
+		65E4E0128AB5E01185322CDF3222ED47 /* CDEEventFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D897B482A5E6E44040C1624A5B31067 /* CDEEventFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		701D4668F9B1515A404AA0D4283BF2FE /* CDEObjectChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 4180F4107550A720AED3AB0A47A494BA /* CDEObjectChange.m */; };
+		70E965200B90562EF7BBA48FD0F3FB3E /* UserInteractionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD26B4513BBA2858AA7BA077A4A86B /* UserInteractionFunctions.swift */; };
+		718081985655D07B960B254951DE5109 /* UIScrollViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02560035EDFB46662331FFB243923B /* UIScrollViewDelegates.swift */; };
+		73991D199BDCABDA631AE62205596DDD /* CDEEventMigrator.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D6E18084F5129087C40E117030B88D6 /* CDEEventMigrator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7500008FC3E326E99AB0126918760269 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E84538505F21AD441B87E2C82C53E5 /* CoreData.framework */; };
+		765AA0DA777DBC2BB219F393636E27EB /* CDEStoreModificationEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EC6DBB8763F3250B2497D9A3BF6D8AF /* CDEStoreModificationEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		773A27CE22BB3A756FDE57D9BFDA2ECC /* NSMapTable+CDEAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9367F47B71F2320E4579772ACBE20E08 /* NSMapTable+CDEAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CDA527EFF522ACB4CFB2FD21449B25F /* CDELocalCloudFileSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = E74CF09640CFDDA9DD540D921E35D594 /* CDELocalCloudFileSystem.m */; };
+		7DA5F704B13F2D3AB1924227578D5479 /* NSFileCoordinator+CDEAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 62807D023FADE5A868170C846E1EB846 /* NSFileCoordinator+CDEAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		802782E6A0442A28EEE0728B579B335A /* CDEBaselineConsolidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 49D2225A012B41A444FCF8216EF7DA04 /* CDEBaselineConsolidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86175F52070E58CC6B1B8F603AD23401 /* JTCalendarProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D94EA2680048B609781834096F58AAB /* JTCalendarProtocols.swift */; };
+		89D93D91A4B635949C489667DD937B3B /* JTAppleCalendarDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD4F8CFBD9215A32EA5823895B6920 /* JTAppleCalendarDelegateProtocol.swift */; };
+		8A468BE2779CB53459F4D4A18D22AC0B /* CDEEventIntegrator.m in Sources */ = {isa = PBXBuildFile; fileRef = 90AEE928C96F9BADA0F64BFBD6DE1EA2 /* CDEEventIntegrator.m */; };
+		8A635E04ACE255F382856F3312C364F0 /* CDEAsynchronousOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E3822C7F16497F2368855B014E12CE58 /* CDEAsynchronousOperation.m */; };
+		8BA72C8DE07E88CDC4AD77ED38E797A8 /* CDECloudManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A929DBB845545A50FA483DCD5D3CA26 /* CDECloudManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D65105E019C2A786F0AD79EAA92EFEC /* GlobalFunctionsAndExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D3D09450CDEFD255B44D08E5F84F9 /* GlobalFunctionsAndExtensions.swift */; };
+		8DA76A7A8D67A042B8AE6DFFE96DEDA9 /* CDEFoundationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 063409ED6E18CEB88389BFD0361D00EC /* CDEFoundationAdditions.m */; };
+		8EE43D14B802A1FD0DD71DE5765BFBB3 /* JTAppleCalendar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 730F50690E868A654FC8CC0973F8E03C /* JTAppleCalendar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9346FE01AB97D189F8107E18094F3571 /* JTAppleCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E2B3E3D88CF1607438E80F925C796 /* JTAppleCollectionReusableView.swift */; };
+		9978739B14E6119A934C4757EB2E99C4 /* CDEDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A6D772C83E92235F1ECF04EE780A1E9 /* CDEDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A52FA23D1C70FED65C9843B169072E01 /* CDERevision.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ED76357D6AE7C6CAF48CA2DCE7A4EC8 /* CDERevision.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB343112F9B2ECA933738BF75940FE4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */; };
+		B15FAA57D26153EE4DF2E2BF146DDD98 /* CDEStoreModificationEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 806D0E98513FA2FC8587613CF34E8B59 /* CDEStoreModificationEvent.m */; };
+		B1E478D862C6DCFE18BB405FE9B6A6BD /* CDERebaser.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DB08624BD5BDED1FD6551601D2C1C6 /* CDERebaser.m */; };
+		B3527F95C900B3D826E5F653D209BE8E /* CDEFileUploadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CE10F52122B9B7E72027D638290784DA /* CDEFileUploadOperation.m */; };
+		B39AE8AF95AF67295B9CB53D6CFB0139 /* JTAppleReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7AF47F9BF66EBAF6BF54F6AAFA83A /* JTAppleReusableViewProtocol.swift */; };
+		B570EB589348AFBF365C7C88091ECC33 /* CDESaveMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3460864C6CF2BD151602D7EEF7034FBD /* CDESaveMonitor.m */; };
+		BB3307CFE4D786B762644660A0C25B7D /* CDEICloudFileSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = BC92111BAAB9F1F6EF2EC089F6F025B2 /* CDEICloudFileSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BEF6E3D5FD186E493453F8E6DE42699D /* CDECloudFile.h in Headers */ = {isa = PBXBuildFile; fileRef = B45D258BCF1DC13752EDB8C6F02BE24D /* CDECloudFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1970D2EAEDFED5A49AAE61A47905D6D /* CDEPropertyChangeValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A26324868C0AE6772F6E862E33E5447 /* CDEPropertyChangeValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4B6FDD5B4BB01EDEAAAA596AC30CFA9 /* CDEAvailabilityMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 776526A891F47BA9CB4EB07C006515B3 /* CDEAvailabilityMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8085EA4D611AA2C781E22F68F06A35D /* JTAppleDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2871F0F4659E72D06AA23AFD6A6D15CE /* JTAppleDayCell.swift */; };
+		C91278C4356BB401E436D5165A74482C /* JTAppleCalendarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54C8CCB03C4A77CBF9C760AF753D081 /* JTAppleCalendarLayout.swift */; };
+		C9C678608954C5D03A6030CE523CBCFE /* CDEAsynchronousTaskQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F3CEE39AD5DDD24F95C7DD8104CC9A /* CDEAsynchronousTaskQueue.m */; };
+		CD9BDFF82BD126C58C529F899AA14CBA /* Ensembles-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C239A477E0047631398A953255CA9D /* Ensembles-dummy.m */; };
+		CE10EB5C96DFE12D0B9DE87DC98B5DE8 /* Ensembles-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 358A21C517EF84B06ECE7316F4CAF472 /* Ensembles-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF4152DD97A8AD332687C34FA813E9BA /* Pods-JodTung-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DF958F06A692AA1A0D09BF93BFDE10 /* Pods-JodTung-dummy.m */; };
+		D1A15B2FD0AFE13F68E358423FCD86E1 /* CDECloudDirectory.h in Headers */ = {isa = PBXBuildFile; fileRef = 7211DE3C04C386817E6D4095C4437C8B /* CDECloudDirectory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1AC0F36A2555801127BA17B5CC2A862 /* CDEEventStore.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DBDFBE57329A8799596969E046C8C1 /* CDEEventStore.m */; };
+		D2AA0A567431F90945D437664612E205 /* CDEPersistentStoreEnsemble.h in Headers */ = {isa = PBXBuildFile; fileRef = 740AF9CC0EAE26064A5DA893DA2F42DC /* CDEPersistentStoreEnsemble.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3A7FCD648C686770C62805D79561CEF /* JTAppleViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C9B6A7DE546C787251E93C0F2F2F2 /* JTAppleViews.swift */; };
+		D3E0908ECE20AE27289B2B4DDBE48841 /* CDEEventBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = ABAF38F2F76F4ED05663BA9877FFC838 /* CDEEventBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D925409F3E0AFC9DAF00A9BA0C8ACBCD /* CDECloudFileSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = B5415E47FA58FF892A76337FFBB1B106 /* CDECloudFileSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEA45085B9C488396F0CB2C48EE8A6BB /* CDEAsynchronousTaskQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = DE48FEBB4BABE8BDCA941B92C9361814 /* CDEAsynchronousTaskQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E843ADF9777FA1DD2D204E1FCC1BE3FA /* CDEDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = E1BED6836ED7F7BEB791A6164B5358AC /* CDEDefines.m */; };
+		EA12E7883C6419EF27A8A0DABF534051 /* JTAppleCalendarLayoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991FC4D64C252ACA93A85F6B021CED27 /* JTAppleCalendarLayoutProtocol.swift */; };
+		F12707C80662193B742083E1245DEC91 /* CDECloudDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3CDD893FD7662DFD66FDCBEF49028A /* CDECloudDirectory.m */; };
+		F573613D35CD8010668C6772DD5A52CA /* CDEPersistentStoreImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F23FDD8153F27C743BDE4CAFA23E6FE /* CDEPersistentStoreImporter.m */; };
+		F591E54A8252B8BD94FC5D4764F0C6C2 /* CDEEventRevision.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9C58FEBE3A00E5A7E054E7C54CE67C /* CDEEventRevision.m */; };
+		F9DA953F8AF31133D5A3702C58AE86A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */; };
+		F9F55D67382D5E2E7CC8696E359CD747 /* Pods-JodTungUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA191E5003AF51F2F1DD55FA8CA275EC /* Pods-JodTungUITests-dummy.m */; };
+		FC1A7E0EE9BA9283B153A179122C8469 /* CDERevisionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D765DDF8333AA7083FB0F360A47A8997 /* CDERevisionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC497603D1E2F3006C2429E500BA3CBB /* CDEPersistentStoreImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BA755AC11597B599CAA483855E1C970 /* CDEPersistentStoreImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC5DD4BF57F4471E9694A32AA2BCEDF5 /* CDEEventIntegrator.h in Headers */ = {isa = PBXBuildFile; fileRef = C621B78824B33521C993704F3563A8C9 /* CDEEventIntegrator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD6337723278C8267DA37C52E0A32920 /* CDEFileUploadOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 26A571A329D5495ACC9E9AC8C7E2E814 /* CDEFileUploadOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B3EE4928956A584C1B3CA548218F40D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CAC95BAD79AE7D179A7730EDB6C3D1A;
+			remoteInfo = Ensembles;
+		};
+		80CFC1BA6C5DF1F59A289CE21434A0E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF0221E8569B7BE65F7BA0CBD282D370;
+			remoteInfo = JTAppleCalendar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		063409ED6E18CEB88389BFD0361D00EC /* CDEFoundationAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDEFoundationAdditions.m; path = Framework/Source/General/CDEFoundationAdditions.m; sourceTree = "<group>"; };
+		06A83C15E7A28FDA451D0951B34AD0F8 /* Pods-JodTungTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JodTungTests-frameworks.sh"; sourceTree = "<group>"; };
+		0B632FA3A773D20D4BB373029C17D427 /* Ensembles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Ensembles.h; path = Framework/Source/General/Ensembles.h; sourceTree = "<group>"; };
+		0B9C48AF65C79FBFA6CA4BE86B7C68CE /* Pods-JodTung.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JodTung.debug.xcconfig"; sourceTree = "<group>"; };
+		0CAD26B4513BBA2858AA7BA077A4A86B /* UserInteractionFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserInteractionFunctions.swift; path = Sources/UserInteractionFunctions.swift; sourceTree = "<group>"; };
+		0D2663693D019D33FCEC80A8BE285FBF /* CDEDataFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDEDataFile.m; path = Framework/Source/Model/CDEDataFile.m; sourceTree = "<group>"; };
+		0E4C3BE88443B8DD31239C717A3D4F91 /* Pods-JodTungTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JodTungTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		14166604DD17A8E32E52AF3CC13990B2 /* CDECloudManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDECloudManager.m; path = Framework/Source/Cloud/CDECloudManager.m; sourceTree = "<group>"; };
+		19B93AE36C8ACAE4ACE431170BDCACE8 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JTAppleCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B1FF09A4BF9CD6EA789C998EE3B1321 /* Pods-JodTung-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JodTung-umbrella.h"; sourceTree = "<group>"; };
+		1BA755AC11597B599CAA483855E1C970 /* CDEPersistentStoreImporter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEPersistentStoreImporter.h; path = Framework/Source/Ensemble/CDEPersistentStoreImporter.h; sourceTree = "<group>"; };
+		1D94EA2680048B609781834096F58AAB /* JTCalendarProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTCalendarProtocols.swift; path = Sources/JTCalendarProtocols.swift; sourceTree = "<group>"; };
+		1F59190D62DC4AABCE0ED2E8F70D4391 /* CDERevision.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDERevision.m; path = Framework/Source/Revisioning/CDERevision.m; sourceTree = "<group>"; };
+		21A97042554912A65F8CEF53ED669CE3 /* CDEPropertyChangeValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDEPropertyChangeValue.m; path = Framework/Source/Events/CDEPropertyChangeValue.m; sourceTree = "<group>"; };
+		2291D09E30BB7A30A24BCE908993CAA3 /* CDEEventStoreModel_1.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = CDEEventStoreModel_1.xcdatamodel; sourceTree = "<group>"; };
+		24E8499E826C0795A36945C4575DE0F1 /* NSFileCoordinator+CDEAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSFileCoordinator+CDEAdditions.m"; path = "Framework/Source/General/NSFileCoordinator+CDEAdditions.m"; sourceTree = "<group>"; };
+		25A235356C8D31607800ADDD937392A0 /* Ensembles-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ensembles-prefix.pch"; sourceTree = "<group>"; };
+		26A571A329D5495ACC9E9AC8C7E2E814 /* CDEFileUploadOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEFileUploadOperation.h; path = "Framework/Source/Cloud File Systems/CDEFileUploadOperation.h"; sourceTree = "<group>"; };
+		2871F0F4659E72D06AA23AFD6A6D15CE /* JTAppleDayCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleDayCell.swift; path = Sources/JTAppleDayCell.swift; sourceTree = "<group>"; };
+		2F23FDD8153F27C743BDE4CAFA23E6FE /* CDEPersistentStoreImporter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDEPersistentStoreImporter.m; path = Framework/Source/Ensemble/CDEPersistentStoreImporter.m; sourceTree = "<group>"; };
+		3130156CBFB4F2D78E033033AB2702B6 /* JTAppleCalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarView.swift; path = Sources/JTAppleCalendarView.swift; sourceTree = "<group>"; };
+		3460864C6CF2BD151602D7EEF7034FBD /* CDESaveMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDESaveMonitor.m; path = Framework/Source/Events/CDESaveMonitor.m; sourceTree = "<group>"; };
+		358A21C517EF84B06ECE7316F4CAF472 /* Ensembles-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Ensembles-umbrella.h"; sourceTree = "<group>"; };
+		3A6D772C83E92235F1ECF04EE780A1E9 /* CDEDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEDefines.h; path = Framework/Source/General/CDEDefines.h; sourceTree = "<group>"; };
+		3A6E2B3E3D88CF1607438E80F925C796 /* JTAppleCollectionReusableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCollectionReusableView.swift; path = Sources/JTAppleCollectionReusableView.swift; sourceTree = "<group>"; };
+		3A8B3F8FBFF8EBF3F60065F8F9B6A700 /* CDEEventStoreModel_0.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = CDEEventStoreModel_0.xcdatamodel; sourceTree = "<group>"; };
+		3C6A467867531B5005A16583A0E267D8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D3CDD893FD7662DFD66FDCBEF49028A /* CDECloudDirectory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDECloudDirectory.m; path = Framework/Source/Cloud/CDECloudDirectory.m; sourceTree = "<group>"; };
+		410CA000B9340545854364801E084D57 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4180F4107550A720AED3AB0A47A494BA /* CDEObjectChange.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDEObjectChange.m; path = Framework/Source/Model/CDEObjectChange.m; sourceTree = "<group>"; };
+		433B8ED72B172CF30A7AA65AC765C842 /* CDEEventStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEEventStore.h; path = Framework/Source/Events/CDEEventStore.h; sourceTree = "<group>"; };
+		44AC569BF94E02939DB64E4D360743C7 /* CDEObjectChange.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEObjectChange.h; path = Framework/Source/Model/CDEObjectChange.h; sourceTree = "<group>"; };
+		477FC62D052C6C0D4600D90DD0B18DBE /* JTAppleCalendar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JTAppleCalendar.xcconfig; sourceTree = "<group>"; };
+		47F3CEE39AD5DDD24F95C7DD8104CC9A /* CDEAsynchronousTaskQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDEAsynchronousTaskQueue.m; path = Framework/Source/General/CDEAsynchronousTaskQueue.m; sourceTree = "<group>"; };
+		49D2225A012B41A444FCF8216EF7DA04 /* CDEBaselineConsolidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEBaselineConsolidator.h; path = Framework/Source/Baselines/CDEBaselineConsolidator.h; sourceTree = "<group>"; };
+		4A929DBB845545A50FA483DCD5D3CA26 /* CDECloudManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDECloudManager.h; path = Framework/Source/Cloud/CDECloudManager.h; sourceTree = "<group>"; };
+		4CE3380F2E4005A9E148221B69178ECF /* JTAppleCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JTAppleCalendar.modulemap; sourceTree = "<group>"; };
+		4D8A628796413670E459FE000EEEBD25 /* Pods-JodTung.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-JodTung.modulemap"; sourceTree = "<group>"; };
+		4EA86C9C2C5059D9575A51DE99DA65D4 /* Pods-JodTungTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JodTungTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4EC6DBB8763F3250B2497D9A3BF6D8AF /* CDEStoreModificationEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEStoreModificationEvent.h; path = Framework/Source/Model/CDEStoreModificationEvent.h; sourceTree = "<group>"; };
+		4F6FFB8B237923CB49082EE624C70384 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50629759DEC74BA9A0D36B7F6548448A /* CDEPersistentStoreEnsemble.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDEPersistentStoreEnsemble.m; path = Framework/Source/Ensemble/CDEPersistentStoreEnsemble.m; sourceTree = "<group>"; };
+		5110A4042C604C63646FF77CE7B842AE /* Pods-JodTungUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JodTungUITests-resources.sh"; sourceTree = "<group>"; };
+		53DD9572C1B2C1CF75EEA148B3CFE645 /* CDESaveMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDESaveMonitor.h; path = Framework/Source/Events/CDESaveMonitor.h; sourceTree = "<group>"; };
+		5A26324868C0AE6772F6E862E33E5447 /* CDEPropertyChangeValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEPropertyChangeValue.h; path = Framework/Source/Events/CDEPropertyChangeValue.h; sourceTree = "<group>"; };
+		5B9C58FEBE3A00E5A7E054E7C54CE67C /* CDEEventRevision.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDEEventRevision.m; path = Framework/Source/Model/CDEEventRevision.m; sourceTree = "<group>"; };
+		5C6DDA41837283EB12AD4A20A3076517 /* CDEEventFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDEEventFile.m; path = Framework/Source/Cloud/CDEEventFile.m; sourceTree = "<group>"; };
+		5C915FF7D3999AECA167B428F54DAAC0 /* CDERevisionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDERevisionManager.m; path = Framework/Source/Revisioning/CDERevisionManager.m; sourceTree = "<group>"; };
+		5D897B482A5E6E44040C1624A5B31067 /* CDEEventFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEEventFile.h; path = Framework/Source/Cloud/CDEEventFile.h; sourceTree = "<group>"; };
+		5DB6172FEE1DD577EF084E2FD1A46DC5 /* Pods_JodTungUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JodTungUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FBF9E0182179AE291791601A2DF635A /* Pods-JodTungUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JodTungUITests-umbrella.h"; sourceTree = "<group>"; };
+		60F9493F38D65C1301EB3837CC7B1FB2 /* Pods-JodTungTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JodTungTests.release.xcconfig"; sourceTree = "<group>"; };
+		617EFD27D6551A6A8C154EB89962303C /* JTAppleCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JTAppleCalendar-prefix.pch"; sourceTree = "<group>"; };
+		62807D023FADE5A868170C846E1EB846 /* NSFileCoordinator+CDEAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSFileCoordinator+CDEAdditions.h"; path = "Framework/Source/General/NSFileCoordinator+CDEAdditions.h"; sourceTree = "<group>"; };
+		65DB08624BD5BDED1FD6551601D2C1C6 /* CDERebaser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDERebaser.m; path = Framework/Source/Baselines/CDERebaser.m; sourceTree = "<group>"; };
+		6B4D3D09450CDEFD255B44D08E5F84F9 /* GlobalFunctionsAndExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GlobalFunctionsAndExtensions.swift; path = Sources/GlobalFunctionsAndExtensions.swift; sourceTree = "<group>"; };
+		6D93F7083A1EC69A6B565DDD43A55726 /* CalendarStructs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarStructs.swift; path = Sources/CalendarStructs.swift; sourceTree = "<group>"; };
+		6DCA927D32CB3DA76228989656AD8969 /* CDERebaser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDERebaser.h; path = Framework/Source/Baselines/CDERebaser.h; sourceTree = "<group>"; };
+		6ED76357D6AE7C6CAF48CA2DCE7A4EC8 /* CDERevision.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDERevision.h; path = Framework/Source/Revisioning/CDERevision.h; sourceTree = "<group>"; };
+		713B75225C9D99D59D33C207E3766D9F /* Pods-JodTungUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JodTungUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7211DE3C04C386817E6D4095C4437C8B /* CDECloudDirectory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDECloudDirectory.h; path = Framework/Source/Cloud/CDECloudDirectory.h; sourceTree = "<group>"; };
+		730F50690E868A654FC8CC0973F8E03C /* JTAppleCalendar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JTAppleCalendar-umbrella.h"; sourceTree = "<group>"; };
+		740AF9CC0EAE26064A5DA893DA2F42DC /* CDEPersistentStoreEnsemble.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEPersistentStoreEnsemble.h; path = Framework/Source/Ensemble/CDEPersistentStoreEnsemble.h; sourceTree = "<group>"; };
+		758AD1D00E5EFAD42BE11B6ED3983F9E /* JTAppleCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JTAppleCalendar-dummy.m"; sourceTree = "<group>"; };
+		776526A891F47BA9CB4EB07C006515B3 /* CDEAvailabilityMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEAvailabilityMacros.h; path = Framework/Source/General/CDEAvailabilityMacros.h; sourceTree = "<group>"; };
+		7DE60EEBA039B992A301221B236177D2 /* Pods-JodTungUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JodTungUITests-frameworks.sh"; sourceTree = "<group>"; };
+		7E8508C5DDE7E4019592C74765CB3A84 /* NSManagedObjectModel+CDEAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObjectModel+CDEAdditions.m"; path = "Framework/Source/General/NSManagedObjectModel+CDEAdditions.m"; sourceTree = "<group>"; };
+		7F9E35A644E9BB061CFC4A4B1FEDFB93 /* CDEDataFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEDataFile.h; path = Framework/Source/Model/CDEDataFile.h; sourceTree = "<group>"; };
+		806D0E98513FA2FC8587613CF34E8B59 /* CDEStoreModificationEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDEStoreModificationEvent.m; path = Framework/Source/Model/CDEStoreModificationEvent.m; sourceTree = "<group>"; };
+		834EE526D2C7D2D6D2C808966B3083BB /* Pods-JodTung-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JodTung-acknowledgements.plist"; sourceTree = "<group>"; };
+		85AB9A9445CF59A79613BE3EAFC0224B /* CDEEventRevision.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEEventRevision.h; path = Framework/Source/Model/CDEEventRevision.h; sourceTree = "<group>"; };
+		860BE7D2304461EE7FB21D1963175307 /* Pods-JodTungTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-JodTungTests.modulemap"; sourceTree = "<group>"; };
+		868C9B6A7DE546C787251E93C0F2F2F2 /* JTAppleViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleViews.swift; path = Sources/JTAppleViews.swift; sourceTree = "<group>"; };
+		893A974CC4038AB0CCF171BA3C914834 /* CDEGlobalIdentifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEGlobalIdentifier.h; path = Framework/Source/Model/CDEGlobalIdentifier.h; sourceTree = "<group>"; };
+		8A6061E751A006FE4BC93B78CFE5C877 /* NSMapTable+CDEAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMapTable+CDEAdditions.m"; path = "Framework/Source/General/NSMapTable+CDEAdditions.m"; sourceTree = "<group>"; };
+		8ADE854B98E3D2C59C95A23A874574C6 /* Pods-JodTungUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-JodTungUITests.modulemap"; sourceTree = "<group>"; };
+		8CF41403424C1EB4501ABA8D3517554A /* NSManagedObjectModel+CDEAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSManagedObjectModel+CDEAdditions.h"; path = "Framework/Source/General/NSManagedObjectModel+CDEAdditions.h"; sourceTree = "<group>"; };
+		8D6E18084F5129087C40E117030B88D6 /* CDEEventMigrator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEEventMigrator.h; path = Framework/Source/Events/CDEEventMigrator.h; sourceTree = "<group>"; };
+		90AEE928C96F9BADA0F64BFBD6DE1EA2 /* CDEEventIntegrator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDEEventIntegrator.m; path = Framework/Source/Events/CDEEventIntegrator.m; sourceTree = "<group>"; };
+		926E21A32B74907789441A1A0ECE5F74 /* CDERevisionSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDERevisionSet.h; path = Framework/Source/Revisioning/CDERevisionSet.h; sourceTree = "<group>"; };
+		92B6FBAE485191E55A02892EFA0706F1 /* CDEEventStoreModel_2.xcdatamodel */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcdatamodel; path = CDEEventStoreModel_2.xcdatamodel; sourceTree = "<group>"; };
+		9367F47B71F2320E4579772ACBE20E08 /* NSMapTable+CDEAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMapTable+CDEAdditions.h"; path = "Framework/Source/General/NSMapTable+CDEAdditions.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94B7528BEDD73DAD0B0B3E4C6FB0F385 /* Pods_JodTung.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JodTung.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		967A8E060E6B8CA5F931AF02355B8C38 /* Pods-JodTungUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JodTungUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		96C239A477E0047631398A953255CA9D /* Ensembles-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Ensembles-dummy.m"; sourceTree = "<group>"; };
+		9919C50B2061FFBDF51FF1AC4380E736 /* Pods_JodTungTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JodTungTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		991FC4D64C252ACA93A85F6B021CED27 /* JTAppleCalendarLayoutProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarLayoutProtocol.swift; path = Sources/JTAppleCalendarLayoutProtocol.swift; sourceTree = "<group>"; };
+		99750C41DB6A214589C6DB977C5334A9 /* Pods-JodTungUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JodTungUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A87B39444ECDDB6C399F2D4F0922758 /* Ensembles.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Ensembles.xcconfig; sourceTree = "<group>"; };
+		9AE32B27673647DF6676A241BAB93397 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A605BDF6B39C19497FF95833598EDDD7 /* Pods-JodTungTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JodTungTests-dummy.m"; sourceTree = "<group>"; };
+		A6DF958F06A692AA1A0D09BF93BFDE10 /* Pods-JodTung-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JodTung-dummy.m"; sourceTree = "<group>"; };
+		ABAF38F2F76F4ED05663BA9877FFC838 /* CDEEventBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEEventBuilder.h; path = Framework/Source/Events/CDEEventBuilder.h; sourceTree = "<group>"; };
+		ABC3C3691DD0865E54BA9424B26667C7 /* CDELocalCloudFileSystem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDELocalCloudFileSystem.h; path = "Framework/Source/Cloud File Systems/CDELocalCloudFileSystem.h"; sourceTree = "<group>"; };
+		AEAEA6F41EBE7C0E7F6C98C44E0C501F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF37F919E74F8ECD37C718A589A4429E /* UICollectionViewDelegates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICollectionViewDelegates.swift; path = Sources/UICollectionViewDelegates.swift; sourceTree = "<group>"; };
+		B21E1B1E427E0AE9C70D06DD907D3EE1 /* CDEFileDownloadOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDEFileDownloadOperation.m; path = "Framework/Source/Cloud File Systems/CDEFileDownloadOperation.m"; sourceTree = "<group>"; };
+		B2AD63DFD81F10377CCC1ED9859B20D2 /* Ensembles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ensembles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3DBDFBE57329A8799596969E046C8C1 /* CDEEventStore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDEEventStore.m; path = Framework/Source/Events/CDEEventStore.m; sourceTree = "<group>"; };
+		B45D258BCF1DC13752EDB8C6F02BE24D /* CDECloudFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDECloudFile.h; path = Framework/Source/Cloud/CDECloudFile.h; sourceTree = "<group>"; };
+		B4F6A800F7B5085DB71B29EFF41B2AAD /* Pods-JodTungUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JodTungUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B5415E47FA58FF892A76337FFBB1B106 /* CDECloudFileSystem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDECloudFileSystem.h; path = Framework/Source/Cloud/CDECloudFileSystem.h; sourceTree = "<group>"; };
+		B5CD4F8CFBD9215A32EA5823895B6920 /* JTAppleCalendarDelegateProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarDelegateProtocol.swift; path = Sources/JTAppleCalendarDelegateProtocol.swift; sourceTree = "<group>"; };
+		B8980A5572DEAABD7AF29F9DD6DCC051 /* CDEAsynchronousOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEAsynchronousOperation.h; path = Framework/Source/General/CDEAsynchronousOperation.h; sourceTree = "<group>"; };
+		BC4527D191AB6FECE503246946CAAD8F /* Pods-JodTungTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JodTungTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BC79DEE87E497D2D4FBF47DD5A24FB5F /* CDECloudFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDECloudFile.m; path = Framework/Source/Cloud/CDECloudFile.m; sourceTree = "<group>"; };
+		BC92111BAAB9F1F6EF2EC089F6F025B2 /* CDEICloudFileSystem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEICloudFileSystem.h; path = "Framework/Source/Cloud File Systems/CDEICloudFileSystem.h"; sourceTree = "<group>"; };
+		C621B78824B33521C993704F3563A8C9 /* CDEEventIntegrator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEEventIntegrator.h; path = Framework/Source/Events/CDEEventIntegrator.h; sourceTree = "<group>"; };
+		C80C01B07002B1956B88FBB5AF8B3F59 /* Ensembles.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Ensembles.modulemap; sourceTree = "<group>"; };
+		C971B608ECFCF9FEAAB849D706A0FD72 /* Pods-JodTung-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JodTung-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CC02560035EDFB46662331FFB243923B /* UIScrollViewDelegates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIScrollViewDelegates.swift; path = Sources/UIScrollViewDelegates.swift; sourceTree = "<group>"; };
+		CDB17E453DB681737C1C390D4F58E825 /* Pods-JodTungTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JodTungTests-umbrella.h"; sourceTree = "<group>"; };
+		CE10F52122B9B7E72027D638290784DA /* CDEFileUploadOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDEFileUploadOperation.m; path = "Framework/Source/Cloud File Systems/CDEFileUploadOperation.m"; sourceTree = "<group>"; };
+		D3E7AF47F9BF66EBAF6BF54F6AAFA83A /* JTAppleReusableViewProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleReusableViewProtocol.swift; path = Sources/JTAppleReusableViewProtocol.swift; sourceTree = "<group>"; };
+		D765DDF8333AA7083FB0F360A47A8997 /* CDERevisionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDERevisionManager.h; path = Framework/Source/Revisioning/CDERevisionManager.h; sourceTree = "<group>"; };
+		D8E5604AD859C521672B25AB1FC876C7 /* Pods-JodTung-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JodTung-resources.sh"; sourceTree = "<group>"; };
+		DBA9088FABB81DEE15B08F5634358613 /* Pods-JodTung.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JodTung.release.xcconfig"; sourceTree = "<group>"; };
+		DE48FEBB4BABE8BDCA941B92C9361814 /* CDEAsynchronousTaskQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEAsynchronousTaskQueue.h; path = Framework/Source/General/CDEAsynchronousTaskQueue.h; sourceTree = "<group>"; };
+		DEB1745200A26A8C582CDF879049DBB7 /* CDERevisionSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDERevisionSet.m; path = Framework/Source/Revisioning/CDERevisionSet.m; sourceTree = "<group>"; };
+		E1B13BAC8281159597D085CEEC443093 /* CDEBaselineConsolidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDEBaselineConsolidator.m; path = Framework/Source/Baselines/CDEBaselineConsolidator.m; sourceTree = "<group>"; };
+		E1BED6836ED7F7BEB791A6164B5358AC /* CDEDefines.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDEDefines.m; path = Framework/Source/General/CDEDefines.m; sourceTree = "<group>"; };
+		E21941A131CC88D4201FABF991061D41 /* CDEEventMigrator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDEEventMigrator.m; path = Framework/Source/Events/CDEEventMigrator.m; sourceTree = "<group>"; };
+		E3822C7F16497F2368855B014E12CE58 /* CDEAsynchronousOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDEAsynchronousOperation.m; path = Framework/Source/General/CDEAsynchronousOperation.m; sourceTree = "<group>"; };
+		E4C3FE915D40C3DB2D3561034AA4135C /* CDEGlobalIdentifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDEGlobalIdentifier.m; path = Framework/Source/Model/CDEGlobalIdentifier.m; sourceTree = "<group>"; };
+		E4DDB84D6A3250FC7802B249FE7E7455 /* Pods-JodTung-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JodTung-frameworks.sh"; sourceTree = "<group>"; };
+		E54C8CCB03C4A77CBF9C760AF753D081 /* JTAppleCalendarLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarLayout.swift; path = Sources/JTAppleCalendarLayout.swift; sourceTree = "<group>"; };
+		E74CF09640CFDDA9DD540D921E35D594 /* CDELocalCloudFileSystem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDELocalCloudFileSystem.m; path = "Framework/Source/Cloud File Systems/CDELocalCloudFileSystem.m"; sourceTree = "<group>"; };
+		E7E84538505F21AD441B87E2C82C53E5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		EB539A1480750F1D05BD709F1C4124B6 /* CDEFileDownloadOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEFileDownloadOperation.h; path = "Framework/Source/Cloud File Systems/CDEFileDownloadOperation.h"; sourceTree = "<group>"; };
+		EFE148B98F08EF1D1BBF289DC37ABFDD /* CalendarEnums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarEnums.swift; path = Sources/CalendarEnums.swift; sourceTree = "<group>"; };
+		F418606078BDDBC45BAA49EA8229FA3D /* Pods-JodTungTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JodTungTests-resources.sh"; sourceTree = "<group>"; };
+		F75C51D1B253F4FB41D36439312B2C62 /* CDEICloudFileSystem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDEICloudFileSystem.m; path = "Framework/Source/Cloud File Systems/CDEICloudFileSystem.m"; sourceTree = "<group>"; };
+		F78F5C7C7A481D73D1EC9FF4164A56D3 /* CDEFoundationAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDEFoundationAdditions.h; path = Framework/Source/General/CDEFoundationAdditions.h; sourceTree = "<group>"; };
+		F99A2FD638AC7973A308ECC8544B39A3 /* CDEEventBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDEEventBuilder.m; path = Framework/Source/Events/CDEEventBuilder.m; sourceTree = "<group>"; };
+		FA191E5003AF51F2F1DD55FA8CA275EC /* Pods-JodTungUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JodTungUITests-dummy.m"; sourceTree = "<group>"; };
+		FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D80829972658923FDE06E5EEB0B6D61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7500008FC3E326E99AB0126918760269 /* CoreData.framework in Frameworks */,
+				65A43D9E0261B9076435EFEACB81CC37 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69794B6355F0E02C4DE8C2A14FB11B01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E742E4B2327D3E0A3180B8B0472B29A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		742649126268D39B3A100EE447FE0F00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9DA953F8AF31133D5A3702C58AE86A1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC9DE73BCEC1B48A1045FF30ED8B4CC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB343112F9B2ECA933738BF75940FE4D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DED4559C8128DF00DE6243F94AB5A2B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C5EBC01746E0491BE0F837E6C01365 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C8C026721FBC4BA7DE43AB36391F2C6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B8980A5572DEAABD7AF29F9DD6DCC051 /* CDEAsynchronousOperation.h */,
+				E3822C7F16497F2368855B014E12CE58 /* CDEAsynchronousOperation.m */,
+				DE48FEBB4BABE8BDCA941B92C9361814 /* CDEAsynchronousTaskQueue.h */,
+				47F3CEE39AD5DDD24F95C7DD8104CC9A /* CDEAsynchronousTaskQueue.m */,
+				776526A891F47BA9CB4EB07C006515B3 /* CDEAvailabilityMacros.h */,
+				49D2225A012B41A444FCF8216EF7DA04 /* CDEBaselineConsolidator.h */,
+				E1B13BAC8281159597D085CEEC443093 /* CDEBaselineConsolidator.m */,
+				7211DE3C04C386817E6D4095C4437C8B /* CDECloudDirectory.h */,
+				3D3CDD893FD7662DFD66FDCBEF49028A /* CDECloudDirectory.m */,
+				B45D258BCF1DC13752EDB8C6F02BE24D /* CDECloudFile.h */,
+				BC79DEE87E497D2D4FBF47DD5A24FB5F /* CDECloudFile.m */,
+				B5415E47FA58FF892A76337FFBB1B106 /* CDECloudFileSystem.h */,
+				4A929DBB845545A50FA483DCD5D3CA26 /* CDECloudManager.h */,
+				14166604DD17A8E32E52AF3CC13990B2 /* CDECloudManager.m */,
+				7F9E35A644E9BB061CFC4A4B1FEDFB93 /* CDEDataFile.h */,
+				0D2663693D019D33FCEC80A8BE285FBF /* CDEDataFile.m */,
+				3A6D772C83E92235F1ECF04EE780A1E9 /* CDEDefines.h */,
+				E1BED6836ED7F7BEB791A6164B5358AC /* CDEDefines.m */,
+				ABAF38F2F76F4ED05663BA9877FFC838 /* CDEEventBuilder.h */,
+				F99A2FD638AC7973A308ECC8544B39A3 /* CDEEventBuilder.m */,
+				5D897B482A5E6E44040C1624A5B31067 /* CDEEventFile.h */,
+				5C6DDA41837283EB12AD4A20A3076517 /* CDEEventFile.m */,
+				C621B78824B33521C993704F3563A8C9 /* CDEEventIntegrator.h */,
+				90AEE928C96F9BADA0F64BFBD6DE1EA2 /* CDEEventIntegrator.m */,
+				8D6E18084F5129087C40E117030B88D6 /* CDEEventMigrator.h */,
+				E21941A131CC88D4201FABF991061D41 /* CDEEventMigrator.m */,
+				85AB9A9445CF59A79613BE3EAFC0224B /* CDEEventRevision.h */,
+				5B9C58FEBE3A00E5A7E054E7C54CE67C /* CDEEventRevision.m */,
+				433B8ED72B172CF30A7AA65AC765C842 /* CDEEventStore.h */,
+				B3DBDFBE57329A8799596969E046C8C1 /* CDEEventStore.m */,
+				EB539A1480750F1D05BD709F1C4124B6 /* CDEFileDownloadOperation.h */,
+				B21E1B1E427E0AE9C70D06DD907D3EE1 /* CDEFileDownloadOperation.m */,
+				26A571A329D5495ACC9E9AC8C7E2E814 /* CDEFileUploadOperation.h */,
+				CE10F52122B9B7E72027D638290784DA /* CDEFileUploadOperation.m */,
+				F78F5C7C7A481D73D1EC9FF4164A56D3 /* CDEFoundationAdditions.h */,
+				063409ED6E18CEB88389BFD0361D00EC /* CDEFoundationAdditions.m */,
+				893A974CC4038AB0CCF171BA3C914834 /* CDEGlobalIdentifier.h */,
+				E4C3FE915D40C3DB2D3561034AA4135C /* CDEGlobalIdentifier.m */,
+				BC92111BAAB9F1F6EF2EC089F6F025B2 /* CDEICloudFileSystem.h */,
+				F75C51D1B253F4FB41D36439312B2C62 /* CDEICloudFileSystem.m */,
+				ABC3C3691DD0865E54BA9424B26667C7 /* CDELocalCloudFileSystem.h */,
+				E74CF09640CFDDA9DD540D921E35D594 /* CDELocalCloudFileSystem.m */,
+				44AC569BF94E02939DB64E4D360743C7 /* CDEObjectChange.h */,
+				4180F4107550A720AED3AB0A47A494BA /* CDEObjectChange.m */,
+				740AF9CC0EAE26064A5DA893DA2F42DC /* CDEPersistentStoreEnsemble.h */,
+				50629759DEC74BA9A0D36B7F6548448A /* CDEPersistentStoreEnsemble.m */,
+				1BA755AC11597B599CAA483855E1C970 /* CDEPersistentStoreImporter.h */,
+				2F23FDD8153F27C743BDE4CAFA23E6FE /* CDEPersistentStoreImporter.m */,
+				5A26324868C0AE6772F6E862E33E5447 /* CDEPropertyChangeValue.h */,
+				21A97042554912A65F8CEF53ED669CE3 /* CDEPropertyChangeValue.m */,
+				6DCA927D32CB3DA76228989656AD8969 /* CDERebaser.h */,
+				65DB08624BD5BDED1FD6551601D2C1C6 /* CDERebaser.m */,
+				6ED76357D6AE7C6CAF48CA2DCE7A4EC8 /* CDERevision.h */,
+				1F59190D62DC4AABCE0ED2E8F70D4391 /* CDERevision.m */,
+				D765DDF8333AA7083FB0F360A47A8997 /* CDERevisionManager.h */,
+				5C915FF7D3999AECA167B428F54DAAC0 /* CDERevisionManager.m */,
+				926E21A32B74907789441A1A0ECE5F74 /* CDERevisionSet.h */,
+				DEB1745200A26A8C582CDF879049DBB7 /* CDERevisionSet.m */,
+				53DD9572C1B2C1CF75EEA148B3CFE645 /* CDESaveMonitor.h */,
+				3460864C6CF2BD151602D7EEF7034FBD /* CDESaveMonitor.m */,
+				4EC6DBB8763F3250B2497D9A3BF6D8AF /* CDEStoreModificationEvent.h */,
+				806D0E98513FA2FC8587613CF34E8B59 /* CDEStoreModificationEvent.m */,
+				0B632FA3A773D20D4BB373029C17D427 /* Ensembles.h */,
+				62807D023FADE5A868170C846E1EB846 /* NSFileCoordinator+CDEAdditions.h */,
+				24E8499E826C0795A36945C4575DE0F1 /* NSFileCoordinator+CDEAdditions.m */,
+				8CF41403424C1EB4501ABA8D3517554A /* NSManagedObjectModel+CDEAdditions.h */,
+				7E8508C5DDE7E4019592C74765CB3A84 /* NSManagedObjectModel+CDEAdditions.m */,
+				9367F47B71F2320E4579772ACBE20E08 /* NSMapTable+CDEAdditions.h */,
+				8A6061E751A006FE4BC93B78CFE5C877 /* NSMapTable+CDEAdditions.m */,
+				DECF96891AD95336F8A77E30FEEAF8C7 /* Resources */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		18C31505F53BCD0CB0F85AB659963013 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E7E84538505F21AD441B87E2C82C53E5 /* CoreData.framework */,
+				FF85E5A74BF2C5F729F6419654402FBC /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		3C869A6FB2723A1E3E8F15805514971D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC653BDB826A75F72B7852BEB16C64F3 /* Ensembles */,
+				A3786237FBF92FF932C4A5BB9457C980 /* JTAppleCalendar */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18C31505F53BCD0CB0F85AB659963013 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				3C869A6FB2723A1E3E8F15805514971D /* Pods */,
+				F2419ABCE95D37D9DD6A1724D867BF43 /* Products */,
+				8ED3EDF1B785A1A314A472578C1ACE24 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		829150B6823C6E9E82B9FCB164AD5520 /* Pods-JodTungTests */ = {
+			isa = PBXGroup;
+			children = (
+				410CA000B9340545854364801E084D57 /* Info.plist */,
+				860BE7D2304461EE7FB21D1963175307 /* Pods-JodTungTests.modulemap */,
+				BC4527D191AB6FECE503246946CAAD8F /* Pods-JodTungTests-acknowledgements.markdown */,
+				0E4C3BE88443B8DD31239C717A3D4F91 /* Pods-JodTungTests-acknowledgements.plist */,
+				A605BDF6B39C19497FF95833598EDDD7 /* Pods-JodTungTests-dummy.m */,
+				06A83C15E7A28FDA451D0951B34AD0F8 /* Pods-JodTungTests-frameworks.sh */,
+				F418606078BDDBC45BAA49EA8229FA3D /* Pods-JodTungTests-resources.sh */,
+				CDB17E453DB681737C1C390D4F58E825 /* Pods-JodTungTests-umbrella.h */,
+				4EA86C9C2C5059D9575A51DE99DA65D4 /* Pods-JodTungTests.debug.xcconfig */,
+				60F9493F38D65C1301EB3837CC7B1FB2 /* Pods-JodTungTests.release.xcconfig */,
+			);
+			name = "Pods-JodTungTests";
+			path = "Target Support Files/Pods-JodTungTests";
+			sourceTree = "<group>";
+		};
+		8ED3EDF1B785A1A314A472578C1ACE24 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D572120EC1CCBA68B36262917D3F7DD0 /* Pods-JodTung */,
+				829150B6823C6E9E82B9FCB164AD5520 /* Pods-JodTungTests */,
+				9B0E9590037502B4D458711D29F64FB4 /* Pods-JodTungUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9B0E9590037502B4D458711D29F64FB4 /* Pods-JodTungUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3C6A467867531B5005A16583A0E267D8 /* Info.plist */,
+				8ADE854B98E3D2C59C95A23A874574C6 /* Pods-JodTungUITests.modulemap */,
+				713B75225C9D99D59D33C207E3766D9F /* Pods-JodTungUITests-acknowledgements.markdown */,
+				967A8E060E6B8CA5F931AF02355B8C38 /* Pods-JodTungUITests-acknowledgements.plist */,
+				FA191E5003AF51F2F1DD55FA8CA275EC /* Pods-JodTungUITests-dummy.m */,
+				7DE60EEBA039B992A301221B236177D2 /* Pods-JodTungUITests-frameworks.sh */,
+				5110A4042C604C63646FF77CE7B842AE /* Pods-JodTungUITests-resources.sh */,
+				5FBF9E0182179AE291791601A2DF635A /* Pods-JodTungUITests-umbrella.h */,
+				99750C41DB6A214589C6DB977C5334A9 /* Pods-JodTungUITests.debug.xcconfig */,
+				B4F6A800F7B5085DB71B29EFF41B2AAD /* Pods-JodTungUITests.release.xcconfig */,
+			);
+			name = "Pods-JodTungUITests";
+			path = "Target Support Files/Pods-JodTungUITests";
+			sourceTree = "<group>";
+		};
+		A3786237FBF92FF932C4A5BB9457C980 /* JTAppleCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				EFE148B98F08EF1D1BBF289DC37ABFDD /* CalendarEnums.swift */,
+				6D93F7083A1EC69A6B565DDD43A55726 /* CalendarStructs.swift */,
+				6B4D3D09450CDEFD255B44D08E5F84F9 /* GlobalFunctionsAndExtensions.swift */,
+				B5CD4F8CFBD9215A32EA5823895B6920 /* JTAppleCalendarDelegateProtocol.swift */,
+				E54C8CCB03C4A77CBF9C760AF753D081 /* JTAppleCalendarLayout.swift */,
+				991FC4D64C252ACA93A85F6B021CED27 /* JTAppleCalendarLayoutProtocol.swift */,
+				3130156CBFB4F2D78E033033AB2702B6 /* JTAppleCalendarView.swift */,
+				3A6E2B3E3D88CF1607438E80F925C796 /* JTAppleCollectionReusableView.swift */,
+				2871F0F4659E72D06AA23AFD6A6D15CE /* JTAppleDayCell.swift */,
+				D3E7AF47F9BF66EBAF6BF54F6AAFA83A /* JTAppleReusableViewProtocol.swift */,
+				868C9B6A7DE546C787251E93C0F2F2F2 /* JTAppleViews.swift */,
+				1D94EA2680048B609781834096F58AAB /* JTCalendarProtocols.swift */,
+				AF37F919E74F8ECD37C718A589A4429E /* UICollectionViewDelegates.swift */,
+				CC02560035EDFB46662331FFB243923B /* UIScrollViewDelegates.swift */,
+				0CAD26B4513BBA2858AA7BA077A4A86B /* UserInteractionFunctions.swift */,
+				A3E5C5218732D0CDDE2C62BA11E908CA /* Support Files */,
+			);
+			path = JTAppleCalendar;
+			sourceTree = "<group>";
+		};
+		A3E5C5218732D0CDDE2C62BA11E908CA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEAEA6F41EBE7C0E7F6C98C44E0C501F /* Info.plist */,
+				4CE3380F2E4005A9E148221B69178ECF /* JTAppleCalendar.modulemap */,
+				477FC62D052C6C0D4600D90DD0B18DBE /* JTAppleCalendar.xcconfig */,
+				758AD1D00E5EFAD42BE11B6ED3983F9E /* JTAppleCalendar-dummy.m */,
+				617EFD27D6551A6A8C154EB89962303C /* JTAppleCalendar-prefix.pch */,
+				730F50690E868A654FC8CC0973F8E03C /* JTAppleCalendar-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JTAppleCalendar";
+			sourceTree = "<group>";
+		};
+		D572120EC1CCBA68B36262917D3F7DD0 /* Pods-JodTung */ = {
+			isa = PBXGroup;
+			children = (
+				4F6FFB8B237923CB49082EE624C70384 /* Info.plist */,
+				4D8A628796413670E459FE000EEEBD25 /* Pods-JodTung.modulemap */,
+				C971B608ECFCF9FEAAB849D706A0FD72 /* Pods-JodTung-acknowledgements.markdown */,
+				834EE526D2C7D2D6D2C808966B3083BB /* Pods-JodTung-acknowledgements.plist */,
+				A6DF958F06A692AA1A0D09BF93BFDE10 /* Pods-JodTung-dummy.m */,
+				E4DDB84D6A3250FC7802B249FE7E7455 /* Pods-JodTung-frameworks.sh */,
+				D8E5604AD859C521672B25AB1FC876C7 /* Pods-JodTung-resources.sh */,
+				1B1FF09A4BF9CD6EA789C998EE3B1321 /* Pods-JodTung-umbrella.h */,
+				0B9C48AF65C79FBFA6CA4BE86B7C68CE /* Pods-JodTung.debug.xcconfig */,
+				DBA9088FABB81DEE15B08F5634358613 /* Pods-JodTung.release.xcconfig */,
+			);
+			name = "Pods-JodTung";
+			path = "Target Support Files/Pods-JodTung";
+			sourceTree = "<group>";
+		};
+		DECF96891AD95336F8A77E30FEEAF8C7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9E2BB56154AE76C23D769B4035D52F12 /* CDEEventStoreModel.xcdatamodeld */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F2419ABCE95D37D9DD6A1724D867BF43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2AD63DFD81F10377CCC1ED9859B20D2 /* Ensembles.framework */,
+				19B93AE36C8ACAE4ACE431170BDCACE8 /* JTAppleCalendar.framework */,
+				94B7528BEDD73DAD0B0B3E4C6FB0F385 /* Pods_JodTung.framework */,
+				9919C50B2061FFBDF51FF1AC4380E736 /* Pods_JodTungTests.framework */,
+				5DB6172FEE1DD577EF084E2FD1A46DC5 /* Pods_JodTungUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F368E6117FD75D0A71C88F805A481A61 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C80C01B07002B1956B88FBB5AF8B3F59 /* Ensembles.modulemap */,
+				9A87B39444ECDDB6C399F2D4F0922758 /* Ensembles.xcconfig */,
+				96C239A477E0047631398A953255CA9D /* Ensembles-dummy.m */,
+				25A235356C8D31607800ADDD937392A0 /* Ensembles-prefix.pch */,
+				358A21C517EF84B06ECE7316F4CAF472 /* Ensembles-umbrella.h */,
+				9AE32B27673647DF6676A241BAB93397 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Ensembles";
+			sourceTree = "<group>";
+		};
+		FC653BDB826A75F72B7852BEB16C64F3 /* Ensembles */ = {
+			isa = PBXGroup;
+			children = (
+				0C8C026721FBC4BA7DE43AB36391F2C6 /* Core */,
+				F368E6117FD75D0A71C88F805A481A61 /* Support Files */,
+			);
+			path = Ensembles;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0D83E1C479F6E71DAD9A9522F085558D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46D249B5DF8B1BA7509F6EDC5EE14E69 /* Pods-JodTung-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54340C6B21133CB97375E012B8049E67 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1008FBC0C81745FD1450648D74E32479 /* CDEAsynchronousOperation.h in Headers */,
+				DEA45085B9C488396F0CB2C48EE8A6BB /* CDEAsynchronousTaskQueue.h in Headers */,
+				C4B6FDD5B4BB01EDEAAAA596AC30CFA9 /* CDEAvailabilityMacros.h in Headers */,
+				802782E6A0442A28EEE0728B579B335A /* CDEBaselineConsolidator.h in Headers */,
+				D1A15B2FD0AFE13F68E358423FCD86E1 /* CDECloudDirectory.h in Headers */,
+				BEF6E3D5FD186E493453F8E6DE42699D /* CDECloudFile.h in Headers */,
+				D925409F3E0AFC9DAF00A9BA0C8ACBCD /* CDECloudFileSystem.h in Headers */,
+				8BA72C8DE07E88CDC4AD77ED38E797A8 /* CDECloudManager.h in Headers */,
+				02CCF2AE7CFCB2CCB27EA2A9EC3DDC1A /* CDEDataFile.h in Headers */,
+				9978739B14E6119A934C4757EB2E99C4 /* CDEDefines.h in Headers */,
+				D3E0908ECE20AE27289B2B4DDBE48841 /* CDEEventBuilder.h in Headers */,
+				65E4E0128AB5E01185322CDF3222ED47 /* CDEEventFile.h in Headers */,
+				FC5DD4BF57F4471E9694A32AA2BCEDF5 /* CDEEventIntegrator.h in Headers */,
+				73991D199BDCABDA631AE62205596DDD /* CDEEventMigrator.h in Headers */,
+				0D1B1BAC72E7013E6BE61893B970DE06 /* CDEEventRevision.h in Headers */,
+				3D489E54CB05CBBFAC805221E99FF71F /* CDEEventStore.h in Headers */,
+				4EE26287116F50D87A7A25854998D414 /* CDEFileDownloadOperation.h in Headers */,
+				FD6337723278C8267DA37C52E0A32920 /* CDEFileUploadOperation.h in Headers */,
+				46028B842C50E29805B72682227071A1 /* CDEFoundationAdditions.h in Headers */,
+				0079375D93538C8928C422221B4A0372 /* CDEGlobalIdentifier.h in Headers */,
+				BB3307CFE4D786B762644660A0C25B7D /* CDEICloudFileSystem.h in Headers */,
+				3337FEE25A3871539CBD19E3FAD25F7D /* CDELocalCloudFileSystem.h in Headers */,
+				0410186BBB687BA4EDFFD5E7E088C343 /* CDEObjectChange.h in Headers */,
+				D2AA0A567431F90945D437664612E205 /* CDEPersistentStoreEnsemble.h in Headers */,
+				FC497603D1E2F3006C2429E500BA3CBB /* CDEPersistentStoreImporter.h in Headers */,
+				C1970D2EAEDFED5A49AAE61A47905D6D /* CDEPropertyChangeValue.h in Headers */,
+				4029A31716254559675C38281CDAE8C5 /* CDERebaser.h in Headers */,
+				A52FA23D1C70FED65C9843B169072E01 /* CDERevision.h in Headers */,
+				FC1A7E0EE9BA9283B153A179122C8469 /* CDERevisionManager.h in Headers */,
+				1EAC1A072E5123D7A441C4139C336213 /* CDERevisionSet.h in Headers */,
+				190BA87C8186D410C659C76483577709 /* CDESaveMonitor.h in Headers */,
+				765AA0DA777DBC2BB219F393636E27EB /* CDEStoreModificationEvent.h in Headers */,
+				CE10EB5C96DFE12D0B9DE87DC98B5DE8 /* Ensembles-umbrella.h in Headers */,
+				52137715D4D89B297F569DB79E4CE384 /* Ensembles.h in Headers */,
+				7DA5F704B13F2D3AB1924227578D5479 /* NSFileCoordinator+CDEAdditions.h in Headers */,
+				04D11450DE4A00421B0E48DE74D6AFF2 /* NSManagedObjectModel+CDEAdditions.h in Headers */,
+				773A27CE22BB3A756FDE57D9BFDA2ECC /* NSMapTable+CDEAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64408BC437D4D3FD921596C3DE7D4FDD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639540A73F4CEBCB5A9C8F7D0BE7DD3B /* Pods-JodTungUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F02DEB038B5B546FCE18EEDAE85FCB7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EE43D14B802A1FD0DD71DE5765BFBB3 /* JTAppleCalendar-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E80DF1F7F3F6DD4AC0E0B292B4720EAA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DFD6F58C415532662A312BB9C39ECC0 /* Pods-JodTungTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		314168C63F2E77BDB0F941F9C405BE91 /* Pods-JodTungUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E368444122A2D95B67D6BD7C7C947AB /* Build configuration list for PBXNativeTarget "Pods-JodTungUITests" */;
+			buildPhases = (
+				4E1B216EAF6EF0A47528DED79889BB00 /* Sources */,
+				69794B6355F0E02C4DE8C2A14FB11B01 /* Frameworks */,
+				64408BC437D4D3FD921596C3DE7D4FDD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-JodTungUITests";
+			productName = "Pods-JodTungUITests";
+			productReference = 5DB6172FEE1DD577EF084E2FD1A46DC5 /* Pods_JodTungUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4CAC95BAD79AE7D179A7730EDB6C3D1A /* Ensembles */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53B61F82DC5DA66A90476EFA6F937E3E /* Build configuration list for PBXNativeTarget "Ensembles" */;
+			buildPhases = (
+				E42E317124EFA806CB4C41A4BFDAB55C /* Sources */,
+				1D80829972658923FDE06E5EEB0B6D61 /* Frameworks */,
+				54340C6B21133CB97375E012B8049E67 /* Headers */,
+				C977D6C92066A4BCA062E2B2D6F14532 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ensembles;
+			productName = Ensembles;
+			productReference = B2AD63DFD81F10377CCC1ED9859B20D2 /* Ensembles.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BF0221E8569B7BE65F7BA0CBD282D370 /* JTAppleCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 805309A2B58B79DE022159F298BE557A /* Build configuration list for PBXNativeTarget "JTAppleCalendar" */;
+			buildPhases = (
+				20B8BDFAA53A051394503DB8B7B87898 /* Sources */,
+				DC9DE73BCEC1B48A1045FF30ED8B4CC2 /* Frameworks */,
+				6F02DEB038B5B546FCE18EEDAE85FCB7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JTAppleCalendar;
+			productName = JTAppleCalendar;
+			productReference = 19B93AE36C8ACAE4ACE431170BDCACE8 /* JTAppleCalendar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D3D23A81EC2EE7D3CE7CA81E6EA0A06B /* Pods-JodTung */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36F51E8D584E428702F06DDE0B74CCA8 /* Build configuration list for PBXNativeTarget "Pods-JodTung" */;
+			buildPhases = (
+				0C72A8B6E0436B7BFC313600A1629804 /* Sources */,
+				DED4559C8128DF00DE6243F94AB5A2B5 /* Frameworks */,
+				0D83E1C479F6E71DAD9A9522F085558D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				41CC35FC69C171067C9B8FADE57F78E6 /* PBXTargetDependency */,
+				BAC9F9189BB0F69F5401395B6467A3DB /* PBXTargetDependency */,
+			);
+			name = "Pods-JodTung";
+			productName = "Pods-JodTung";
+			productReference = 94B7528BEDD73DAD0B0B3E4C6FB0F385 /* Pods_JodTung.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F97D6D8286ACE550441ABE2B3B10D0CC /* Pods-JodTungTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF7F4F139E51D45A6D29A85DBAEDE5B6 /* Build configuration list for PBXNativeTarget "Pods-JodTungTests" */;
+			buildPhases = (
+				1787C36ADD1160843B20FB5F3E96AFFF /* Sources */,
+				742649126268D39B3A100EE447FE0F00 /* Frameworks */,
+				E80DF1F7F3F6DD4AC0E0B292B4720EAA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-JodTungTests";
+			productName = "Pods-JodTungTests";
+			productReference = 9919C50B2061FFBDF51FF1AC4380E736 /* Pods_JodTungTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = F2419ABCE95D37D9DD6A1724D867BF43 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4CAC95BAD79AE7D179A7730EDB6C3D1A /* Ensembles */,
+				BF0221E8569B7BE65F7BA0CBD282D370 /* JTAppleCalendar */,
+				D3D23A81EC2EE7D3CE7CA81E6EA0A06B /* Pods-JodTung */,
+				F97D6D8286ACE550441ABE2B3B10D0CC /* Pods-JodTungTests */,
+				314168C63F2E77BDB0F941F9C405BE91 /* Pods-JodTungUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C977D6C92066A4BCA062E2B2D6F14532 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21A839943182F72D48977B85864AB947 /* CDEEventStoreModel.xcdatamodeld in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C72A8B6E0436B7BFC313600A1629804 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF4152DD97A8AD332687C34FA813E9BA /* Pods-JodTung-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1787C36ADD1160843B20FB5F3E96AFFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22BFB845F547E4B8762F30E33BFA0D19 /* Pods-JodTungTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20B8BDFAA53A051394503DB8B7B87898 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B43F1340D4369153D01EBEEAF42214E /* CalendarEnums.swift in Sources */,
+				601FB14D2AC97C4B8C6C6686EA24A3D6 /* CalendarStructs.swift in Sources */,
+				8D65105E019C2A786F0AD79EAA92EFEC /* GlobalFunctionsAndExtensions.swift in Sources */,
+				0BFA6C637DD65E6C3147C52907944B71 /* JTAppleCalendar-dummy.m in Sources */,
+				89D93D91A4B635949C489667DD937B3B /* JTAppleCalendarDelegateProtocol.swift in Sources */,
+				C91278C4356BB401E436D5165A74482C /* JTAppleCalendarLayout.swift in Sources */,
+				EA12E7883C6419EF27A8A0DABF534051 /* JTAppleCalendarLayoutProtocol.swift in Sources */,
+				53A61813C5891261763D30705D967D8B /* JTAppleCalendarView.swift in Sources */,
+				9346FE01AB97D189F8107E18094F3571 /* JTAppleCollectionReusableView.swift in Sources */,
+				C8085EA4D611AA2C781E22F68F06A35D /* JTAppleDayCell.swift in Sources */,
+				B39AE8AF95AF67295B9CB53D6CFB0139 /* JTAppleReusableViewProtocol.swift in Sources */,
+				D3A7FCD648C686770C62805D79561CEF /* JTAppleViews.swift in Sources */,
+				86175F52070E58CC6B1B8F603AD23401 /* JTCalendarProtocols.swift in Sources */,
+				24EA2DAA09699CD9AEDFE51B473CA8B5 /* UICollectionViewDelegates.swift in Sources */,
+				718081985655D07B960B254951DE5109 /* UIScrollViewDelegates.swift in Sources */,
+				70E965200B90562EF7BBA48FD0F3FB3E /* UserInteractionFunctions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E1B216EAF6EF0A47528DED79889BB00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9F55D67382D5E2E7CC8696E359CD747 /* Pods-JodTungUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E42E317124EFA806CB4C41A4BFDAB55C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A635E04ACE255F382856F3312C364F0 /* CDEAsynchronousOperation.m in Sources */,
+				C9C678608954C5D03A6030CE523CBCFE /* CDEAsynchronousTaskQueue.m in Sources */,
+				15217BB0E5006F49A51D22ABBBD175E7 /* CDEBaselineConsolidator.m in Sources */,
+				F12707C80662193B742083E1245DEC91 /* CDECloudDirectory.m in Sources */,
+				0DB0D970D3B70C9357B40E8BFB2343F3 /* CDECloudFile.m in Sources */,
+				37C829006A6F4CC64B5E29D4800416C7 /* CDECloudManager.m in Sources */,
+				278048732EA360380ED638184911F727 /* CDEDataFile.m in Sources */,
+				E843ADF9777FA1DD2D204E1FCC1BE3FA /* CDEDefines.m in Sources */,
+				23CE2DBD1A7F79C19DFD4AD9A2E002DD /* CDEEventBuilder.m in Sources */,
+				18638675F076AF7F1CD767877932849C /* CDEEventFile.m in Sources */,
+				8A468BE2779CB53459F4D4A18D22AC0B /* CDEEventIntegrator.m in Sources */,
+				00FC7CC72C3D96ED98B5371423C1CA83 /* CDEEventMigrator.m in Sources */,
+				F591E54A8252B8BD94FC5D4764F0C6C2 /* CDEEventRevision.m in Sources */,
+				D1AC0F36A2555801127BA17B5CC2A862 /* CDEEventStore.m in Sources */,
+				5D561ACDEA2FC613AA5252B58CF9FCA7 /* CDEFileDownloadOperation.m in Sources */,
+				B3527F95C900B3D826E5F653D209BE8E /* CDEFileUploadOperation.m in Sources */,
+				8DA76A7A8D67A042B8AE6DFFE96DEDA9 /* CDEFoundationAdditions.m in Sources */,
+				10AC102CDF7C08DC2A362F348718698C /* CDEGlobalIdentifier.m in Sources */,
+				6476E949A684C1621874139B8ADB19C3 /* CDEICloudFileSystem.m in Sources */,
+				7CDA527EFF522ACB4CFB2FD21449B25F /* CDELocalCloudFileSystem.m in Sources */,
+				701D4668F9B1515A404AA0D4283BF2FE /* CDEObjectChange.m in Sources */,
+				0F9794BBD6A9BB78B0184875B9AB5316 /* CDEPersistentStoreEnsemble.m in Sources */,
+				F573613D35CD8010668C6772DD5A52CA /* CDEPersistentStoreImporter.m in Sources */,
+				5A3A6A8AAB434DEDC1601E97FB31BE1F /* CDEPropertyChangeValue.m in Sources */,
+				B1E478D862C6DCFE18BB405FE9B6A6BD /* CDERebaser.m in Sources */,
+				3378C9D5CF49CC572051C98BD452C100 /* CDERevision.m in Sources */,
+				5ED915DC2381816A112715C119379E4E /* CDERevisionManager.m in Sources */,
+				20C0F06F0222F2B79B5BFFD1F4FFE4CD /* CDERevisionSet.m in Sources */,
+				B570EB589348AFBF365C7C88091ECC33 /* CDESaveMonitor.m in Sources */,
+				B15FAA57D26153EE4DF2E2BF146DDD98 /* CDEStoreModificationEvent.m in Sources */,
+				CD9BDFF82BD126C58C529F899AA14CBA /* Ensembles-dummy.m in Sources */,
+				57000192CB8F377E71C8449ACA414473 /* NSFileCoordinator+CDEAdditions.m in Sources */,
+				050B38E3544D77784C1C1F21704C2219 /* NSManagedObjectModel+CDEAdditions.m in Sources */,
+				3ADA8FA14C7533CBCE18F07649E3B406 /* NSMapTable+CDEAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		41CC35FC69C171067C9B8FADE57F78E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Ensembles;
+			target = 4CAC95BAD79AE7D179A7730EDB6C3D1A /* Ensembles */;
+			targetProxy = 4B3EE4928956A584C1B3CA548218F40D /* PBXContainerItemProxy */;
+		};
+		BAC9F9189BB0F69F5401395B6467A3DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JTAppleCalendar;
+			target = BF0221E8569B7BE65F7BA0CBD282D370 /* JTAppleCalendar */;
+			targetProxy = 80CFC1BA6C5DF1F59A289CE21434A0E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		12914D756594D15C6F2CA12FE5F89F1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		2741C2A9FB210B6205D97026E01B713E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60F9493F38D65C1301EB3837CC7B1FB2 /* Pods-JodTungTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JodTungTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JodTungTests/Pods-JodTungTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JodTungTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4AC321EABA13E54E65F2CB89B9F38B69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 477FC62D052C6C0D4600D90DD0B18DBE /* JTAppleCalendar.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JTAppleCalendar/JTAppleCalendar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JTAppleCalendar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JTAppleCalendar/JTAppleCalendar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = JTAppleCalendar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		74DE5A95B245FBBE887442E568014BA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBA9088FABB81DEE15B08F5634358613 /* Pods-JodTung.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JodTung/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JodTung/Pods-JodTung.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JodTung;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		95EE600F0E93A1651AB4A0B3FD4597A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A87B39444ECDDB6C399F2D4F0922758 /* Ensembles.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Ensembles/Ensembles-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Ensembles/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Ensembles/Ensembles.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Ensembles;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A62E3BAA40C6FF16039F8532E99291C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 477FC62D052C6C0D4600D90DD0B18DBE /* JTAppleCalendar.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JTAppleCalendar/JTAppleCalendar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JTAppleCalendar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JTAppleCalendar/JTAppleCalendar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = JTAppleCalendar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B23DCEF9E0C7442176AFBC5C28EDFEAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EA86C9C2C5059D9575A51DE99DA65D4 /* Pods-JodTungTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JodTungTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JodTungTests/Pods-JodTungTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JodTungTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BBC8FD4D5C82025883A9B6862A8326C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B9C48AF65C79FBFA6CA4BE86B7C68CE /* Pods-JodTung.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JodTung/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JodTung/Pods-JodTung.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JodTung;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CE9D64CEA3DB3EC5769837EF00B92CE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A87B39444ECDDB6C399F2D4F0922758 /* Ensembles.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Ensembles/Ensembles-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Ensembles/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Ensembles/Ensembles.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Ensembles;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DE9DAEAA19D9EAB3840442AEE732DD2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4F6A800F7B5085DB71B29EFF41B2AAD /* Pods-JodTungUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JodTungUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JodTungUITests/Pods-JodTungUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JodTungUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E72E7977875C2D251FC62736BBDDC389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3007A316ACCE1401813B24DE49EF845 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99750C41DB6A214589C6DB977C5334A9 /* Pods-JodTungUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JodTungUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JodTungUITests/Pods-JodTungUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JodTungUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E368444122A2D95B67D6BD7C7C947AB /* Build configuration list for PBXNativeTarget "Pods-JodTungUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3007A316ACCE1401813B24DE49EF845 /* Debug */,
+				DE9DAEAA19D9EAB3840442AEE732DD2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12914D756594D15C6F2CA12FE5F89F1B /* Debug */,
+				E72E7977875C2D251FC62736BBDDC389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36F51E8D584E428702F06DDE0B74CCA8 /* Build configuration list for PBXNativeTarget "Pods-JodTung" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBC8FD4D5C82025883A9B6862A8326C5 /* Debug */,
+				74DE5A95B245FBBE887442E568014BA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53B61F82DC5DA66A90476EFA6F937E3E /* Build configuration list for PBXNativeTarget "Ensembles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95EE600F0E93A1651AB4A0B3FD4597A0 /* Debug */,
+				CE9D64CEA3DB3EC5769837EF00B92CE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		805309A2B58B79DE022159F298BE557A /* Build configuration list for PBXNativeTarget "JTAppleCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AC321EABA13E54E65F2CB89B9F38B69 /* Debug */,
+				A62E3BAA40C6FF16039F8532E99291C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF7F4F139E51D45A6D29A85DBAEDE5B6 /* Build configuration list for PBXNativeTarget "Pods-JodTungTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B23DCEF9E0C7442176AFBC5C28EDFEAE /* Debug */,
+				2741C2A9FB210B6205D97026E01B713E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9E2BB56154AE76C23D769B4035D52F12 /* CDEEventStoreModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3A8B3F8FBFF8EBF3F60065F8F9B6A700 /* CDEEventStoreModel_0.xcdatamodel */,
+				2291D09E30BB7A30A24BCE908993CAA3 /* CDEEventStoreModel_1.xcdatamodel */,
+				92B6FBAE485191E55A02892EFA0706F1 /* CDEEventStoreModel_2.xcdatamodel */,
+			);
+			currentVersion = 92B6FBAE485191E55A02892EFA0706F1 /* CDEEventStoreModel_2.xcdatamodel */;
+			name = CDEEventStoreModel.xcdatamodeld;
+			path = Framework/Resources/CDEEventStoreModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

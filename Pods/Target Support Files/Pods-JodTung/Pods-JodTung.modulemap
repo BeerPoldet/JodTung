@@ -1,0 +1,6 @@
+framework module Pods_JodTung {
+  umbrella header "Pods-JodTung-umbrella.h"
+
+  export *
+  module * { export * }
+}
