@@ -46,7 +46,10 @@ class CategoryPickerView: UIView, StoryboardView {
             }
         }
     }
-    fileprivate var selectedCategory: Category?
+    
+    // MARK: - Public Properties
+    
+    var selectedCategory: Category?
     
     // MARK: - Object lifecycle
     

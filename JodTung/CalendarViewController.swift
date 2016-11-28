@@ -74,7 +74,7 @@ class CalendarViewController {
                 preferredScrollPosition: .centeredVertically,
                 completionHandler: {
                     self.updateCalendarViewSelectedDate()
-            }
+                }
             )
         }
     }

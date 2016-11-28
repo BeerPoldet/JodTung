@@ -13,59 +13,44 @@ class TransactionListViewController: UIViewController {
     
     // MARK: - Injected Dependencies
     
-    var selectedDate: Date! {
-        get {
-            return calendarViewController.selectedDate
-        }
-        set {
-            calendarViewController.selectedDate = newValue
-            selectedDateDidChange()
-        }
-    }
-    
     weak var delegate: TransactionListViewControllerDelegate?
     
     var accountant: Accountant!
     
     // MARK: - Properties
     
-    // Transaction for selected date
-    var transactions = [Transaction]()
+    var selectedDate: Date! {
+        get {
+            return calendarWeekView.selectedDate
+        }
+        set {
+            calendarWeekView?.selectedDate = newValue
+            if calendarWeekView == nil {
+                _selectedDate = newValue
+            }
+        }
+    }
     
-    lazy var calendarViewController: CalendarViewController = {
-        let config = CalendarViewController.CalendarViewConfig(
-            itemSize: nil,
-            numberOfRows: 1,
-            cellInset: CGPoint.zero,
-            generateInDates: .forFirstMonthOnly,
-            generateOutDates: .off,
-            firstDayOfWeek: .sunday,
-            allowsMultipleSelection: false,
-            scrolling: CalendarViewController.CalendarViewConfig.Scrolling(
-                mode: .stopAtEachCalendarFrameWidth,
-                direction: .horizontal
-            )
-        )
-        let calendarViewController = CalendarViewController(config: config)
-        calendarViewController.calendarDelegate = self
-        return calendarViewController
-    }()
+    private var _selectedDate: Date?
     
-    fileprivate var selectedDay: DaysOfWeek?
     fileprivate lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .full
         return dateFormatter
     }()
+    
+    // Transaction for selected date
+    var transactions = [Transaction]()
+    
     fileprivate var expandedHeightOfCalendarWeekView: CGFloat?
     
     fileprivate lazy var viewControllerAnimatedTransitioning = StackViewControllerAnimatedTransitioning()
     
     // MARK: - Outlets
     
-    @IBOutlet weak var calendarView: JTAppleCalendarView! {
+    @IBOutlet weak var calendarWeekView: CalendarWeekView! {
         didSet {
-            calendarViewController.calendarView = calendarView
+            calendarWeekView.delegate = self
         }
     }
     @IBOutlet weak var selectedDateLabel: UILabel! {
@@ -73,7 +58,6 @@ class TransactionListViewController: UIViewController {
             updateSelectedDateLabel()
         }
     }
-    @IBOutlet weak var calendarWeekView: UIView!
     @IBOutlet weak var calendarWeekViewHeightConstraint: NSLayoutConstraint! {
         didSet {
             expandedHeightOfCalendarWeekView = calendarWeekViewHeightConstraint.constant
@@ -95,23 +79,14 @@ class TransactionListViewController: UIViewController {
         }
     }
     
-    // MARK: - Events
-    
-    fileprivate func selectedDateDidChange() {
-        updateSelectedDay()
-        updateSelectedDateLabel()
-        if let selectedDate = selectedDate {
-            reloadTableData()
-            delegate?.transactionListViewController(self, didSelect: selectedDate)
-        }
-    }
-    
     // MARK: - View Controller Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupNavigationBar()
+        
+        setupCalendarWeekView()
                
 //        let categories = accountant.transactionCategories!
 //        accountant.add(transactionInfo: TransactionInfo(creationDate: Date(), note: "some note", value: 40, category: categories.first!))
@@ -122,7 +97,7 @@ class TransactionListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        calendarViewController.scrollToSelectedDate(withAnimation: false)
+        calendarWeekView.scrollToSelectedDate(withAnimation: false)
     }
     
     // MARK: - Setup UI
@@ -149,23 +124,9 @@ class TransactionListViewController: UIViewController {
         }
     }
     
-    fileprivate func updateSelectedDay() {
-        
-        func dayOfWeek(from date: Date?) -> DaysOfWeek? {
-            if let date = date {
-                return DaysOfWeek(rawValue: Calendar.current.component(.weekday, from: date))
-            } else {
-                return nil
-            }
-        }
-        
-        selectedDay = dayOfWeek(from: selectedDate)
-    }
-    
     // MARK: - Navigation
     
     struct SegueIdentifier {
-        static let showCalendar = "Show Calendar"
         static let showTransactionInfo = "Show Transaction Info"
     }
     
@@ -173,16 +134,12 @@ class TransactionListViewController: UIViewController {
         guard let identifier = segue.identifier else { return }
         
         switch identifier {
-        case SegueIdentifier.showCalendar:
-            let calendarMonthViewController = segue.destination as! CalendarMonthViewController
-            if let selectedDate = calendarViewController.selectedDate {
-                calendarMonthViewController.selectedDate = selectedDate
-            }
         case SegueIdentifier.showTransactionInfo:
             let transactionInfoViewController = segue.destination as! TransactionInfoViewController
             transactionInfoViewController.transitioningDelegate = self
             transactionInfoViewController.modalPresentationStyle = .custom
             transactionInfoViewController.accountant = accountant
+            transactionInfoViewController.delegate = self
         default:
             break
         }
@@ -195,39 +152,31 @@ class TransactionListViewController: UIViewController {
             static let transaction = "TxactionViewCell"
         }
     }
+    
+    // MARK: - CalendarWeekView
+    
+    private func setupCalendarWeekView() {
+        if _selectedDate != nil {
+            calendarWeekView.selectedDate = _selectedDate
+            _selectedDate = nil
+        }
+    }
 }
 
-// MARK: - JTAppleCalendarViewDelegate
+// MARK: - CalendarWeekViewDelegate
 
-extension TransactionListViewController: JTAppleCalendarViewDelegate {
-    
-    func calendar(_ calendar: JTAppleCalendarView, willDisplayCell cell: JTAppleDayCellView, date: Date, cellState: CellState) {
-        if let cell = cell as? DayCellView {
-            cell.setup(date: date, with: cellState, showingSeparateLine: false)
-        }
-    }
-    
-    func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleDayCellView?, cellState: CellState) {
-        calendarViewController.calendar(calendar, didSelectDate: date, cell: cell, cellState: cellState)
-        
-        selectedDateDidChange()
-    }
-    
-    func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
-        let shiftSelectedDate = visibleDates.monthDates.first(where: { (date) -> Bool in
-            let weekday = Calendar.current.component(.weekday, from: date)
-            return DaysOfWeek(rawValue: weekday) == selectedDay
-        })
-        
-        if shiftSelectedDate != nil {
-            selectedDate = shiftSelectedDate
-        }
+extension TransactionListViewController: CalendarWeekViewDelegate {
+    func calenadrWeekView(_ calendar: CalendarWeekView, didSelect date: Date) {
+        updateSelectedDateLabel()
+        reloadTableData()
+        delegate?.transactionListViewController(self, didSelect: date)
     }
 }
 
 // MARK: - CalendarViewControllerAnimatedTransitioningDataSource
 
 extension TransactionListViewController: CollapsingViewControllerAnimatedTransitioningDataSource {
+    
     func expandableLayoutConstraint() -> NSLayoutConstraint {
         return self.calendarWeekViewHeightConstraint
     }
@@ -281,5 +230,13 @@ extension TransactionListViewController: UIViewControllerTransitioningDelegate {
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         return StackPresentationController(presentedViewController: presented, presenting: presenting)
+    }
+}
+
+// MARK: - TransactionInfoViewControllerDelegate
+
+extension TransactionListViewController: TransactionInfoViewControllerDelegate {
+    func transactionInfoViewControllerDidSave() {
+        reloadTableData()
     }
 }

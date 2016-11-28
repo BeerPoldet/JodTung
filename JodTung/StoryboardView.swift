@@ -18,8 +18,13 @@ extension StoryboardView where Self: UIView {
         let nib = UINib(nibName: String(describing: Self.self), bundle: bundle)
         
         let view = nib.instantiate(withOwner: self, options: nil).first	 as! UIView
-        view.frame = bounds
-        
+        //        view.frame = bounds
         addSubview(view)
+        
+        view.translatesAutoresizingMaskIntoConstraints = false
+        let bindings = ["view": view]
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options:[], metrics:nil, views: bindings))
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options:[], metrics:nil, views: bindings))
+        
     }
 }

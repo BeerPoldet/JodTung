@@ -262,13 +262,13 @@ extension CalendarMonthViewController: JTAppleCalendarViewDelegate {
 
 extension CalendarMonthViewController: TransactionListViewControllerDelegate {
     func transactionListViewController(_ controller: TransactionListViewController, didSelect date: Date) {
-        updateNavigationBarTitle()
         
-        if let selectedDate = selectedDate, Calendar.current.isDate(selectedDate, inSameDayAs: date) {
-            return
-        }
+//        if let selectedDate = selectedDate, Calendar.current.isDate(selectedDate, inSameDayAs: date) {
+//            return
+//        }
         
         selectedDate = date
+        updateNavigationBarTitle()
         calendarViewController.scrollToSelectedDate()
     }
 }

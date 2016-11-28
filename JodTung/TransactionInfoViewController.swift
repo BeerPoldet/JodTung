@@ -18,6 +18,8 @@ class TransactionInfoViewController: UIViewController {
         }
     }
     
+    weak var delegate: TransactionInfoViewControllerDelegate?
+    
     // MARK: - Properties
     
     
@@ -28,6 +30,21 @@ class TransactionInfoViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func dismiss(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func save(_ sender: Any) {
+        guard let category = categoryPickerView.selectedCategory else { return }
+        let transactionInfo = TransactionInfo(
+            creationDate: Date(),
+            note: "test note",
+            value: 200,
+            category: category
+        )
+        accountant.add(transactionInfo: transactionInfo)
+        
+        delegate?.transactionInfoViewControllerDidSave()
+        
         dismiss(animated: true, completion: nil)
     }
     
@@ -55,4 +72,8 @@ class TransactionInfoViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return false
     }
+}
+
+protocol TransactionInfoViewControllerDelegate: class {
+    func transactionInfoViewControllerDidSave()
 }

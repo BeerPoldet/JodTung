@@ -62,6 +62,8 @@
 		D732C0FD1DEC0DE70090EFF5 /* StoryboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D732C0FC1DEC0DE70090EFF5 /* StoryboardView.swift */; };
 		D732C1001DEC1BA50090EFF5 /* CategoryGroupCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D732C0FF1DEC1BA50090EFF5 /* CategoryGroupCollectionViewCell.xib */; };
 		D732C1021DEC1D9E0090EFF5 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D732C1011DEC1D9E0090EFF5 /* CategoryCollectionViewCell.xib */; };
+		D732C1421DEC4BC10090EFF5 /* CalendarWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D732C1411DEC4BC10090EFF5 /* CalendarWeekView.swift */; };
+		D732C1441DEC4CF90090EFF5 /* CalendarWeekView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D732C1431DEC4CF90090EFF5 /* CalendarWeekView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +162,8 @@
 		D732C0FC1DEC0DE70090EFF5 /* StoryboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardView.swift; sourceTree = "<group>"; };
 		D732C0FF1DEC1BA50090EFF5 /* CategoryGroupCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryGroupCollectionViewCell.xib; sourceTree = "<group>"; };
 		D732C1011DEC1D9E0090EFF5 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		D732C1411DEC4BC10090EFF5 /* CalendarWeekView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarWeekView.swift; sourceTree = "<group>"; };
+		D732C1431DEC4CF90090EFF5 /* CalendarWeekView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarWeekView.xib; sourceTree = "<group>"; };
 		EF90905546D6A4CA1CF85513 /* Pods-JodTung.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JodTung.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JodTung/Pods-JodTung.debug.xcconfig"; sourceTree = "<group>"; };
 		F3454CB1778743E68FE708C0 /* Pods_JodTung.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JodTung.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -299,12 +303,14 @@
 		053E0C811DB61A1300E0B9FC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				053E0C7F1DB6070700E0B9FC /* DayCellView.swift */,
+				D732C1431DEC4CF90090EFF5 /* CalendarWeekView.xib */,
+				D732C1411DEC4BC10090EFF5 /* CalendarWeekView.swift */,
 				053E0C7D1DB606C000E0B9FC /* DayCellView.xib */,
-				053E0C821DB61D5700E0B9FC /* MonthSectionHeaderView.swift */,
+				053E0C7F1DB6070700E0B9FC /* DayCellView.swift */,
 				053E0C841DB6203000E0B9FC /* MonthSectionHeaderView.xib */,
-				050411121DC1B405005D1EBB /* WeekHeaderView.swift */,
+				053E0C821DB61D5700E0B9FC /* MonthSectionHeaderView.swift */,
 				050411101DC1B2F9005D1EBB /* WeekHeaderView.xib */,
+				050411121DC1B405005D1EBB /* WeekHeaderView.swift */,
 				05FEA7791DE0140000BD4252 /* TxactionViewCell.swift */,
 				D732C0FE1DEC16510090EFF5 /* CategoryPickerView */,
 			);
@@ -565,6 +571,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D732C1441DEC4CF90090EFF5 /* CalendarWeekView.xib in Resources */,
 				058723DC1DC0A2E900FEF676 /* ShadowedBlurVisualEffectView.xib in Resources */,
 				053593BB1DB37ACB00A7B508 /* LaunchScreen.storyboard in Resources */,
 				050411111DC1B2F9005D1EBB /* WeekHeaderView.xib in Resources */,
@@ -765,6 +772,7 @@
 				05A0DE0C1DE0908C00B4E04B /* StackPresentationController.swift in Sources */,
 				05FEA77A1DE0140000BD4252 /* TxactionViewCell.swift in Sources */,
 				D732C0F91DEBFC3E0090EFF5 /* CategoryPickerView.swift in Sources */,
+				D732C1421DEC4BC10090EFF5 /* CalendarWeekView.swift in Sources */,
 				05A3D51A1DE40A7D0086DA5C /* CategoryCollectionViewCell.swift in Sources */,
 				053E0C801DB6070700E0B9FC /* DayCellView.swift in Sources */,
 				05228ED01DBDC9D9008403B2 /* NavigationBar+Transparent.swift in Sources */,
