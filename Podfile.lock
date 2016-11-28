@@ -1,0 +1,17 @@
+PODS:
+  - Ensembles (1.6):
+    - Ensembles/Core (= 1.6)
+  - Ensembles/Core (1.6)
+  - JTAppleCalendar (6.0.0)
+
+DEPENDENCIES:
+  - Ensembles (~> 1.0)
+  - JTAppleCalendar (~> 6.0)
+
+SPEC CHECKSUMS:
+  Ensembles: 8a9dab6543db7b9d617185efbc3ce8cfc812faed
+  JTAppleCalendar: 374d7d6309b4c40a41be4167fe4cc3b935831da1
+
+PODFILE CHECKSUM: a132fa5f35ef46545a9e56ca9b6544dd09be0d6c
+
+COCOAPODS: 1.1.1
