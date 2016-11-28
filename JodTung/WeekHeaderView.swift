@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class WeekHeaderView: UIView {
+class WeekHeaderView: UIView, StoryboardView {
 
   @IBOutlet weak var view: UIView!
   
@@ -23,16 +23,5 @@ class WeekHeaderView: UIView {
     super.init(coder: aDecoder)
     
     setup()
-  }
-  
-  private func setup() {
-    
-    let bundle = Bundle(for: WeekHeaderView.self)
-    let nib = UINib(nibName: String(describing: WeekHeaderView.self), bundle: bundle)
-//    view = nib.instantiate(withOwner: self, options: nil).first as! UIView
-    nib.instantiate(withOwner: self, options: nil)
-    
-    addSubview(view)
-    view.frame = bounds
   }
 }

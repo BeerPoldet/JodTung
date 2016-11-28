@@ -14,7 +14,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     
     var category: Category? { didSet { updateUI() } }
     
-    func updateUI() {
+    private func updateUI() {
         if let category = category {
             label.text = category.title
         }
