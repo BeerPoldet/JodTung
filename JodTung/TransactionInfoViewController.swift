@@ -26,6 +26,7 @@ class TransactionInfoViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var categoryPickerView: CategoryPickerView!
+    @IBOutlet weak var transactionTypeSegmentedControl: UISegmentedControl!
     
     // MARK: - Actions
     
@@ -48,12 +49,20 @@ class TransactionInfoViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func transactionTypeDidChange(_ sender: UISegmentedControl) {
+        categoryPickerView.selectedTransactionType =
+            TransactionType(rawValue: transactionTypeSegmentedControl.selectedSegmentIndex)!
+    }
+    
     // MARK: - View Controller lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         modalPresentationCapturesStatusBarAppearance = true
+        
+        categoryPickerView.selectedTransactionType =
+            TransactionType(rawValue: transactionTypeSegmentedControl.selectedSegmentIndex)!
         categoryPickerView?.categoryGroups = accountant.categoryGroups!
     }
     

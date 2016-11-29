@@ -48,7 +48,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HUa-Zl-wfQ" id="aOC-Dd-wRc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hsA-Ur-NQK">
@@ -242,11 +242,23 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem id="jGN-7B-5hl">
+                                        <nil key="title"/>
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="YKc-bP-t5j">
                                             <connections>
                                                 <action selector="dismiss:" destination="yE3-eT-bzu" id="h26-uV-OOb"/>
                                             </connections>
                                         </barButtonItem>
+                                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" id="2Ni-wo-hZp">
+                                            <rect key="frame" x="113" y="7" width="150" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="Expense"/>
+                                                <segment title="Income"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="transactionTypeDidChange:" destination="yE3-eT-bzu" eventType="valueChanged" id="NCp-Mo-jHe"/>
+                                            </connections>
+                                        </segmentedControl>
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="kF6-TD-CKp">
                                             <connections>
                                                 <action selector="save:" destination="yE3-eT-bzu" id="XTh-gX-zqu"/>
@@ -255,11 +267,11 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipC-k9-c0F" customClass="CategoryPickerView" customModule="JodTung" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="68" width="375" height="200"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipC-k9-c0F" customClass="CategoryPickerView" customModule="JodTung" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="65" width="375" height="174"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="vjT-2d-gYY"/>
+                                    <constraint firstAttribute="height" constant="174" id="vjT-2d-gYY"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -267,7 +279,7 @@
                         <constraints>
                             <constraint firstItem="raf-pd-Joe" firstAttribute="centerY" secondItem="eVd-hw-gwt" secondAttribute="centerY" id="QQ1-SV-6IO"/>
                             <constraint firstItem="ipC-k9-c0F" firstAttribute="leading" secondItem="eVd-hw-gwt" secondAttribute="leading" id="TbD-Z3-vpx"/>
-                            <constraint firstItem="ipC-k9-c0F" firstAttribute="top" secondItem="rV3-9O-vGT" secondAttribute="bottom" constant="4" id="Vvd-AO-VhM"/>
+                            <constraint firstItem="ipC-k9-c0F" firstAttribute="top" secondItem="rV3-9O-vGT" secondAttribute="bottom" constant="1" id="Vvd-AO-VhM"/>
                             <constraint firstAttribute="trailing" secondItem="ipC-k9-c0F" secondAttribute="trailing" id="Y1a-AC-QDG"/>
                             <constraint firstAttribute="trailing" secondItem="rV3-9O-vGT" secondAttribute="trailing" id="aIo-A2-Qn5"/>
                             <constraint firstItem="raf-pd-Joe" firstAttribute="centerX" secondItem="eVd-hw-gwt" secondAttribute="centerX" id="eyv-ab-732"/>
@@ -277,6 +289,7 @@
                     </view>
                     <connections>
                         <outlet property="categoryPickerView" destination="ipC-k9-c0F" id="zC7-wr-Abl"/>
+                        <outlet property="transactionTypeSegmentedControl" destination="2Ni-wo-hZp" id="cJ9-CF-afX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWN-gV-J8D" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -4,7 +4,6 @@ class CategoryPickerView: UIView, StoryboardView {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var view: UIView!
     @IBOutlet weak var categoryGroupCollectionView: UICollectionView! {
         didSet {
             categoryGroupCollectionView.dataSource = self
@@ -22,13 +21,19 @@ class CategoryPickerView: UIView, StoryboardView {
     
     var categoryGroups = [CategoryGroup]() {
         didSet {
-            selectedCategoryGroup = categoryGroups.first
-            categoryGroupCollectionView?.reloadData()
+            setupSelectedCategoryGroups()
+        }
+    }
+    
+    var selectedTransactionType: TransactionType = .income {
+        didSet {
+            setupSelectedCategoryGroups()
         }
     }
     
     // MAKR: - Private Properties
     
+    fileprivate var selectedCategoryGroups = [CategoryGroup]()
     fileprivate var selectedCategoryGroup: CategoryGroup? {
         didSet {
             guard let categoriesOfSelectedGroup = selectedCategoryGroup?.categoryList else { return }
@@ -45,6 +50,17 @@ class CategoryPickerView: UIView, StoryboardView {
                 categoryCollectionView?.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: false)
             }
         }
+    }
+    
+    // MARK: - SelectedCategoryGroup
+    
+    fileprivate func setupSelectedCategoryGroups() {
+        selectedCategoryGroups = categoryGroups.filter({ (group) -> Bool in
+            return group.type == selectedTransactionType
+        })
+        
+        selectedCategoryGroup = selectedCategoryGroups.first
+        categoryGroupCollectionView?.reloadData()
     }
     
     // MARK: - Public Properties
@@ -77,7 +93,7 @@ class CategoryPickerView: UIView, StoryboardView {
             UINib(nibName: Storyboard.CollectionViewCell.category, bundle: nil),
             forCellWithReuseIdentifier: Storyboard.CollectionViewCell.category
         )
-        
+                
         categoryGroupCollectionView.reloadData()
     }
     
@@ -95,10 +111,9 @@ class CategoryPickerView: UIView, StoryboardView {
 
 extension CategoryPickerView: UICollectionViewDataSource {
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == categoryGroupCollectionView {
-            return categoryGroups.count
+            return selectedCategoryGroups.count
         } else {
             return selectedCategories.count
         }
@@ -111,7 +126,7 @@ extension CategoryPickerView: UICollectionViewDataSource {
                 for: indexPath
                 ) as! CategoryGroupCollectionViewCell
             
-            cell.categoryGroup = categoryGroups[indexPath.row]
+            cell.categoryGroup = selectedCategoryGroups[indexPath.row]
             
             return cell
         } else {
@@ -133,7 +148,7 @@ extension CategoryPickerView: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == categoryGroupCollectionView {
-            selectedCategoryGroup = categoryGroups[indexPath.row]
+            selectedCategoryGroup = selectedCategoryGroups[indexPath.row]
         } else {
             
         }
