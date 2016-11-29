@@ -81,7 +81,6 @@ class DayCellView: JTAppleDayCellView {
       dayLabel.backgroundHidden = true
     }
     
-    
     self.showingSeparateLine = showingSeparateLine
     setNeedsDisplay()
   }

@@ -34,7 +34,13 @@ class CalendarNavigationController: UINavigationController {
         pushViewController(transactionListViewController, animated: false)
     }
     
-    func performSegue(toTxactionListViewControllerWith selectedDate: Date) {
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        self.calendarMonthViewController.preloadView()
+    }
+    
+    func performSegue(toTransactionListViewControllerWith selectedDate: Date) {
         
         transactionListViewController.selectedDate = selectedDate
         pushViewController(transactionListViewController, animated: true)

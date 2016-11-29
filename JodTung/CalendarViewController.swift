@@ -157,7 +157,7 @@ class CalendarViewController {
 extension CalendarViewController: JTAppleCalendarViewDataSource {
     
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
-        
+
         return ConfigurationParameters(
             startDate: CalendarViewConfig.Boundary.startDate,
             endDate: CalendarViewConfig.Boundary.endDate,

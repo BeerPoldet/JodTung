@@ -50,7 +50,7 @@
 		05F7E0C51DDEB7E100379902 /* Int+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7E0C41DDEB7E100379902 /* Int+Random.swift */; };
 		05F7E0C71DDEBB2A00379902 /* Array+RandomChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7E0C61DDEBB2A00379902 /* Array+RandomChild.swift */; };
 		05F917341DB8C9B70032F54C /* CalendarMonthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F917331DB8C9B70032F54C /* CalendarMonthViewController.swift */; };
-		05FEA77A1DE0140000BD4252 /* TxactionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FEA7791DE0140000BD4252 /* TxactionViewCell.swift */; };
+		05FEA77A1DE0140000BD4252 /* TransactionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FEA7791DE0140000BD4252 /* TransactionViewCell.swift */; };
 		05FEA77C1DE022DF00BD4252 /* ExtendedTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FEA77B1DE022DF00BD4252 /* ExtendedTable.swift */; };
 		05FEA77F1DE0516400BD4252 /* StackViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FEA77E1DE0516400BD4252 /* StackViewControllerAnimatedTransitioning.swift */; };
 		05FEA7811DE0591400BD4252 /* TransactionInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FEA7801DE0591400BD4252 /* TransactionInfoViewController.swift */; };
@@ -64,6 +64,8 @@
 		D732C1021DEC1D9E0090EFF5 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D732C1011DEC1D9E0090EFF5 /* CategoryCollectionViewCell.xib */; };
 		D732C1421DEC4BC10090EFF5 /* CalendarWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D732C1411DEC4BC10090EFF5 /* CalendarWeekView.swift */; };
 		D732C1441DEC4CF90090EFF5 /* CalendarWeekView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D732C1431DEC4CF90090EFF5 /* CalendarWeekView.xib */; };
+		D7E10D221DED737E00EF30BB /* CalendarMonthViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E10D211DED737E00EF30BB /* CalendarMonthViewControllerPresenter.swift */; };
+		D7E10D241DED7B5500EF30BB /* TransactionListViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E10D231DED7B5500EF30BB /* TransactionListViewControllerPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,7 +149,7 @@
 		05F7E0C41DDEB7E100379902 /* Int+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Random.swift"; sourceTree = "<group>"; };
 		05F7E0C61DDEBB2A00379902 /* Array+RandomChild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+RandomChild.swift"; sourceTree = "<group>"; };
 		05F917331DB8C9B70032F54C /* CalendarMonthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarMonthViewController.swift; sourceTree = "<group>"; };
-		05FEA7791DE0140000BD4252 /* TxactionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TxactionViewCell.swift; sourceTree = "<group>"; };
+		05FEA7791DE0140000BD4252 /* TransactionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewCell.swift; sourceTree = "<group>"; };
 		05FEA77B1DE022DF00BD4252 /* ExtendedTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedTable.swift; sourceTree = "<group>"; };
 		05FEA77E1DE0516400BD4252 /* StackViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
 		05FEA7801DE0591400BD4252 /* TransactionInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionInfoViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +166,8 @@
 		D732C1011DEC1D9E0090EFF5 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		D732C1411DEC4BC10090EFF5 /* CalendarWeekView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarWeekView.swift; sourceTree = "<group>"; };
 		D732C1431DEC4CF90090EFF5 /* CalendarWeekView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarWeekView.xib; sourceTree = "<group>"; };
+		D7E10D211DED737E00EF30BB /* CalendarMonthViewControllerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarMonthViewControllerPresenter.swift; sourceTree = "<group>"; };
+		D7E10D231DED7B5500EF30BB /* TransactionListViewControllerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListViewControllerPresenter.swift; sourceTree = "<group>"; };
 		EF90905546D6A4CA1CF85513 /* Pods-JodTung.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JodTung.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JodTung/Pods-JodTung.debug.xcconfig"; sourceTree = "<group>"; };
 		F3454CB1778743E68FE708C0 /* Pods_JodTung.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JodTung.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -210,7 +214,7 @@
 		050397621DB5C85C00D82B3D /* Txaction List */ = {
 			isa = PBXGroup;
 			children = (
-				05709CF01DC8A5A800EADFD9 /* Controllers */,
+				D7E10D201DED733B00EF30BB /* Presenters */,
 				05709CEF1DC8A58500EADFD9 /* View Controllers */,
 				053E0C811DB61A1300E0B9FC /* Views */,
 			);
@@ -311,7 +315,7 @@
 				053E0C821DB61D5700E0B9FC /* MonthSectionHeaderView.swift */,
 				050411101DC1B2F9005D1EBB /* WeekHeaderView.xib */,
 				050411121DC1B405005D1EBB /* WeekHeaderView.swift */,
-				05FEA7791DE0140000BD4252 /* TxactionViewCell.swift */,
+				05FEA7791DE0140000BD4252 /* TransactionViewCell.swift */,
 				D732C0FE1DEC16510090EFF5 /* CategoryPickerView */,
 			);
 			name = Views;
@@ -327,13 +331,6 @@
 				05FEA7801DE0591400BD4252 /* TransactionInfoViewController.swift */,
 			);
 			name = "View Controllers";
-			sourceTree = "<group>";
-		};
-		05709CF01DC8A5A800EADFD9 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Controllers;
 			sourceTree = "<group>";
 		};
 		05A0DE091DE0904000B4E04B /* Presentation Controllers */ = {
@@ -446,6 +443,15 @@
 				05A3D5191DE40A7D0086DA5C /* CategoryCollectionViewCell.swift */,
 			);
 			name = CategoryPickerView;
+			sourceTree = "<group>";
+		};
+		D7E10D201DED733B00EF30BB /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				D7E10D211DED737E00EF30BB /* CalendarMonthViewControllerPresenter.swift */,
+				D7E10D231DED7B5500EF30BB /* TransactionListViewControllerPresenter.swift */,
+			);
+			name = Presenters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -744,10 +750,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7E10D241DED7B5500EF30BB /* TransactionListViewControllerPresenter.swift in Sources */,
 				058472531DD3230700843C55 /* Transaction+CoreDataProperties.swift in Sources */,
 				D732C0FD1DEC0DE70090EFF5 /* StoryboardView.swift in Sources */,
 				05FEA7811DE0591400BD4252 /* TransactionInfoViewController.swift in Sources */,
 				050397641DB5C8FA00D82B3D /* TransactionListViewController.swift in Sources */,
+				D7E10D221DED737E00EF30BB /* CalendarMonthViewControllerPresenter.swift in Sources */,
 				05F7E0BF1DDE9FC700379902 /* AccountBootstrapFactory.swift in Sources */,
 				058472511DD3230700843C55 /* Category+CoreDataProperties.swift in Sources */,
 				050411131DC1B405005D1EBB /* WeekHeaderView.swift in Sources */,
@@ -770,7 +778,7 @@
 				05F917341DB8C9B70032F54C /* CalendarMonthViewController.swift in Sources */,
 				05A3D5131DE3FC100086DA5C /* UIViewController+ContentViewController.swift in Sources */,
 				05A0DE0C1DE0908C00B4E04B /* StackPresentationController.swift in Sources */,
-				05FEA77A1DE0140000BD4252 /* TxactionViewCell.swift in Sources */,
+				05FEA77A1DE0140000BD4252 /* TransactionViewCell.swift in Sources */,
 				D732C0F91DEBFC3E0090EFF5 /* CategoryPickerView.swift in Sources */,
 				D732C1421DEC4BC10090EFF5 /* CalendarWeekView.swift in Sources */,
 				05A3D51A1DE40A7D0086DA5C /* CategoryCollectionViewCell.swift in Sources */,

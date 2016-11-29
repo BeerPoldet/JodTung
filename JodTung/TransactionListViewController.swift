@@ -1,5 +1,5 @@
 //
-//  TxactionListViewController.swift
+//  TransactionListViewController.swift
 //  JodTung
 //
 //  Created by Poldet Assanangkornchai on 10/18/2559 BE.
@@ -33,31 +33,17 @@ class TransactionListViewController: UIViewController {
     
     private var _selectedDate: Date?
     
-    fileprivate lazy var dateFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .full
-        return dateFormatter
-    }()
-    
     // Transaction for selected date
     var transactions = [Transaction]()
     
     fileprivate var expandedHeightOfCalendarWeekView: CGFloat?
     
-    fileprivate lazy var viewControllerAnimatedTransitioning = StackViewControllerAnimatedTransitioning()
+    fileprivate var presenter = TransactionListViewControllerPresenter()
     
     // MARK: - Outlets
     
-    @IBOutlet weak var calendarWeekView: CalendarWeekView! {
-        didSet {
-            calendarWeekView.delegate = self
-        }
-    }
-    @IBOutlet weak var selectedDateLabel: UILabel! {
-        didSet {
-            updateSelectedDateLabel()
-        }
-    }
+    @IBOutlet weak var calendarWeekView: CalendarWeekView! { didSet { calendarWeekView.delegate = self } }
+    @IBOutlet weak var selectedDateLabel: UILabel! { didSet { updateSelectedDateLabel() } }
     @IBOutlet weak var calendarWeekViewHeightConstraint: NSLayoutConstraint! {
         didSet {
             expandedHeightOfCalendarWeekView = calendarWeekViewHeightConstraint.constant
@@ -85,11 +71,7 @@ class TransactionListViewController: UIViewController {
         super.viewDidLoad()
         
         setupNavigationBar()
-        
         setupCalendarWeekView()
-               
-//        let categories = accountant.transactionCategories!
-//        accountant.add(transactionInfo: TransactionInfo(creationDate: Date(), note: "some note", value: 40, category: categories.first!))
         
         reloadTableData()
     }
@@ -117,7 +99,7 @@ class TransactionListViewController: UIViewController {
                 duration: 0.5,
                 options: .transitionCrossDissolve,
                 animations: {
-                    self.selectedDateLabel?.text = self.dateFormatter.string(from: selectedDate)
+                    self.selectedDateLabel?.text = self.presenter.dateTitle(of: selectedDate)
             },
                 completion: nil
             )
@@ -136,7 +118,7 @@ class TransactionListViewController: UIViewController {
         switch identifier {
         case SegueIdentifier.showTransactionInfo:
             let transactionInfoViewController = segue.destination as! TransactionInfoViewController
-            transactionInfoViewController.transitioningDelegate = self
+            transactionInfoViewController.transitioningDelegate = presenter
             transactionInfoViewController.modalPresentationStyle = .custom
             transactionInfoViewController.accountant = accountant
             transactionInfoViewController.delegate = self
@@ -149,7 +131,7 @@ class TransactionListViewController: UIViewController {
     
     struct StoryboardIdentifier {
         struct TableViewCell {
-            static let transaction = "TxactionViewCell"
+            static let transaction = String(describing: TransactionViewCell.self)
         }
     }
     
@@ -173,7 +155,7 @@ extension TransactionListViewController: CalendarWeekViewDelegate {
     }
 }
 
-// MARK: - CalendarViewControllerAnimatedTransitioningDataSource
+// MARK: - CollapsingViewControllerAnimatedTransitioningDataSource
 
 extension TransactionListViewController: CollapsingViewControllerAnimatedTransitioningDataSource {
     
@@ -190,47 +172,25 @@ extension TransactionListViewController: CollapsingViewControllerAnimatedTransit
     }
 }
 
-// MARK: - UITableViewDataSource
+// MARK: - UITableViewDataSource UITableViewDelegate
 
-extension TransactionListViewController: UITableViewDataSource {
+extension TransactionListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return transactions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: StoryboardIdentifier.TableViewCell.transaction, for: indexPath) as! TxactionViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: StoryboardIdentifier.TableViewCell.transaction, for: indexPath) as! TransactionViewCell
         let transaction = transactions[indexPath.row]
         cell.transaction = transaction
         return cell
     }
 }
 
-// MARK: - UITableViewDelegate
-
-extension TransactionListViewController: UITableViewDelegate {
-    
-}
-
-// MARK: - TxactionListViewControllerDelegate
+// MARK: - TransactionListViewControllerDelegate
 
 protocol TransactionListViewControllerDelegate: class {
     func transactionListViewController(_ controller: TransactionListViewController, didSelect date: Date)
-}
-
-// MARK: - TransitioningDelgate
-
-extension TransactionListViewController: UIViewControllerTransitioningDelegate {
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return viewControllerAnimatedTransitioning
-    }
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return viewControllerAnimatedTransitioning
-    }
-    
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return StackPresentationController(presentedViewController: presented, presenting: presenting)
-    }
 }
 
 // MARK: - TransactionInfoViewControllerDelegate

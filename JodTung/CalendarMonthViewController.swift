@@ -24,30 +24,13 @@ class CalendarMonthViewController: UIViewController {
     
     // MARK: - Properties
     
-    lazy var calendarViewController: CalendarViewController = {
-        let config = CalendarViewController.CalendarViewConfig(
-            itemSize: 54,
-            numberOfRows: 6,
-            cellInset: CGPoint.zero,
-            generateInDates: .forAllMonths,
-            generateOutDates: .tillEndOfRow,
-            firstDayOfWeek: .sunday,
-            allowsMultipleSelection: false,
-            scrolling: CalendarViewController.CalendarViewConfig.Scrolling(
-                mode: .none,
-                direction: .vertical
-            )
-        )
-        let calendarViewController = CalendarViewController(config: config)
+    fileprivate lazy var calendarViewController: CalendarViewController = {
+        let calendarViewController = CalendarViewController(config: self.presenter.calendarViewControllerConfig)
         calendarViewController.calendarDelegate = self
         return calendarViewController
     }()
     
-    fileprivate lazy var monthFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM"
-        return dateFormatter
-    }()
+    fileprivate var presenter = CalendarMonthViewControllerPresenter()
     
     // MARK: - Outlets
     
@@ -87,7 +70,15 @@ class CalendarMonthViewController: UIViewController {
     
     // MARK: - Setup UI
     
-    private func setupNavigationBar() {
+    /**
+        preload high cost performance view before it being use make app feels more smoother
+    */
+    func preloadView() {
+        loadViewIfNeeded()
+        calendarView?.layoutIfNeeded()
+    }
+    
+    fileprivate func setupNavigationBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: calendarTitleView)
         
         if let navigationBar = navigationController?.navigationBar {
@@ -101,17 +92,13 @@ class CalendarMonthViewController: UIViewController {
         
         /// On initiate state fade text from Back > Month make it's look awkward
         if self.navigationItem.title != nil {
-            let fadeTextAnimation = CATransition()
-            fadeTextAnimation.type = kCATransitionFade
-            fadeTextAnimation.duration = 0.5
-            
-            navigationBar.layer.add(fadeTextAnimation, forKey: "fadeText")
+            navigationBar.layer.add(presenter.fadeTextAnimation, forKey: "fadeText")
         }
         
-        self.navigationItem.title = self.monthFormatter.string(from: selectedDate)
+        self.navigationItem.title = presenter.monthTitle(for: selectedDate)
     }
     
-    private func setupCalendarViewContentInset() {
+    fileprivate func setupCalendarViewContentInset() {
         
         let tabBarHeight = tabBarController?.tabBar.bounds.height ?? 0
         calendarView.contentInset = UIEdgeInsets(
@@ -124,98 +111,8 @@ class CalendarMonthViewController: UIViewController {
     
     // MARK: - Navigation
     
-    struct SegueIdentifier {
-        static let showTxaction = "Show Txaction"
-    }
-    
-    // Deprecated: - it won't be any segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let identifier = segue.identifier
-        if identifier == SegueIdentifier.showTxaction {
-            let transactionViewController = segue.destination as! TransactionListViewController
-            transactionViewController.selectedDate = selectedDate
-            transactionViewController.delegate = self
-        }
-    }
-    
-    // MARK: - Calendar Navigation Header
-    
-    lazy var yearFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy"
-        return formatter
-    }()
-    
-    struct MonthItem {
-        var month: Int
-        var year: Int
-        
-        init(month: Int, year: Int) {
-            self.month = month
-            self.year = year
-        }
-        
-        var count = 0
-    }
-    
-    struct MonthItemList {
-        var items = [MonthItem]()
-        
-        mutating func add(_ item: MonthItem) {
-            if let existItemIndex = items.index(where: { item.month == $0.month && item.year == $0.year }) {
-                items[existItemIndex].count = items[existItemIndex].count + 1
-            } else {
-                items.append(item)
-            }
-        }
-        
-        var max: MonthItem? {
-            if items.isEmpty {
-                return nil
-            }
-            return items.max { $0.count < $1.count }
-        }
-        
-        init(monthDates: [Date]) {
-            monthDates.forEach({ (date) in
-                var calendar = Calendar.current
-                calendar.timeZone = TimeZone(secondsFromGMT: 0)!
-                let month = calendar.component(.month, from: date)
-                let year = calendar.component(.year, from: date)
-                self.add(MonthItem(month: month, year: year))
-            })
-        }
-        
-        var mostPresenceDate: Date? {
-            guard let mostPresenceMonthItem = self.max else { return nil }
-            var dateComponent = DateComponents()
-            dateComponent.month = mostPresenceMonthItem.month
-            dateComponent.year = mostPresenceMonthItem.year
-            
-            var calendar = Calendar.current
-            calendar.timeZone = TimeZone(secondsFromGMT: 0)!
-            return calendar.date(from: dateComponent)
-        }
-    }
-    
-    fileprivate var currentMostPresenceDate: Date?
-    
-    fileprivate func updateNavigationTitle() {
-        
-        DispatchQueue.global(qos: .userInitiated).async {
-            self.calendarView.visibleDates { (dateSegmentInfo: DateSegmentInfo) in
-                
-                let monthItemList = MonthItemList(monthDates: dateSegmentInfo.monthDates)
-                if let mostPresenceDate = monthItemList.mostPresenceDate, self.currentMostPresenceDate != mostPresenceDate {
-                    DispatchQueue.main.async {
-                        self.monthTitleLabel.text = self.monthFormatter.string(from: mostPresenceDate)
-                        self.yearTitleLabel.text = self.yearFormatter.string(from: mostPresenceDate)
-                        
-                        self.currentMostPresenceDate = mostPresenceDate
-                    }
-                }
-            }
-        }
+    fileprivate struct SegueIdentifier {
+        static let showTransaction = "Show Transaction"
     }
 }
 
@@ -239,7 +136,7 @@ extension CalendarMonthViewController: JTAppleCalendarViewDelegate {
         
         if let selectedDate = selectedDate {
             let calendarNavigationController = navigationController as! CalendarNavigationController
-            calendarNavigationController.performSegue(toTxactionListViewControllerWith: selectedDate)
+            calendarNavigationController.performSegue(toTransactionListViewControllerWith: selectedDate)
         }
     }
     
@@ -254,11 +151,16 @@ extension CalendarMonthViewController: JTAppleCalendarViewDelegate {
     }
     
     func calendarDidScroll(_ calendar: JTAppleCalendarView) {
-        updateNavigationTitle()
+        calendar.visibleDates { (dateSegmentInfo) in
+            self.presenter.monthInfo(for: dateSegmentInfo, completionHandler: { (monthInfo) in
+                self.monthTitleLabel.text = monthInfo.monthTitle
+                self.yearTitleLabel.text = monthInfo.yearTitle
+            })
+        }
     }
 }
 
-// MARK: - TxactionListViewControllerDelegate
+// MARK: - TransactionListViewControllerDelegate
 
 extension CalendarMonthViewController: TransactionListViewControllerDelegate {
     func transactionListViewController(_ controller: TransactionListViewController, didSelect date: Date) {
