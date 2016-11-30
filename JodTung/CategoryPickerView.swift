@@ -4,18 +4,14 @@ class CategoryPickerView: UIView, StoryboardView {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var categoryGroupCollectionView: UICollectionView! {
+    @IBOutlet weak var categoryGroupCollectionView: CategoryGroupCollectionView! {
         didSet {
-            categoryGroupCollectionView.dataSource = self
-            categoryGroupCollectionView.delegate = self
-            categoryGroupCollectionView.allowsMultipleSelection = false
+            categoryGroupCollectionView.viewDelegate = self
         }
     }
-    @IBOutlet weak var categoryCollectionView: UICollectionView! {
+    @IBOutlet weak var categoryCollectionView: CategoryCollectionView! {
         didSet {
-            categoryCollectionView.dataSource = self
-            categoryCollectionView.delegate = self
-            categoryCollectionView.allowsMultipleSelection = false
+            categoryCollectionView.viewDelegate = self
         }
     }
     
@@ -35,22 +31,10 @@ class CategoryPickerView: UIView, StoryboardView {
     
     // MAKR: - Private Properties
     
-    fileprivate var selectedCategoryGroups = [CategoryGroup]()
-    fileprivate var selectedCategoryGroup: CategoryGroup? {
+    fileprivate var selectedCategoryGroups = [CategoryGroup]() {
         didSet {
-            guard let categoriesOfSelectedGroup = selectedCategoryGroup?.categoryList else { return }
-            
-            selectedCategories = categoriesOfSelectedGroup
-        }
-    }
-    fileprivate var selectedCategories = [Category]() {
-        didSet {
-            selectedCategory = selectedCategories.first
-            
-            categoryCollectionView?.reloadData()
-            if !selectedCategories.isEmpty {
-                categoryCollectionView?.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: false)
-            }
+            categoryGroupCollectionView.categoryGroups = selectedCategoryGroups
+            categoryGroupCollectionView.selectedCategoryGroup = selectedCategoryGroups.first
         }
     }
     
@@ -60,18 +44,17 @@ class CategoryPickerView: UIView, StoryboardView {
         selectedCategoryGroups = categoryGroups.filter({ (group) -> Bool in
             return group.type == selectedTransactionType
         })
-        
-        selectedCategoryGroup = selectedCategoryGroups.first
-        categoryGroupCollectionView?.reloadData()
-        
-        if selectedCategoryGroup != nil {
-            categoryGroupCollectionView?.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .left)
-        }
     }
     
     // MARK: - Public Properties
     
-    var selectedCategory: Category?
+    var selectedCategoryGroup: CategoryGroup? {
+        return categoryGroupCollectionView.selectedCategoryGroup
+    }
+    
+    var selectedCategory: Category? {
+        return categoryCollectionView.selectedCategory
+    }
     
     // MARK: - Object lifecycle
     
@@ -86,73 +69,19 @@ class CategoryPickerView: UIView, StoryboardView {
         
         setup()
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        categoryGroupCollectionView.register(
-            UINib(nibName: Storyboard.CollectionViewCell.categoryGroup, bundle: nil),
-            forCellWithReuseIdentifier: Storyboard.CollectionViewCell.categoryGroup)
-        
-        categoryCollectionView.register(
-            UINib(nibName: Storyboard.CollectionViewCell.category, bundle: nil),
-            forCellWithReuseIdentifier: Storyboard.CollectionViewCell.category)
-        
-        categoryGroupCollectionView.reloadData()
-    }
-    
-    // MARK: - Constant
-    
-    struct Storyboard {
-        struct CollectionViewCell {
-            static let categoryGroup = String(describing: CategoryGroupCollectionViewCell.self)
-            static let category = String(describing: CategoryCollectionViewCell.self)
-        }
-    }
 }
 
 // MARK: - CollectionViewDataSource
 
-extension CategoryPickerView: UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == categoryGroupCollectionView {
-            return selectedCategoryGroups.count
-        } else {
-            return selectedCategories.count
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == categoryGroupCollectionView {
-            let cell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: Storyboard.CollectionViewCell.categoryGroup,
-                for: indexPath) as! CategoryGroupCollectionViewCell
-            
-            cell.categoryGroup = selectedCategoryGroups[indexPath.row]
-            
-            return cell
-        } else {
-            let cell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: Storyboard.CollectionViewCell.category,
-                for: indexPath) as! CategoryCollectionViewCell
-            
-            cell.category = selectedCategories[indexPath.row]
-            
-            return cell
-        }
+extension CategoryPickerView: CategoryGroupCollectionViewDelegate {
+    func categoryGroupCollectionView(_ collectionView: CategoryGroupCollectionView, didSelect categoryGroup: CategoryGroup) {
+        categoryCollectionView.categories = categoryGroup.categoryList!
+        categoryCollectionView.selectedCategory = categoryCollectionView.categories.first
     }
 }
 
-// MARK: - CollectionViewDelegate
-
-extension CategoryPickerView: UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if collectionView == categoryGroupCollectionView {
-            selectedCategoryGroup = selectedCategoryGroups[indexPath.row]
-        } else {
-            
-        }
+extension CategoryPickerView: CategoryCollectionViewDelegate {
+    func categoryCollectionView(_ collectionView: CategoryCollectionView, didSelect category: Category) {
+        print("selected \(category)")
     }
 }
