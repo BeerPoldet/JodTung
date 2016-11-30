@@ -10,7 +10,13 @@ import UIKit
 
 class CategoryGroupCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var label: RoundedLabel!
+    
+    override var isSelected: Bool {
+        didSet {
+            updateSelection()
+        }
+    }
     
     var categoryGroup: CategoryGroup? { didSet { updateUI() } }
     
@@ -18,5 +24,11 @@ class CategoryGroupCollectionViewCell: UICollectionViewCell {
         if let categoryGroup = categoryGroup {
             label.text = categoryGroup.title
         }
+        updateSelection()
+    }
+    
+    private func updateSelection() {
+        label?.backgroundHidden = !isSelected
+        label?.textColor = isSelected ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
 }

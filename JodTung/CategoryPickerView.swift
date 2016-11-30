@@ -8,12 +8,14 @@ class CategoryPickerView: UIView, StoryboardView {
         didSet {
             categoryGroupCollectionView.dataSource = self
             categoryGroupCollectionView.delegate = self
+            categoryGroupCollectionView.allowsMultipleSelection = false
         }
     }
     @IBOutlet weak var categoryCollectionView: UICollectionView! {
         didSet {
             categoryCollectionView.dataSource = self
             categoryCollectionView.delegate = self
+            categoryCollectionView.allowsMultipleSelection = false
         }
     }
     
@@ -61,6 +63,10 @@ class CategoryPickerView: UIView, StoryboardView {
         
         selectedCategoryGroup = selectedCategoryGroups.first
         categoryGroupCollectionView?.reloadData()
+        
+        if selectedCategoryGroup != nil {
+            categoryGroupCollectionView?.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .left)
+        }
     }
     
     // MARK: - Public Properties
@@ -86,14 +92,12 @@ class CategoryPickerView: UIView, StoryboardView {
         
         categoryGroupCollectionView.register(
             UINib(nibName: Storyboard.CollectionViewCell.categoryGroup, bundle: nil),
-            forCellWithReuseIdentifier: Storyboard.CollectionViewCell.categoryGroup
-        )
+            forCellWithReuseIdentifier: Storyboard.CollectionViewCell.categoryGroup)
         
         categoryCollectionView.register(
             UINib(nibName: Storyboard.CollectionViewCell.category, bundle: nil),
-            forCellWithReuseIdentifier: Storyboard.CollectionViewCell.category
-        )
-                
+            forCellWithReuseIdentifier: Storyboard.CollectionViewCell.category)
+        
         categoryGroupCollectionView.reloadData()
     }
     
@@ -123,8 +127,7 @@ extension CategoryPickerView: UICollectionViewDataSource {
         if collectionView == categoryGroupCollectionView {
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: Storyboard.CollectionViewCell.categoryGroup,
-                for: indexPath
-                ) as! CategoryGroupCollectionViewCell
+                for: indexPath) as! CategoryGroupCollectionViewCell
             
             cell.categoryGroup = selectedCategoryGroups[indexPath.row]
             
@@ -132,8 +135,7 @@ extension CategoryPickerView: UICollectionViewDataSource {
         } else {
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: Storyboard.CollectionViewCell.category,
-                for: indexPath
-                ) as! CategoryCollectionViewCell
+                for: indexPath) as! CategoryCollectionViewCell
             
             cell.category = selectedCategories[indexPath.row]
             
