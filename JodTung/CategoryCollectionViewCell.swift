@@ -14,9 +14,42 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     
     var category: Category? { didSet { updateUI() } }
     
+    struct SelectionBoundary {
+        static let borderWitdh: CGFloat = 1
+        static let borderColor: UIColor = UIColor(ired: 0, igreen: 122, iblue: 255, alpha: 1)
+        static let inset: CGFloat = 5
+        static let cornerRadius: CGFloat = 5
+    }
+    
+    override var isSelected: Bool {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
     private func updateUI() {
         if let category = category {
             label.text = category.title
         }
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        
+        if !isSelected {
+            return
+        }
+                
+        let boundaryRect = CGRect(
+            x: rect.origin.x + SelectionBoundary.inset,
+            y: rect.origin.y + SelectionBoundary.inset,
+            width: rect.width - (SelectionBoundary.inset * 2),
+            height: rect.height - (SelectionBoundary.inset * 2))
+        
+        SelectionBoundary.borderColor.setStroke()
+        let path = UIBezierPath(roundedRect: boundaryRect, cornerRadius: SelectionBoundary.cornerRadius)
+        path.lineWidth = SelectionBoundary.borderWitdh
+        path.stroke()
+        
     }
 }

@@ -29,6 +29,8 @@ class CategoryGroupCollectionViewCell: UICollectionViewCell {
     
     private func updateSelection() {
         label?.backgroundHidden = !isSelected
-        label?.textColor = isSelected ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        label?.textColor = isSelected ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) : label.layerBackgroundColor
+        
+        label?.isBordered = !isSelected
     }
 }

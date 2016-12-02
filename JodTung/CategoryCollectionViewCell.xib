@@ -18,9 +18,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="5lN-vQ-i3R">
-                        <rect key="frame" x="33" y="76" width="35" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lN-vQ-i3R">
+                        <rect key="frame" x="36.5" y="80" width="28.5" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -37,7 +37,7 @@
                 <constraint firstItem="E1b-su-fRJ" firstAttribute="top" secondItem="l9b-X0-ir0" secondAttribute="top" constant="8" id="DUt-dA-uxq"/>
                 <constraint firstItem="E1b-su-fRJ" firstAttribute="centerX" secondItem="l9b-X0-ir0" secondAttribute="centerX" id="OTX-Yi-5ax"/>
                 <constraint firstItem="5lN-vQ-i3R" firstAttribute="centerX" secondItem="l9b-X0-ir0" secondAttribute="centerX" id="e7L-a7-kr2"/>
-                <constraint firstItem="5lN-vQ-i3R" firstAttribute="top" secondItem="E1b-su-fRJ" secondAttribute="bottom" constant="4" id="ihH-oN-Rdz"/>
+                <constraint firstItem="5lN-vQ-i3R" firstAttribute="top" secondItem="E1b-su-fRJ" secondAttribute="bottom" constant="8" symbolic="YES" id="ihH-oN-Rdz"/>
             </constraints>
             <connections>
                 <outlet property="label" destination="5lN-vQ-i3R" id="2VV-Ip-5Xw"/>

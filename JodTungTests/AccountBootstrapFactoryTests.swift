@@ -12,13 +12,15 @@ import XCTest
 class AccountBootstrapFactoryTests: XCTestCase {
     
     var dataStorage: DataStorage!
+    var icon: Icon!
     var accountBootstrapFactory: AccountBootstrapFactory!
     
     override func setUp() {
         super.setUp()
         
         dataStorage = DataStorage(storageType: .inMemory)
-        accountBootstrapFactory = AccountBootstrapFactory(dataStorage: dataStorage)
+        icon = JTIcon()
+        accountBootstrapFactory = AccountBootstrapFactory(dataStorage: dataStorage, icon: icon)
     }
     
     func testBoostraped_dataStorageWillContainCorrectDatas() {

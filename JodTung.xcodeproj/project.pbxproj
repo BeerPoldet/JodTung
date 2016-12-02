@@ -17,7 +17,6 @@
 		05228ED01DBDC9D9008403B2 /* NavigationBar+Transparent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05228ECF1DBDC9D9008403B2 /* NavigationBar+Transparent.swift */; };
 		053593B11DB37ACB00A7B508 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053593B01DB37ACB00A7B508 /* AppDelegate.swift */; };
 		053593B61DB37ACB00A7B508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 053593B41DB37ACB00A7B508 /* Main.storyboard */; };
-		053593B81DB37ACB00A7B508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 053593B71DB37ACB00A7B508 /* Assets.xcassets */; };
 		053593BB1DB37ACB00A7B508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 053593B91DB37ACB00A7B508 /* LaunchScreen.storyboard */; };
 		053593D11DB37ACB00A7B508 /* JodTungUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053593D01DB37ACB00A7B508 /* JodTungUITests.swift */; };
 		053E0C7C1DB5D95000E0B9FC /* Pods_JodTung.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 053E0C7B1DB5D95000E0B9FC /* Pods_JodTung.framework */; };
@@ -66,19 +65,16 @@
 		D732C1441DEC4CF90090EFF5 /* CalendarWeekView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D732C1431DEC4CF90090EFF5 /* CalendarWeekView.xib */; };
 		D776DE001DEEB8DF008F4DC4 /* CategoryGroupCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D776DDFF1DEEB8DF008F4DC4 /* CategoryGroupCollectionView.swift */; };
 		D776DE021DEEC7F9008F4DC4 /* CategoryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D776DE011DEEC7F9008F4DC4 /* CategoryCollectionView.swift */; };
+		D776DE041DEFE796008F4DC4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D776DE031DEFE796008F4DC4 /* UIColor.swift */; };
+		D776DE061DF12792008F4DC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D776DE051DF12792008F4DC4 /* Assets.xcassets */; };
+		D776DE091DF12B13008F4DC4 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D776DE081DF12B13008F4DC4 /* Icon.swift */; };
+		D776DE0B1DF13061008F4DC4 /* JTIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D776DE0A1DF13061008F4DC4 /* JTIcon.swift */; };
 		D77762081DEDC2E70074CEA0 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77762071DEDC2E70074CEA0 /* Line.swift */; };
 		D7E10D221DED737E00EF30BB /* CalendarMonthViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E10D211DED737E00EF30BB /* CalendarMonthViewControllerPresenter.swift */; };
 		D7E10D241DED7B5500EF30BB /* TransactionListViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E10D231DED7B5500EF30BB /* TransactionListViewControllerPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		053593C21DB37ACB00A7B508 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 053593A51DB37ACB00A7B508 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 053593AC1DB37ACB00A7B508;
-			remoteInfo = JodTung;
-		};
 		053593CD1DB37ACB00A7B508 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 053593A51DB37ACB00A7B508 /* Project object */;
@@ -114,7 +110,6 @@
 		053593AD1DB37ACB00A7B508 /* JodTung.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JodTung.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		053593B01DB37ACB00A7B508 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		053593B51DB37ACB00A7B508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		053593B71DB37ACB00A7B508 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		053593BA1DB37ACB00A7B508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		053593BC1DB37ACB00A7B508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		053593C11DB37ACB00A7B508 /* JodTungTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JodTungTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +166,10 @@
 		D732C1431DEC4CF90090EFF5 /* CalendarWeekView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarWeekView.xib; sourceTree = "<group>"; };
 		D776DDFF1DEEB8DF008F4DC4 /* CategoryGroupCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryGroupCollectionView.swift; sourceTree = "<group>"; };
 		D776DE011DEEC7F9008F4DC4 /* CategoryCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionView.swift; sourceTree = "<group>"; };
+		D776DE031DEFE796008F4DC4 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		D776DE051DF12792008F4DC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D776DE081DF12B13008F4DC4 /* Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		D776DE0A1DF13061008F4DC4 /* JTIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTIcon.swift; sourceTree = "<group>"; };
 		D77762071DEDC2E70074CEA0 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		D7E10D211DED737E00EF30BB /* CalendarMonthViewControllerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarMonthViewControllerPresenter.swift; sourceTree = "<group>"; };
 		D7E10D231DED7B5500EF30BB /* TransactionListViewControllerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListViewControllerPresenter.swift; sourceTree = "<group>"; };
@@ -241,6 +240,7 @@
 			children = (
 				0510CD861DDDA8720008029A /* Accountant.swift */,
 				05F7E0BE1DDE9FC700379902 /* AccountBootstrapFactory.swift */,
+				D776DE081DF12B13008F4DC4 /* Icon.swift */,
 			);
 			name = "Application Frameworks";
 			sourceTree = "<group>";
@@ -272,7 +272,6 @@
 			children = (
 				0510CD851DDDA83D0008029A /* Application Frameworks */,
 				05B9BA7E1DD34DCA00B604A9 /* Data Storage */,
-				05EA02AF1DD31E0300E9A498 /* Models */,
 				050397611DB5C84C00D82B3D /* Scenes */,
 				05EB3BE81DB7194D00E84B45 /* Libraries */,
 				053593DE1DB37AE500A7B508 /* Suppporting Files */,
@@ -303,7 +302,7 @@
 		053593DE1DB37AE500A7B508 /* Suppporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				053593B71DB37ACB00A7B508 /* Assets.xcassets */,
+				D776DE051DF12792008F4DC4 /* Assets.xcassets */,
 				053593B91DB37ACB00A7B508 /* LaunchScreen.storyboard */,
 				053593BC1DB37ACB00A7B508 /* Info.plist */,
 			);
@@ -361,11 +360,12 @@
 			isa = PBXGroup;
 			children = (
 				05CFA4BD1DD6093F003FEA0A /* DataStorage.swift */,
+				05EA02AF1DD31E0300E9A498 /* Core Data Models */,
 			);
 			name = "Data Storage";
 			sourceTree = "<group>";
 		};
-		05EA02AF1DD31E0300E9A498 /* Models */ = {
+		05EA02AF1DD31E0300E9A498 /* Core Data Models */ = {
 			isa = PBXGroup;
 			children = (
 				0562465F1DD9CBD000FB6C92 /* TransactionType.swift */,
@@ -377,7 +377,7 @@
 				0584724F1DD3230700843C55 /* CategoryGroup+CoreDataProperties.swift */,
 				05EA02B01DD31E5A00E9A498 /* Models.xcdatamodeld */,
 			);
-			name = Models;
+			name = "Core Data Models";
 			sourceTree = "<group>";
 		};
 		05EB3BE81DB7194D00E84B45 /* Libraries */ = {
@@ -387,6 +387,8 @@
 				05F545551DC0657D00045E7E /* Views */,
 				05F7E0C41DDEB7E100379902 /* Int+Random.swift */,
 				05F7E0C61DDEBB2A00379902 /* Array+RandomChild.swift */,
+				D776DE031DEFE796008F4DC4 /* UIColor.swift */,
+				D776DE0A1DF13061008F4DC4 /* JTIcon.swift */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -501,7 +503,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				053593C31DB37ACB00A7B508 /* PBXTargetDependency */,
 			);
 			name = JodTungTests;
 			productName = JodTungTests;
@@ -550,7 +551,6 @@
 						DevelopmentTeam = F6395XL53N;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 053593AC1DB37ACB00A7B508;
 					};
 					053593CB1DB37ACB00A7B508 = {
 						CreatedOnToolsVersion = 8.0;
@@ -588,9 +588,9 @@
 			files = (
 				D732C1441DEC4CF90090EFF5 /* CalendarWeekView.xib in Resources */,
 				058723DC1DC0A2E900FEF676 /* ShadowedBlurVisualEffectView.xib in Resources */,
+				D776DE061DF12792008F4DC4 /* Assets.xcassets in Resources */,
 				053593BB1DB37ACB00A7B508 /* LaunchScreen.storyboard in Resources */,
 				050411111DC1B2F9005D1EBB /* WeekHeaderView.xib in Resources */,
-				053593B81DB37ACB00A7B508 /* Assets.xcassets in Resources */,
 				053593B61DB37ACB00A7B508 /* Main.storyboard in Resources */,
 				D732C1001DEC1BA50090EFF5 /* CategoryGroupCollectionViewCell.xib in Resources */,
 				D732C1021DEC1D9E0090EFF5 /* CategoryCollectionViewCell.xib in Resources */,
@@ -762,8 +762,10 @@
 				D77762081DEDC2E70074CEA0 /* Line.swift in Sources */,
 				D7E10D241DED7B5500EF30BB /* TransactionListViewControllerPresenter.swift in Sources */,
 				058472531DD3230700843C55 /* Transaction+CoreDataProperties.swift in Sources */,
+				D776DE091DF12B13008F4DC4 /* Icon.swift in Sources */,
 				D732C0FD1DEC0DE70090EFF5 /* StoryboardView.swift in Sources */,
 				05FEA7811DE0591400BD4252 /* TransactionInfoViewController.swift in Sources */,
+				D776DE0B1DF13061008F4DC4 /* JTIcon.swift in Sources */,
 				050397641DB5C8FA00D82B3D /* TransactionListViewController.swift in Sources */,
 				D7E10D221DED737E00EF30BB /* CalendarMonthViewControllerPresenter.swift in Sources */,
 				05F7E0BF1DDE9FC700379902 /* AccountBootstrapFactory.swift in Sources */,
@@ -788,6 +790,7 @@
 				05709CEE1DC89F9E00EADFD9 /* CalendarViewController.swift in Sources */,
 				05F917341DB8C9B70032F54C /* CalendarMonthViewController.swift in Sources */,
 				05A3D5131DE3FC100086DA5C /* UIViewController+ContentViewController.swift in Sources */,
+				D776DE041DEFE796008F4DC4 /* UIColor.swift in Sources */,
 				05A0DE0C1DE0908C00B4E04B /* StackPresentationController.swift in Sources */,
 				05FEA77A1DE0140000BD4252 /* TransactionViewCell.swift in Sources */,
 				D732C0F91DEBFC3E0090EFF5 /* CategoryPickerView.swift in Sources */,
@@ -826,11 +829,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		053593C31DB37ACB00A7B508 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 053593AC1DB37ACB00A7B508 /* JodTung */;
-			targetProxy = 053593C21DB37ACB00A7B508 /* PBXContainerItemProxy */;
-		};
 		053593CE1DB37ACB00A7B508 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 053593AC1DB37ACB00A7B508 /* JodTung */;
@@ -993,7 +991,6 @@
 			baseConfigurationReference = 686E2B6AB80DA2CF41321908 /* Pods-JodTungTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = F6395XL53N;
 				INFOPLIST_FILE = JodTungTests/Info.plist;
@@ -1002,7 +999,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JodTung.app/JodTung";
 			};
 			name = Debug;
 		};
@@ -1011,7 +1007,6 @@
 			baseConfigurationReference = 9FF141CAB061E2853D1DBE22 /* Pods-JodTungTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = F6395XL53N;
 				INFOPLIST_FILE = JodTungTests/Info.plist;
@@ -1019,7 +1014,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = bib.JodTungTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JodTung.app/JodTung";
 			};
 			name = Release;
 		};

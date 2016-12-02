@@ -59,7 +59,7 @@ class CategoryGroupCollectionView: UICollectionView {
     }
 }
 
-extension CategoryGroupCollectionView: UICollectionViewDataSource, UICollectionViewDelegate {
+extension CategoryGroupCollectionView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categoryGroups.count
     }

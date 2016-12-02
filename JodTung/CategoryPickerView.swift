@@ -82,6 +82,6 @@ extension CategoryPickerView: CategoryGroupCollectionViewDelegate {
 
 extension CategoryPickerView: CategoryCollectionViewDelegate {
     func categoryCollectionView(_ collectionView: CategoryCollectionView, didSelect category: Category) {
-        print("selected \(category)")
+        // DO NOTHING
     }
 }
