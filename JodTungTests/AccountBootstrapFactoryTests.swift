@@ -12,15 +12,14 @@ import XCTest
 class AccountBootstrapFactoryTests: XCTestCase {
     
     var dataStorage: DataStorage!
-    var icon: Icon!
+    var iconFactory = JTIconImageFactory()
     var accountBootstrapFactory: AccountBootstrapFactory!
     
     override func setUp() {
         super.setUp()
         
         dataStorage = DataStorage(storageType: .inMemory)
-        icon = JTIcon()
-        accountBootstrapFactory = AccountBootstrapFactory(dataStorage: dataStorage, icon: icon)
+        accountBootstrapFactory = AccountBootstrapFactory(dataStorage: dataStorage)
     }
     
     func testBoostraped_dataStorageWillContainCorrectDatas() {
@@ -40,10 +39,11 @@ class AccountBootstrapFactoryTests: XCTestCase {
         XCTAssertTrue(bootstrapedGroupData?.categories?.count == someBootstrapGroupData.categories.count, "Contain equals category count")
         
         let someBootstrapCategoryData = someBootstrapGroupData.categories.random
-        let bootstrapedCategoryData = bootstrapedGroupData?.categories?.first {
-            ($0 as! JodTung.Category).title == someBootstrapCategoryData.title
-        }
+        let bootstrapedCategoryData = bootstrapedGroupData?.categoryList?.first { $0.title == someBootstrapCategoryData.title }
         XCTAssertNotNil(bootstrapedCategoryData, "Inside group will contain the same cateory that bootstrap has")
+        XCTAssertTrue(bootstrapedCategoryData?.iconName == someBootstrapCategoryData.icon.name)
+        let icon = Icon(rawValue: (bootstrapedCategoryData!.iconName)!)
+        XCTAssertTrue(icon?.image(usingFactory: iconFactory) == someBootstrapCategoryData.icon.image(usingFactory: iconFactory))
     }
     
 }

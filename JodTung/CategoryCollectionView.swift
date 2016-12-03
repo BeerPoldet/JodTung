@@ -38,6 +38,8 @@ class CategoryCollectionView: UICollectionView {
         }
     }
     
+    var iconImageFactory: IconImageFactory?
+    
     // MARK: - Private
     
     override func awakeFromNib() {
@@ -75,6 +77,7 @@ extension CategoryCollectionView: UICollectionViewDataSource, UICollectionViewDe
             for: indexPath) as! CategoryCollectionViewCell
         
         cell.category = categories[indexPath.row]
+        cell.iconImageFactory = self.iconImageFactory
         
         return cell
     }

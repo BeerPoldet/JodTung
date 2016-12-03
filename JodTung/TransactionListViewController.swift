@@ -40,6 +40,8 @@ class TransactionListViewController: UIViewController {
     
     fileprivate var presenter = TransactionListViewControllerPresenter()
     
+    fileprivate let iconImageFactory = JTIconImageFactory()
+    
     // MARK: - Outlets
     
     @IBOutlet weak var calendarWeekView: CalendarWeekView! { didSet { calendarWeekView.delegate = self } }
@@ -183,6 +185,7 @@ extension TransactionListViewController: UITableViewDataSource, UITableViewDeleg
         let cell = tableView.dequeueReusableCell(withIdentifier: StoryboardIdentifier.TableViewCell.transaction, for: indexPath) as! TransactionViewCell
         let transaction = transactions[indexPath.row]
         cell.transaction = transaction
+        cell.iconImageFactory = iconImageFactory
         return cell
     }
 }

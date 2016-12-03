@@ -14,6 +14,7 @@ class AccountBootstrapFactory {
     
     struct CategoryBoostrap {
         var title: String
+        var icon: Icon
     }
     
     let bootstrapDatas = [
@@ -21,30 +22,30 @@ class AccountBootstrapFactory {
             title: "Food",
             type: .expense,
             categories: [
-                CategoryBoostrap(title: "Breakfast"),
-                CategoryBoostrap(title: "Lunch"),
-                CategoryBoostrap(title: "Dinner"),
-                CategoryBoostrap(title: "Drink"),
-                CategoryBoostrap(title: "Snack")
+                CategoryBoostrap(title: "Breakfast", icon: Icon.breakfast),
+                CategoryBoostrap(title: "Lunch", icon: Icon.lunch),
+                CategoryBoostrap(title: "Dinner", icon: Icon.dinner),
+                CategoryBoostrap(title: "Drink", icon: Icon.drink),
+                CategoryBoostrap(title: "Snack", icon: Icon.snack)
             ]
         ),
         CategoryGroupBootstrap(
             title: "Transport",
             type: .expense,
             categories: [
-                CategoryBoostrap(title: "MRT"),
-                CategoryBoostrap(title: "BTS"),
-                CategoryBoostrap(title: "Train"),
-                CategoryBoostrap(title: "Taxi"),
-                CategoryBoostrap(title: "Fuel")
+                CategoryBoostrap(title: "MRT", icon: Icon.mrt),
+                CategoryBoostrap(title: "BTS", icon: Icon.bts),
+                CategoryBoostrap(title: "Train", icon: Icon.train),
+                CategoryBoostrap(title: "Taxi", icon: Icon.taxi),
+                CategoryBoostrap(title: "Fuel", icon: Icon.fuel)
             ]
         ),
         CategoryGroupBootstrap(
             title: "Income",
             type: .income,
             categories: [
-                CategoryBoostrap(title: "Income"),
-                CategoryBoostrap(title: "Salary")
+                CategoryBoostrap(title: "Income", icon: Icon.income),
+                CategoryBoostrap(title: "Salary", icon: Icon.salary)
             ]
         ),
     ]
@@ -57,6 +58,7 @@ class AccountBootstrapFactory {
             categoryGroupData.categories.forEach{ (categoryData) in
                 let category = self.dataStorage.makeCategory()
                 category.title = categoryData.title
+                category.iconName = categoryData.icon.name
                 categoryGroup.addToCategories(category)
             }
         }

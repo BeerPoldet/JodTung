@@ -6,31 +6,63 @@
 //  Copyright © 2559 Poldet Assanangkornchai. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-protocol IconBuilder {
-    associatedtype Item: Icon
-    typealias Content = Item.Content
-    
-    var breakfast: Item { get }
-    var lunch: Item { get }
-    var dinner: Item { get }
-    var drink: Item { get }
-    var snack: Item { get }
-    
-    var mrt: Item { get }
-    var bts: Item { get }
-    var train: Item { get }
-    var taxi: Item { get }
-    var fuel: Item { get }
-    
-    var income: Item { get }
-    var salary: Item { get }
-    
+protocol IconImageFactory {
+    func image(forIcon icon: Icon) -> UIImage
 }
 
-protocol Icon {
-    associatedtype Content
-    var data: String { get }
-    var content: Content { get }
+enum Icon: String {
+    
+    case breakfast = "breakfast"
+    case lunch = "lunch"
+    case dinner = "dinner"
+    case drink = "drink"
+    case snack = "snack"
+    
+    case mrt = "mrt"
+    case bts = "bts"
+    case train = "train"
+    case taxi = "taxi"
+    case fuel = "fuel"
+    
+    case income = "income"
+    case salary = "salary"
+        
+    var name: String {
+        return rawValue
+    }
+    
+    func image(usingFactory iconImageFactory: IconImageFactory) -> UIImage {
+        return iconImageFactory.image(forIcon: self)
+    }
+    
+//    var image: UIImage {
+//        switch self {
+//        case .breakfast:
+//            return #imageLiteral(resourceName: "Breakfast")
+//        case .lunch:
+//            return #imageLiteral(resourceName: "Lunch")
+//        case .dinner:
+//            return #imageLiteral(resourceName: "Dinner")
+//        case .drink:
+//            return #imageLiteral(resourceName: "Drink")
+//        case .snack:
+//            return #imageLiteral(resourceName: "Snack")
+//        case .mrt:
+//            return #imageLiteral(resourceName: "MRT")
+//        case .bts:
+//            return #imageLiteral(resourceName: "BTS")
+//        case .train:
+//            return #imageLiteral(resourceName: "Train")
+//        case .taxi:
+//            return #imageLiteral(resourceName: "Taxi")
+//        case .fuel:
+//            return #imageLiteral(resourceName: "Fuel")
+//        case .income:
+//            return #imageLiteral(resourceName: "Income")
+//        case .salary:
+//            return #imageLiteral(resourceName: "Salary")
+//        }
+//    }
 }

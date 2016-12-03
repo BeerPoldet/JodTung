@@ -10,9 +10,11 @@ import UIKit
 
 class CategoryCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var label: UILabel!
     
     var category: Category? { didSet { updateUI() } }
+    var iconImageFactory: IconImageFactory? { didSet { updateIcon() } }
     
     struct SelectionBoundary {
         static let borderWitdh: CGFloat = 1
@@ -31,6 +33,16 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         if let category = category {
             label.text = category.title
         }
+        
+        updateIcon()
+    }
+    
+    private func updateIcon() {
+        guard let category = category,
+            let iconImageFactory = iconImageFactory,
+            let icon = Icon(rawValue: category.iconName!) else { return }
+        
+        iconImageView?.image = iconImageFactory.image(forIcon: icon)
     }
     
     override func draw(_ rect: CGRect) {

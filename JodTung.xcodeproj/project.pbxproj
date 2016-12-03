@@ -68,7 +68,7 @@
 		D776DE041DEFE796008F4DC4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D776DE031DEFE796008F4DC4 /* UIColor.swift */; };
 		D776DE061DF12792008F4DC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D776DE051DF12792008F4DC4 /* Assets.xcassets */; };
 		D776DE091DF12B13008F4DC4 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D776DE081DF12B13008F4DC4 /* Icon.swift */; };
-		D776DE0B1DF13061008F4DC4 /* JTIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D776DE0A1DF13061008F4DC4 /* JTIcon.swift */; };
+		D776DE0B1DF13061008F4DC4 /* JTIconImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D776DE0A1DF13061008F4DC4 /* JTIconImageFactory.swift */; };
 		D77762081DEDC2E70074CEA0 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77762071DEDC2E70074CEA0 /* Line.swift */; };
 		D7E10D221DED737E00EF30BB /* CalendarMonthViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E10D211DED737E00EF30BB /* CalendarMonthViewControllerPresenter.swift */; };
 		D7E10D241DED7B5500EF30BB /* TransactionListViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E10D231DED7B5500EF30BB /* TransactionListViewControllerPresenter.swift */; };
@@ -76,6 +76,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		053593CD1DB37ACB00A7B508 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 053593A51DB37ACB00A7B508 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 053593AC1DB37ACB00A7B508;
+			remoteInfo = JodTung;
+		};
+		0573FDDD1DF2A2BE0096749B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 053593A51DB37ACB00A7B508 /* Project object */;
 			proxyType = 1;
@@ -169,7 +176,7 @@
 		D776DE031DEFE796008F4DC4 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		D776DE051DF12792008F4DC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D776DE081DF12B13008F4DC4 /* Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
-		D776DE0A1DF13061008F4DC4 /* JTIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTIcon.swift; sourceTree = "<group>"; };
+		D776DE0A1DF13061008F4DC4 /* JTIconImageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTIconImageFactory.swift; sourceTree = "<group>"; };
 		D77762071DEDC2E70074CEA0 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		D7E10D211DED737E00EF30BB /* CalendarMonthViewControllerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarMonthViewControllerPresenter.swift; sourceTree = "<group>"; };
 		D7E10D231DED7B5500EF30BB /* TransactionListViewControllerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionListViewControllerPresenter.swift; sourceTree = "<group>"; };
@@ -388,7 +395,7 @@
 				05F7E0C41DDEB7E100379902 /* Int+Random.swift */,
 				05F7E0C61DDEBB2A00379902 /* Array+RandomChild.swift */,
 				D776DE031DEFE796008F4DC4 /* UIColor.swift */,
-				D776DE0A1DF13061008F4DC4 /* JTIcon.swift */,
+				D776DE0A1DF13061008F4DC4 /* JTIconImageFactory.swift */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -503,6 +510,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				0573FDDE1DF2A2BE0096749B /* PBXTargetDependency */,
 			);
 			name = JodTungTests;
 			productName = JodTungTests;
@@ -551,6 +559,7 @@
 						DevelopmentTeam = F6395XL53N;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
+						TestTargetID = 053593AC1DB37ACB00A7B508;
 					};
 					053593CB1DB37ACB00A7B508 = {
 						CreatedOnToolsVersion = 8.0;
@@ -765,7 +774,7 @@
 				D776DE091DF12B13008F4DC4 /* Icon.swift in Sources */,
 				D732C0FD1DEC0DE70090EFF5 /* StoryboardView.swift in Sources */,
 				05FEA7811DE0591400BD4252 /* TransactionInfoViewController.swift in Sources */,
-				D776DE0B1DF13061008F4DC4 /* JTIcon.swift in Sources */,
+				D776DE0B1DF13061008F4DC4 /* JTIconImageFactory.swift in Sources */,
 				050397641DB5C8FA00D82B3D /* TransactionListViewController.swift in Sources */,
 				D7E10D221DED737E00EF30BB /* CalendarMonthViewControllerPresenter.swift in Sources */,
 				05F7E0BF1DDE9FC700379902 /* AccountBootstrapFactory.swift in Sources */,
@@ -833,6 +842,11 @@
 			isa = PBXTargetDependency;
 			target = 053593AC1DB37ACB00A7B508 /* JodTung */;
 			targetProxy = 053593CD1DB37ACB00A7B508 /* PBXContainerItemProxy */;
+		};
+		0573FDDE1DF2A2BE0096749B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 053593AC1DB37ACB00A7B508 /* JodTung */;
+			targetProxy = 0573FDDD1DF2A2BE0096749B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -991,6 +1005,7 @@
 			baseConfigurationReference = 686E2B6AB80DA2CF41321908 /* Pods-JodTungTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = F6395XL53N;
 				INFOPLIST_FILE = JodTungTests/Info.plist;
@@ -999,6 +1014,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JodTung.app/JodTung";
 			};
 			name = Debug;
 		};
@@ -1007,6 +1023,7 @@
 			baseConfigurationReference = 9FF141CAB061E2853D1DBE22 /* Pods-JodTungTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = F6395XL53N;
 				INFOPLIST_FILE = JodTungTests/Info.plist;
@@ -1014,6 +1031,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = bib.JodTungTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JodTung.app/JodTung";
 			};
 			name = Release;
 		};

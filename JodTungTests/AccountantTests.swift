@@ -76,37 +76,4 @@ class AccountantTests: XCTestCase {
     func testCanListBootstrapedCategoryGroup_isNotEmpty() {
         XCTAssertTrue(accountant.categoryGroups?.isEmpty == false)
     }
-    
-    func testCategoryFromCategoryGroup_canListCorrectly() {
-        let categoryGroup = accountant.categoryGroups!.first!
-        let category = categoryGroup.categoryList!.first!
-        XCTAssertNotNil(category.title)
-    }
-    
-    func testCanListCategoriesByGroup_containCorrectData() {
-        let foodCategoryGroup = dataStorage.makeCategoryGroup()
-        foodCategoryGroup.title = "food"
-        
-        let incomeCategoryGroup = dataStorage.makeCategoryGroup()
-        incomeCategoryGroup.title = "income"
-        
-        let breakfastCategory = dataStorage.makeCategory()
-        breakfastCategory.title = "breakfast"
-        breakfastCategory.group = foodCategoryGroup
-        
-        let dinnerCategory = dataStorage.makeCategory()
-        dinnerCategory.title = "dinner"
-        dinnerCategory.group = foodCategoryGroup
-        
-        let salaryCategory = dataStorage.makeCategory()
-        salaryCategory.title = "salary"
-        salaryCategory.group = incomeCategoryGroup
-        
-        dataStorage.save()
-        
-//        let listedCategories = accountant.categories(ofGroup: foodCategoryGroup)
-        let listedCategories = foodCategoryGroup.categoryList
-        XCTAssertTrue(listedCategories?.count == 2)
-        XCTAssertTrue(listedCategories?.contains { $0.title == breakfastCategory.title } == true)
-    }
 }

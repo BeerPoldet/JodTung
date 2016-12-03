@@ -12,6 +12,7 @@ class CategoryPickerView: UIView, StoryboardView {
     @IBOutlet weak var categoryCollectionView: CategoryCollectionView! {
         didSet {
             categoryCollectionView.viewDelegate = self
+            categoryCollectionView.iconImageFactory = iconImageFactory
         }
     }
     
@@ -37,6 +38,8 @@ class CategoryPickerView: UIView, StoryboardView {
             categoryGroupCollectionView.selectedCategoryGroup = selectedCategoryGroups.first
         }
     }
+    
+    fileprivate let iconImageFactory: IconImageFactory = JTIconImageFactory()
     
     // MARK: - SelectedCategoryGroup
     

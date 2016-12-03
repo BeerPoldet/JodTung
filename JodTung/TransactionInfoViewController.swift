@@ -20,9 +20,6 @@ class TransactionInfoViewController: UIViewController {
     
     weak var delegate: TransactionInfoViewControllerDelegate?
     
-    // MARK: - Properties
-    
-    
     // MARK: - Outlets
     
     @IBOutlet weak var categoryPickerView: CategoryPickerView!
