@@ -56,7 +56,24 @@ class TransactionInfoViewController: UIViewController {
     }
     
     @IBAction func save(_ sender: Any) {
+        defer {
+            delegate?.transactionInfoViewControllerDidSave()
+            
+            dismiss(animated: true, completion: nil)
+        }
+        
         guard let category = categoryPickerView.selectedCategory else { return }
+        
+        // Edit
+        if let transaction = transaction {
+            transaction.value = value
+            transaction.category = category
+            transaction.note = "edited note"
+            
+            return
+        }
+        
+        // Add
         let transactionInfo = TransactionInfo(
             creationDate: Date(),
             note: "test note",
@@ -64,10 +81,6 @@ class TransactionInfoViewController: UIViewController {
             category: category
         )
         accountant.add(transactionInfo: transactionInfo)
-        
-        delegate?.transactionInfoViewControllerDidSave()
-        
-        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func transactionTypeDidChange(_ sender: UISegmentedControl) {
@@ -106,6 +119,8 @@ class TransactionInfoViewController: UIViewController {
     // MARK: - UI
     
     fileprivate func setupUI() {
+        
+        isValueInTheMiddleOfTyping = transaction?.value != 0
         value = transaction?.value ?? 0
         
         if let category = transaction?.category, let group = category.group {
@@ -134,7 +149,6 @@ extension TransactionInfoViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField == self.valueTextField {
-            print("begin")
             if !isValueInTheMiddleOfTyping {
                 isValueInTheMiddleOfTyping = true
                 valueTextField.text = ""
