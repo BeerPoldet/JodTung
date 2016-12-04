@@ -55,7 +55,7 @@ class Accountant {
 
 struct TransactionInfo {
     var creationDate: Date
-    var note: String
+    var note: String?
     var value: Double
     var category: Category
 }

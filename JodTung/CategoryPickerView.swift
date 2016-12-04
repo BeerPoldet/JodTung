@@ -52,11 +52,21 @@ class CategoryPickerView: UIView, StoryboardView {
     // MARK: - Public Properties
     
     var selectedCategoryGroup: CategoryGroup? {
-        return categoryGroupCollectionView.selectedCategoryGroup
+        get {
+            return categoryGroupCollectionView.selectedCategoryGroup
+        }
+        set {
+            categoryGroupCollectionView.selectedCategoryGroup = newValue
+        }
     }
     
     var selectedCategory: Category? {
-        return categoryCollectionView.selectedCategory
+        get {
+            return categoryCollectionView.selectedCategory
+        }
+        set {
+            categoryCollectionView.selectedCategory = newValue
+        }
     }
     
     // MARK: - Object lifecycle

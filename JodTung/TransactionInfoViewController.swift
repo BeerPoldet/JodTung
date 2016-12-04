@@ -20,10 +20,34 @@ class TransactionInfoViewController: UIViewController {
     
     weak var delegate: TransactionInfoViewControllerDelegate?
     
+    var transaction: Transaction?
+    
+    // MARK: - Private Properties
+    
+    fileprivate var value: Double {
+        get {
+            return Double(valueTextField.text!)!
+        }
+        set {
+            valueTextField.text = String(newValue)
+        }
+    }
+    fileprivate var isValueInTheMiddleOfTyping = false
+    fileprivate var transactionType: TransactionType {
+        get {
+            return categoryPickerView.selectedTransactionType
+        }
+        set {
+            transactionTypeSegmentedControl.selectedSegmentIndex = newValue.rawValue
+            categoryPickerView.selectedTransactionType = newValue
+        }
+    }
+    
     // MARK: - Outlets
     
     @IBOutlet weak var categoryPickerView: CategoryPickerView!
     @IBOutlet weak var transactionTypeSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var valueTextField: UITextField! { didSet { valueTextField.delegate = self } }
     
     // MARK: - Actions
     
@@ -36,7 +60,7 @@ class TransactionInfoViewController: UIViewController {
         let transactionInfo = TransactionInfo(
             creationDate: Date(),
             note: "test note",
-            value: 200,
+            value: value,
             category: category
         )
         accountant.add(transactionInfo: transactionInfo)
@@ -47,8 +71,17 @@ class TransactionInfoViewController: UIViewController {
     }
     
     @IBAction func transactionTypeDidChange(_ sender: UISegmentedControl) {
-        categoryPickerView.selectedTransactionType =
-            TransactionType(rawValue: transactionTypeSegmentedControl.selectedSegmentIndex)!
+        transactionType = TransactionType(rawValue: transactionTypeSegmentedControl.selectedSegmentIndex)!
+    }
+    
+    @IBAction func valueDisplayDidTap(_ sender: Any) {
+        valueTextField.becomeFirstResponder()
+    }
+    
+    @IBAction func textfieldDismissalDidTap(_ sender: Any) {
+        if valueTextField.isFirstResponder {
+            valueTextField.resignFirstResponder()
+        }
     }
     
     // MARK: - View Controller lifecycle
@@ -58,15 +91,28 @@ class TransactionInfoViewController: UIViewController {
         
         modalPresentationCapturesStatusBarAppearance = true
         
-        categoryPickerView.selectedTransactionType =
-            TransactionType(rawValue: transactionTypeSegmentedControl.selectedSegmentIndex)!
+        transactionType = TransactionType(rawValue: transactionTypeSegmentedControl.selectedSegmentIndex)!
         categoryPickerView?.categoryGroups = accountant.categoryGroups!
+        
+        setupUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    // MARK: - UI
+    
+    fileprivate func setupUI() {
+        value = transaction?.value ?? 0
+        
+        if let category = transaction?.category, let group = category.group {
+            transactionType = group.type
+            categoryPickerView.selectedCategoryGroup = group
+            categoryPickerView.selectedCategory = category
+        }
     }
     
     // MARK: - Status Bar
@@ -82,4 +128,19 @@ class TransactionInfoViewController: UIViewController {
 
 protocol TransactionInfoViewControllerDelegate: class {
     func transactionInfoViewControllerDidSave()
+}
+
+extension TransactionInfoViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == self.valueTextField {
+            print("begin")
+            if !isValueInTheMiddleOfTyping {
+                isValueInTheMiddleOfTyping = true
+                valueTextField.text = ""
+                return true
+            }
+        }
+        return true
+    }
 }

@@ -36,33 +36,4 @@ enum Icon: String {
     func image(usingFactory iconImageFactory: IconImageFactory) -> UIImage {
         return iconImageFactory.image(forIcon: self)
     }
-    
-//    var image: UIImage {
-//        switch self {
-//        case .breakfast:
-//            return #imageLiteral(resourceName: "Breakfast")
-//        case .lunch:
-//            return #imageLiteral(resourceName: "Lunch")
-//        case .dinner:
-//            return #imageLiteral(resourceName: "Dinner")
-//        case .drink:
-//            return #imageLiteral(resourceName: "Drink")
-//        case .snack:
-//            return #imageLiteral(resourceName: "Snack")
-//        case .mrt:
-//            return #imageLiteral(resourceName: "MRT")
-//        case .bts:
-//            return #imageLiteral(resourceName: "BTS")
-//        case .train:
-//            return #imageLiteral(resourceName: "Train")
-//        case .taxi:
-//            return #imageLiteral(resourceName: "Taxi")
-//        case .fuel:
-//            return #imageLiteral(resourceName: "Fuel")
-//        case .income:
-//            return #imageLiteral(resourceName: "Income")
-//        case .salary:
-//            return #imageLiteral(resourceName: "Salary")
-//        }
-//    }
 }
