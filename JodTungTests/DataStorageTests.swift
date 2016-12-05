@@ -16,11 +16,16 @@ class DataStorageTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
+        let incomeCategoryGroup = dataStorage.makeCategoryGroup()
+        incomeCategoryGroup.title = "income"
+        
         let foodCategoryGroup = dataStorage.makeCategoryGroup()
         foodCategoryGroup.title = "food"
         
-        let incomeCategoryGroup = dataStorage.makeCategoryGroup()
-        incomeCategoryGroup.title = "income"
+        let salaryCategory = dataStorage.makeCategory()
+        salaryCategory.title = "salary"
+        salaryCategory.group = incomeCategoryGroup
+        salaryCategory.iconName = Icon.salary.name
         
         let breakfastCategory = dataStorage.makeCategory()
         breakfastCategory.title = "breakfast"
@@ -31,11 +36,6 @@ class DataStorageTests: XCTestCase {
         dinnerCategory.title = "dinner"
         dinnerCategory.group = foodCategoryGroup
         dinnerCategory.iconName = Icon.dinner.name
-        
-        let salaryCategory = dataStorage.makeCategory()
-        salaryCategory.title = "salary"
-        salaryCategory.group = incomeCategoryGroup
-        salaryCategory.iconName = Icon.salary.name
         
         dataStorage.save()
     }
@@ -50,6 +50,18 @@ class DataStorageTests: XCTestCase {
         
         let dinnerCategory = savedFoodCategories?.first { $0.title == "dinner" }
         XCTAssertTrue(dinnerCategory?.iconName == Icon.dinner.name)
+    }
+    
+    func testCanListCategoryGroups_inCorrectDefaultSortingOrder() {
+        let categoryGroups = dataStorage.categoryGroups()
+        XCTAssertTrue(categoryGroups?.first?.title == "food")
+        XCTAssertTrue(categoryGroups?.last?.title == "income")
+    }
+    
+    func testCanListCategories_inCorrectDefaultSortingOrder() {
+        let categories = dataStorage.categories()
+        XCTAssertTrue(categories?.first?.title == "breakfast")
+        XCTAssertTrue(categories?.last?.title == "salary")
     }
     
 }

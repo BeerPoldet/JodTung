@@ -1,6 +1,6 @@
 import UIKit
 
-class CategoryPickerView: UIView, StoryboardView {
+class CategoryPickerView: UIView, StoryboardView, CategoryPresenter {
     
     // MARK: - Outlets
     
@@ -88,7 +88,7 @@ class CategoryPickerView: UIView, StoryboardView {
 
 extension CategoryPickerView: CategoryGroupCollectionViewDelegate {
     func categoryGroupCollectionView(_ collectionView: CategoryGroupCollectionView, didSelect categoryGroup: CategoryGroup) {
-        categoryCollectionView.categories = categoryGroup.categoryList!
+        categoryCollectionView.categories = sorted(categories: categoryGroup.categoryList!) 
         categoryCollectionView.selectedCategory = categoryCollectionView.categories.first
     }
 }

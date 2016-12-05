@@ -47,19 +47,24 @@ class TransactionInfoViewController: UIViewController {
     
     @IBOutlet weak var categoryPickerView: CategoryPickerView!
     @IBOutlet weak var transactionTypeSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var valueTextField: UITextField! { didSet { valueTextField.delegate = self } }
+    @IBOutlet weak var valueTextField: UITextField! {
+        didSet {
+            valueTextField.contentVerticalAlignment = .bottom
+            valueTextField.delegate = self
+        }
+    }
     
     // MARK: - Actions
     
     @IBAction func dismiss(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismiss()
     }
     
     @IBAction func save(_ sender: Any) {
         defer {
             delegate?.transactionInfoViewControllerDidSave()
             
-            dismiss(animated: true, completion: nil)
+            dismiss()
         }
         
         guard let category = categoryPickerView.selectedCategory else { return }
@@ -130,6 +135,13 @@ class TransactionInfoViewController: UIViewController {
         }
     }
     
+    fileprivate func dismiss() {
+        self.delegate?.transactionInfoViewControllerWillDismiss?()
+        dismiss(animated: true) {
+            self.delegate?.transactionInfoViewControllerDidDismiss?()
+        }
+    }
+    
     // MARK: - Status Bar
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -141,8 +153,12 @@ class TransactionInfoViewController: UIViewController {
     }
 }
 
-protocol TransactionInfoViewControllerDelegate: class {
+@objc protocol TransactionInfoViewControllerDelegate: class {
     func transactionInfoViewControllerDidSave()
+    
+    @objc optional func transactionInfoViewControllerWillDismiss()
+    
+    @objc optional func transactionInfoViewControllerDidDismiss()
 }
 
 extension TransactionInfoViewController: UITextFieldDelegate {
@@ -156,5 +172,13 @@ extension TransactionInfoViewController: UITextFieldDelegate {
             }
         }
         return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == self.valueTextField {
+            if valueTextField.text?.isEmpty == true {
+                value = 0
+            }
+        }
     }
 }

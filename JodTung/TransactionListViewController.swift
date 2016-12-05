@@ -84,14 +84,6 @@ class TransactionListViewController: UIViewController {
         calendarWeekView.scrollToSelectedDate(withAnimation: false)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if let indexPathForSelectedRow = tableView.indexPathForSelectedRow {
-            tableView.deselectRow(at: indexPathForSelectedRow, animated: true)
-        }
-    }
-    
     // MARK: - Setup UI
     
     fileprivate func setupNavigationBar() {
@@ -213,5 +205,11 @@ protocol TransactionListViewControllerDelegate: class {
 extension TransactionListViewController: TransactionInfoViewControllerDelegate {
     func transactionInfoViewControllerDidSave() {
         reloadTableData()
+    }
+    
+    func transactionInfoViewControllerWillDismiss() {
+        if let indexPathForSelectedRow = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPathForSelectedRow, animated: true)
+        }
     }
 }

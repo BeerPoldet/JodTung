@@ -9,34 +9,6 @@
 import CoreData
 import Ensembles
 
-protocol EntityGateway {
-    func save()
-    
-    func categoryGroupsCount() -> Int?
-    
-    func categoryGroups() -> [CategoryGroup]?
-    
-    func makeCategoryGroup() -> CategoryGroup
-    
-    func categoryGroupBy(uniqueIdentifier: String) -> CategoryGroup?
-    
-    func categories() -> [Category]?
-    
-    func categories(ofGroup categoryGroup: CategoryGroup) -> [Category]?
-    
-    func makeCategory() -> Category
-    
-    func categoryBy(uniqueIdentifier: String) -> Category?
-    
-    func transactions(ofDate date: Date) -> [Transaction]?
-    
-    func transactionCount(ofDate date: Date) -> Int?
-    
-    func makeTransaction() -> Transaction
-    
-    func delete(transaction: Transaction)
-}
-
 class DataStorage: NSObject, EntityGateway {
     
     // MARK: - Properties
@@ -168,6 +140,7 @@ class DataStorage: NSObject, EntityGateway {
         var categoryGroups: [CategoryGroup]?
         managedObjectContext.performAndWait {
             let request: NSFetchRequest<CategoryGroup> = CategoryGroup.fetchRequest()
+            request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
             do {
                 categoryGroups = try request.execute()
             } catch {
@@ -201,6 +174,7 @@ class DataStorage: NSObject, EntityGateway {
         var categories: [Category]?
         managedObjectContext.performAndWait {
             let request: NSFetchRequest<Category> = Category.fetchRequest()
+            request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
             do {
                 categories = try request.execute()
             } catch {
@@ -256,6 +230,7 @@ class DataStorage: NSObject, EntityGateway {
                 startOfDay as NSDate,
                 endOfDay as NSDate
             )
+            request.sortDescriptors = [NSSortDescriptor(key: "creationNSDate", ascending: false)]
             do {
                 transactions = try request.execute()
             } catch {
