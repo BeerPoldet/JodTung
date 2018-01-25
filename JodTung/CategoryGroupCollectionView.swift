@@ -50,6 +50,10 @@ class CategoryGroupCollectionView: UICollectionView {
         self.delegate = self
         self.dataSource = self
         self.allowsMultipleSelection = false
+//        let pageCollectionViewFlowLayout = PagingCollectionViewFlowLayout()
+//        self.collectionViewLayout = pageCollectionViewFlowLayout
+//        pageCollectionViewFlowLayout.scrollDirection = .horizontal
+//        pageCollectionViewFlowLayout.itemSize = CGSize(width: bounds.width / 4 - 8, height: 40)
     }
     
     fileprivate struct Storyboard {
@@ -81,4 +85,64 @@ extension CategoryGroupCollectionView: UICollectionViewDataSource, UICollectionV
 
 protocol CategoryGroupCollectionViewDelegate: class {
     func categoryGroupCollectionView(_ collectionView: CategoryGroupCollectionView, didSelect categoryGroup: CategoryGroup)
+}
+
+class PagingCollectionViewFlowLayout: UICollectionViewFlowLayout {
+    
+    override var collectionViewContentSize: CGSize {
+        let count: Int! = collectionView?.dataSource?.collectionView(collectionView!, numberOfItemsInSection: 0)
+        var contentSize = canvasSize
+        
+        let page: Int = (count / Int(rowCount * columnCount))
+        contentSize.width = CGFloat(page) * canvasSize.width
+        
+        return contentSize
+    }
+    
+    var canvasSize: CGSize {
+        return collectionView!.frame.size
+    }
+    
+    var rowCount: Int {
+        return Int(canvasSize.height - itemSize.height) / Int(itemSize.height + minimumInteritemSpacing) + 1
+    }
+    
+    var columnCount: Int {
+        return Int(canvasSize.width - itemSize.width) / Int(itemSize.width + minimumLineSpacing) + 1
+    }
+    
+    func frame(forItemAt indexPath: IndexPath) -> CGRect {
+        let x = columnCount > 1 ? CGFloat(columnCount - 1) * self.minimumLineSpacing : 0
+        let y = rowCount > 1 ? CGFloat(rowCount - 1) * self.minimumInteritemSpacing : 0
+        let pageMarginX = (canvasSize.width - CGFloat(columnCount) * self.itemSize.width - x) / 2.0
+        let pageMarginY = (canvasSize.height - CGFloat(rowCount) * self.itemSize.height - y) / 2.0
+        let page = indexPath.row / Int(rowCount * columnCount)
+        let remainder = indexPath.row - page * Int(rowCount * columnCount)
+        let row = remainder / Int(columnCount)
+        let column = remainder - row * Int(columnCount)
+        
+        var cellFrame = CGRect.init(
+            x: pageMarginX + CGFloat(column) * (self.itemSize.width + self.minimumLineSpacing),
+            y: pageMarginY + CGFloat(row) * (self.itemSize.height + self.minimumInteritemSpacing),
+            width: self.itemSize.width,
+            height: self.itemSize.height)
+        
+        cellFrame.origin.x += CGFloat(page) * canvasSize.width
+        
+        return cellFrame
+    }
+    
+    override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+        let attr = super.layoutAttributesForItem(at: indexPath)
+        attr?.frame = frame(forItemAt: indexPath)
+        return attr
+    }
+    
+    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+        return super.layoutAttributesForElements(in: rect)?.filter({ (attr) -> Bool in
+            let indexPath = attr.indexPath
+            let itemFrame = self.frame(forItemAt: indexPath)
+            return rect.intersects(itemFrame)
+        })
+    }
 }

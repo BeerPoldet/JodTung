@@ -52,6 +52,11 @@ class CategoryCollectionView: UICollectionView {
         dataSource = self
         delegate = self
         allowsMultipleSelection = false
+        isPagingEnabled = false
+        let pageCollectionViewFlowLayout = PagingCollectionViewFlowLayout()
+        self.collectionViewLayout = pageCollectionViewFlowLayout
+        pageCollectionViewFlowLayout.scrollDirection = .horizontal
+//        pageCollectionViewFlowLayout.itemSize = CGSize(width: 150, height: 100)
     }
     
     // MARK: - Constant
@@ -65,7 +70,7 @@ class CategoryCollectionView: UICollectionView {
 
 // MARK: - CategoryCollectionView CollectionViewDelegate
 
-extension CategoryCollectionView: UICollectionViewDataSource, UICollectionViewDelegate {
+extension CategoryCollectionView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categories.count
@@ -84,6 +89,24 @@ extension CategoryCollectionView: UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewDelegate?.categoryCollectionView(self, didSelect: categories[indexPath.row])
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        print("FUCK?")
+        print(collectionView.frame.width)
+        print(collectionView.frame.width / 4)
+        let numberOfItemsPerRow = 4
+        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+        let totalSpace = flowLayout.sectionInset.left
+            + flowLayout.sectionInset.right
+            + (flowLayout.minimumInteritemSpacing * CGFloat(numberOfItemsPerRow - 1))
+        let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(numberOfItemsPerRow))
+        print(size)
+        return CGSize(width: size, height: 100)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 4
     }
 }
 
